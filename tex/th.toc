@@ -1,0 +1,20 @@
+\contentsline {section}{\numberline {1}Introduction}{1}
+\contentsline {subsection}{\numberline {1.1}Research scope}{1}
+\contentsline {subsection}{\numberline {1.2}Host machine}{2}
+\contentsline {subsection}{\numberline {1.3}Problem description}{3}
+\contentsline {subsection}{\numberline {1.4}Demand for improvements}{4}
+\contentsline {section}{\numberline {2}Problem analysis}{5}
+\contentsline {subsection}{\numberline {2.1}Establishing framework for product cleanness assessment}{5}
+\contentsline {subsection}{\numberline {2.2}Techniques of automatic egg quality assessment}{6}
+\contentsline {subsection}{\numberline {2.3}Detecting batch state with camera image}{7}
+\contentsline {subsection}{\numberline {2.4}Chosen method structure}{7}
+\contentsline {section}{\numberline {3}Egg yolk detection}{8}
+\contentsline {subsection}{\numberline {3.1}Methods overview}{8}
+\contentsline {subsection}{\numberline {3.2}Circle Hough Transform (CHT)}{8}
+\contentsline {subsection}{\numberline {3.3}Erosion and Dilatation}{9}
+\contentsline {subsection}{\numberline {3.4}Gaussian blur}{10}
+\contentsline {subsection}{\numberline {3.5}Thresholding}{11}
+\contentsline {subsection}{\numberline {3.6}Channeling and HSV conversion}{13}
+\contentsline {subsection}{\numberline {3.7}Finding optimal parameter values}{13}
+\contentsline {subsection}{\numberline {3.8}Overfitting}{13}
+\contentsline {section}{\numberline {4}Contaminated product recognition}{13}

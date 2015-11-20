@@ -1,0 +1,479 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.2.7)  20 NOV 2015 01:57
+entering extended mode
+**th.tex
+(C:\Users\Orley\Desktop\thesis\docs\tex\th.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\latex\base\article.
+cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\latex\base\size12.c
+lo"
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\latex\titlesec\titl
+esec.sty"
+Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
+\ttl@box=\box26
+\beforetitleunit=\skip43
+\aftertitleunit=\skip44
+\ttl@plus=\dimen103
+\ttl@minus=\dimen104
+\ttl@toksa=\toks14
+\titlewidth=\dimen105
+\titlewidthlast=\dimen106
+\titlewidthfirst=\dimen107
+)
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\latex\chngcntr\chng
+cntr.sty"
+Package: chngcntr 2009/09/02 v1.0a change counter resetting
+)
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\latex\float\float.s
+ty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count87
+\float@exts=\toks15
+\float@box=\box27
+\@float@everytoks=\toks16
+\@floatcapt=\box28
+)
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\latex\geometry\geom
+etry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\latex\graphics\keyv
+al.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\generic\oberdiek\if
+pdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\generic\oberdiek\if
+vtex.sty"
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\generic\ifxetex\ifx
+etex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
+\Gm@bindingoffset=\dimen108
+\Gm@wd@mp=\dimen109
+\Gm@odd@mp=\dimen110
+\Gm@even@mp=\dimen111
+\Gm@layoutwidth=\dimen112
+\Gm@layoutheight=\dimen113
+\Gm@layouthoffset=\dimen114
+\Gm@layoutvoffset=\dimen115
+\Gm@dimlist=\toks18
+
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\latex\geometry\geom
+etry.cfg"))
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\latex\base\fontenc.
+sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\latex\base\t1enc.de
+f"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\latex\psnfss\mathpt
+mx.sty"
+Package: mathptmx 2005/04/12 PSNFSS-v9.2a Times w/ Math, improved (SPQR, WaS) 
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/ztmcm/m/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ztmcm/m/n on input line 28.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 29.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/ztmcm/m/it on input line 29.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/ztmcm/m/it on input line 29.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 30.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/ztmcm/m/n on input line 30.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/ztmcm/m/n on input line 30.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 31.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
+\symbold=\mathgroup4
+\symitalic=\mathgroup5
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 34.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 35.
+LaTeX Info: Redefining \hbar on input line 50.
+)
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\latex\graphics\grap
+hicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\latex\graphics\grap
+hics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\latex\graphics\trig
+.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\latex\00miktex\grap
+hics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\latex\pdftex-def\pd
+ftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\generic\oberdiek\in
+fwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\generic\oberdiek\lt
+xcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count91
+))
+\Gin@req@height=\dimen116
+\Gin@req@width=\dimen117
+)
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\latex\enumitem\enum
+item.sty"
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip45
+\enit@outerparindent=\dimen118
+\enit@toks=\toks19
+\enit@inbox=\box29
+\enitdp@description=\count92
+) (C:\Users\Orley\Desktop\thesis\docs\tex\th.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 18.
+
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\latex\psnfss\t1ptm.
+fd"
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=85.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\big@size=\dimen119
+
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\context\base\supp-p
+df.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count93
+\scratchdimen=\dimen120
+\scratchbox=\box30
+\nofMPsegments=\count94
+\nofMParguments=\count95
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count96
+\MPscratchDim=\dimen121
+\MPnumerator=\count97
+\makeMPintoPDFobject=\count98
+\everyMPtoPDFconversion=\toks21
+)
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 20.
+ (C:\Users\Orley\Desktop\thesis\docs\tex\th.toc
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 2.
+
+
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\latex\psnfss\ot1ztm
+cm.fd"
+File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 2.
+
+
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\latex\psnfss\omlztm
+cm.fd"
+File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 2.
+
+
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\latex\psnfss\omsztm
+cm.fd"
+File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 2.
+
+
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\latex\psnfss\omxztm
+cm.fd"
+File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 2.
+
+("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\latex\psnfss\ot1ptm
+.fd"
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
+)
+\tf@toc=\write3
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <13> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 26.
+ <imgs/map.png, id=1, 464.73625pt x 238.8925pt>
+File: imgs/map.png Graphic file (type png)
+ <use imgs/map.png>
+Package pdftex.def Info: imgs/map.png used on input line 51.
+(pdftex.def)             Requested size: 238.9995pt x 122.8542pt.
+
+[1
+
+{C:/Program Files (x86)/TiCTeX v1.0 for windows/MiKTeX/pdftex/config/pdftex.map
+}] <imgs/rz1table.png, id=8, 583.17876pt x 557.08125pt>
+File: imgs/rz1table.png Graphic file (type png)
+
+<use imgs/rz1table.png>
+Package pdftex.def Info: imgs/rz1table.png used on input line 63.
+(pdftex.def)             Requested size: 238.9995pt x 228.30278pt.
+ <imgs/rz1crack.jpg, id=9, 1204.5pt x 677.53125pt>
+File: imgs/rz1crack.jpg Graphic file (type jpg)
+
+<use imgs/rz1crack.jpg>
+Package pdftex.def Info: imgs/rz1crack.jpg used on input line 70.
+(pdftex.def)             Requested size: 238.9995pt x 134.42867pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/map.png> <C:/Users/Orley/Deskt
+op/thesis/docs/tex/imgs/rz1table.png>] <imgs/prop.png, id=13, 581.17125pt x 442
+.65375pt>
+File: imgs/prop.png Graphic file (type png)
+
+<use imgs/prop.png>
+Package pdftex.def Info: imgs/prop.png used on input line 102.
+(pdftex.def)             Requested size: 238.9995pt x 182.0363pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/rz1crack.jpg>]
+<imgs/damg.png, id=17, 594.22pt x 371.3875pt>
+File: imgs/damg.png Graphic file (type png)
+ <use imgs/damg.png>
+Package pdftex.def Info: imgs/damg.png used on input line 109.
+(pdftex.def)             Requested size: 238.9995pt x 149.37405pt.
+ [4 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/prop.png> <C:/Users/Orley/Desk
+top/thesis/docs/tex/imgs/damg.png>] [5] <imgs/8of9.jpg, id=24, 803.0pt x 300.12
+125pt>
+File: imgs/8of9.jpg Graphic file (type jpg)
+
+<use imgs/8of9.jpg>
+Package pdftex.def Info: imgs/8of9.jpg used on input line 171.
+(pdftex.def)             Requested size: 478.00812pt x 178.65907pt.
+
+Overfull \hbox (22.764pt too wide) in paragraph at lines 171--172
+ [][] 
+ []
+
+<imgs/chalaza.png, id=25, 314.17375pt x 220.825pt>
+File: imgs/chalaza.png Graphic file (type png)
+ <use imgs/chalaza.png>
+Package pdftex.def Info: imgs/chalaza.png used on input line 182.
+(pdftex.def)             Requested size: 238.9995pt x 167.98709pt.
+
+[6 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/8of9.jpg> <C:/Users/Orley/Deskt
+op/thesis/docs/tex/imgs/chalaza.png>] [7]
+<imgs/space.jpg, id=33, 297.11pt x 297.11pt>
+File: imgs/space.jpg Graphic file (type jpg)
+ <use imgs/space.jpg>
+Package pdftex.def Info: imgs/space.jpg used on input line 266.
+(pdftex.def)             Requested size: 238.9995pt x 239.00757pt.
+ [8 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/space.jpg>]
+<imgs/accu.png, id=37, 285.065pt x 275.0275pt>
+File: imgs/accu.png Graphic file (type png)
+ <use imgs/accu.png>
+Package pdftex.def Info: imgs/accu.png used on input line 276.
+(pdftex.def)             Requested size: 238.9995pt x 230.58507pt.
+
+<imgs/diam.png, id=38, 272.01625pt x 126.4725pt>
+File: imgs/diam.png Graphic file (type png)
+ <use imgs/diam.png>
+Package pdftex.def Info: imgs/diam.png used on input line 294.
+(pdftex.def)             Requested size: 238.9995pt x 111.12631pt.
+ [9 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/accu.png> <C:/Users/Orley/Desk
+top/thesis/docs/tex/imgs/diam.png>] <imgs/lett.png, id=42, 449.68pt x 213.79875
+pt>
+File: imgs/lett.png Graphic file (type png)
+
+<use imgs/lett.png>
+Package pdftex.def Info: imgs/lett.png used on input line 309.
+(pdftex.def)             Requested size: 238.9995pt x 113.63249pt.
+ <imgs/gauss.png, id=43, 265.99374pt x 76.285pt>
+File: imgs/gauss.png Graphic file (type png)
+
+<use imgs/gauss.png>
+Package pdftex.def Info: imgs/gauss.png used on input line 329.
+(pdftex.def)             Requested size: 238.9995pt x 68.54527pt.
+ <imgs/conv.png, id=44, 939.51pt x 100.375pt>
+File: imgs/conv.png Graphic file (type png)
+
+<use imgs/conv.png>
+Package pdftex.def Info: imgs/conv.png used on input line 342.
+(pdftex.def)             Requested size: 478.00812pt x 51.06956pt.
+
+Overfull \hbox (22.764pt too wide) in paragraph at lines 342--343
+ [][] 
+ []
+
+<imgs/micro.png, id=45, 373.395pt x 180.675pt>
+File: imgs/micro.png Graphic file (type png)
+ <use imgs/micro.png>
+Package pdftex.def Info: imgs/micro.png used on input line 349.
+(pdftex.def)             Requested size: 238.9995pt x 115.64537pt.
+ [10 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/lett.png> <C:/Users/Orley/Des
+ktop/thesis/docs/tex/imgs/gauss.png> <C:/Users/Orley/Desktop/thesis/docs/tex/im
+gs/conv.png>] <imgs/thr.png, id=49, 601.24625pt x 408.52625pt>
+File: imgs/thr.png Graphic file (type png)
+ <use imgs/thr.png>
+Package pdftex.def Info: imgs/thr.png used on input line 368.
+(pdftex.def)             Requested size: 238.9995pt x 162.39153pt.
+
+<imgs/thremeth.png, id=50, 606.265pt x 605.26125pt>
+File: imgs/thremeth.png Graphic file (type png)
+ <use imgs/thremeth.png>
+Package pdftex.def Info: imgs/thremeth.png used on input line 385.
+(pdftex.def)             Requested size: 238.9995pt x 238.59993pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/micro.png> <C:/Users/Orley/De
+sktop/thesis/docs/tex/imgs/thr.png>] <imgs/diffthr.png, id=54, 589.0005pt x 444
+.4605pt>
+File: imgs/diffthr.png Graphic file (type png)
+
+<use imgs/diffthr.png>
+Package pdftex.def Info: imgs/diffthr.png used on input line 391.
+(pdftex.def)             Requested size: 238.9995pt x 180.3514pt.
+ <imgs/kmeans.png, id=56, 382.42876pt x 248.93pt>
+File: imgs/kmeans.png Graphic file (type png)
+
+<use imgs/kmeans.png>
+Package pdftex.def Info: imgs/kmeans.png used on input line 401.
+(pdftex.def)             Requested size: 238.9995pt x 155.56946pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/thremeth.png> <C:/Users/Orley
+/Desktop/thesis/docs/tex/imgs/diffthr.png>]
+Underfull \hbox (badness 1701) in paragraph at lines 433--435
+[]\T1/ptm/m/n/12 Ketelaerea B.,Bamelisa F., Kempsa1 B., De-cuyperea1 E., Baerde
+-maek-era J. \T1/ptm/m/it/12 Non-
+ []
+
+[13 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/kmeans.png>] [14]
+(C:\Users\Orley\Desktop\thesis\docs\tex\th.aux) ) 
+Here is how much of TeX's memory you used:
+ 2712 strings out of 493921
+ 38819 string characters out of 3151769
+ 97171 words of memory out of 3000000
+ 5960 multiletter control sequences out of 15000+200000
+ 26811 words of font info for 44 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 27i,5n,32p,1046b,238s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/TiCTeX
+ v1.0 for windows/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86
+)/TiCTeX v1.0 for windows/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program F
+iles (x86)/TiCTeX v1.0 for windows/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/
+Program Files (x86)/TiCTeX v1.0 for windows/MiKTeX/fonts/type1/urw/times/utmri8
+a.pfb>
+Output written on th.pdf (14 pages, 2446753 bytes).
+PDF statistics:
+ 81 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+
