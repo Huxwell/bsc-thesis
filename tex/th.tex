@@ -73,14 +73,23 @@ The machine that will be extended with the module prototype prepared in this the
 
 
 The machine operates in a following way:
-(1) Eggs are directed into one-line flow, and mechanically aligned
-(2) Two knives cut the egg surface
-(3) Cracking module cuts the incoming egg surface from below with two knives that are aligned in direction of egg focal radius
-(4) The knives imitate human  hands work by opening the previously notched egg
-(5) The cracked eggs are accumulated  in a movable utensil for optical assessment. 
-If the egg yolk appears to be broken, it is removed by an  operator from the processing plant
-(6) Cracked eggs are transported by sliding to white and yolk separating module
-(7) Separation  is done in a mechanic way while eggs slide over specific shaped  gap that only egg white fills in, while the egg yolks remain intact
+\begin{enumerate}
+\item Eggs are directed into one-line flow, and mechanically aligned
+
+\item Cracking module cuts the incoming egg surface from below with two knives that are aligned in direction of egg focal radius
+\item The knives imitate human hands work by opening the previously notched egg
+\item The cracked eggs are accumulated in a movable utensil for optical assessment. 
+If the egg yolk appears to be broken, it is removed by an operator from the processing plant
+\item Cracked eggs are transported by sliding to white and yolk separating module
+\item Separation  is done in a mechanic way while eggs slide over specificly shaped gap that only egg white fills in, while the egg yolks remain intact
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\paperwidth]{process}
+\caption{RZ-1 Egg processing  - process and plant structure}
+
+\end{figure}
 
 RZ-1 operates in two modes:
 - Precision mode
@@ -239,7 +248,17 @@ Thirdly two options will be tested:
 - The extracted egg yolk will be graded in terms of shape similarity to a single, intact yolk
 
 The best obtained combination of preprocessing, segmentation and grading parameters will be used in a final algorithm that will be implemented in Raspberry Pi 2 device with camera module, and than tested in the Rz-1 processing plant.
-
+\section{Batch state detection system}
+\subsection{System design}
+lorem ipsum
+\subsection{Detection Algorithm}
+lorem ipsum
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\paperwidth]{algorithm}
+\caption{Detection Algorithm}
+\end{figure}
+lorem ipsum
 \section{Egg yolk detection}
 \subsection{Methods overview}
 An egg yolk, when intact and fresh can be approximated with sphere which projects as circle-like shape on 2D image.
@@ -351,6 +370,17 @@ The term ‘convolution’ might be misleading and for the scope of image proces
 \end{figure}
 
   
+
+
+\subsection{Channeling and HSV conversion}
+lorem ipsum
+\subsection{Finding optimal parameter values}
+lorem ipsum
+\subsection{Overfitting}
+lorem ipsum
+\section{Contaminated product recognition}
+\subsection{General idea}
+lorem ipsum
 \subsection{Thresholding}
 
 Thresholding is a simple case of image segmentation.
@@ -402,11 +432,16 @@ For more general cases (i.e. multichannel images, assigning more colors) cluster
 \caption{K-means clustering method for k = 16\cite{segm}}
 \end{figure}
 
+\section{Choosing detection system parameters}
+\subsection{Brute force testing}
+lorem ipsum
+\section{Phisical system implementation}
+\subsection{Raspberry Pi}
+lorem ipsum
+\section{Conclusions}
+\subsection{Beyond the scope}
+lorem ipsum
 
-\subsection{Channeling and HSV conversion}
-\subsection{Finding optimal parameter values}
-\subsection{Overfitting}
-\section{Contaminated product recognition}
 
 All the Web. sources have been checked for availability in November 2015.
 Web links are not included if articles are to be immediately found with search engines, which is consistent to MLN referencing convention.
