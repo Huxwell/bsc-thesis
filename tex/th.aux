@@ -19,29 +19,29 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {2.1.1}{\ignorespaces Cracked egg product cases. Source: own materials }}{7}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.1.2}{\ignorespaces Chalaza attached to egg. Source: own materials}}{7}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Techniques of automatic egg quality assessment}{7}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Batch state detection system}{8}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}System design}{8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1.1}{\ignorespaces System design}}{8}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Detecting batch state with camera image}{8}}
-\citation{learnopencv}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Batch state detection system design}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}System structure}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1.1}{\ignorespaces System structure}}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Detecting batch state with camera image}{9}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Detection algorithm}{10}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3.1}{\ignorespaces Detection Algorithm}}{10}}
+\citation{learnopencv}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3.1}{\ignorespaces Detection Algorithm}}{11}}
 \citation{performance}
 \citation{hgtcv}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Algorithm programming}{11}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Egg yolk detection}{11}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Methods overview}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Algorithm programming}{12}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Egg yolk detection}{12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Methods overview}{12}}
 \citation{craters}
 \citation{hgt}
 \citation{hgt}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Circle Hough Transform (CHT)}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2.1}{\ignorespaces Potential circles space\cite  {craters}}}{12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Circle Hough Transform (CHT)}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2.1}{\ignorespaces Potential circles space\cite  {craters}}}{13}}
 \citation{mastercv}
 \citation{fd}
 \citation{morph}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2.2}{\ignorespaces Accumulation matrix with two good circle candidates\cite  {hgt}}}{13}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Erosion and Dilatation}{13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3.1}{\ignorespaces A diamond-shaped kernel\cite  {morph}}}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2.2}{\ignorespaces Accumulation matrix with two good circle candidates\cite  {hgt}}}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Erosion and Dilatation}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3.1}{\ignorespaces A diamond-shaped kernel\cite  {morph}}}{14}}
 \citation{erdil}
 \citation{erdil}
 \citation{cv}
@@ -49,47 +49,49 @@
 \citation{featproc}
 \citation{gimp}
 \citation{cnoisy}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3.2}{\ignorespaces Orignal image, eroded image, dilated image.\cite  {erdil}}}{14}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Gaussian blur}{14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4.1}{\ignorespaces Gauss function in two dimension\cite  {featproc}}}{14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4.2}{\ignorespaces Convolution of 3x3 matrices\cite  {gimp}}}{14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4.3}{\ignorespaces Microscope image before and after applying gaussian filter\cite  {cnoisy}}}{15}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Channeling and HSV conversion}{15}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Using the methods}{15}}
-\@writefile{lol}{\contentsline {lstlisting}{yolk.py}{15}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Finding optimal parameter values}{15}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Overfitting}{15}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Contaminated product recognition}{15}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}General idea}{15}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Thresholding}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3.2}{\ignorespaces Orignal image, eroded image, dilated image.\cite  {erdil}}}{15}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Gaussian blur}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4.1}{\ignorespaces Gauss function in two dimension\cite  {featproc}}}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4.2}{\ignorespaces Convolution of 3x3 matrices\cite  {gimp}}}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4.3}{\ignorespaces Microscope image before and after applying gaussian filter\cite  {cnoisy}}}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Channeling and HSV conversion}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Using the methods}{16}}
+\@writefile{lol}{\contentsline {lstlisting}{yolk.py}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Finding optimal parameter values}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Overfitting}{16}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Contaminated product recognition}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}General idea}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Thresholding}{16}}
 \citation{thre}
 \citation{thre}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2.1}{\ignorespaces Different Thresholding modes generated with Metaplotlib}}{16}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2.2}{\ignorespaces Threshold computing methods12\cite  {thre}}}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2.1}{\ignorespaces Different Thresholding modes generated with Metaplotlib}}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2.2}{\ignorespaces Threshold computing methods12\cite  {thre}}}{17}}
 \citation{lesscv}
 \citation{segm}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2.3}{\ignorespaces Different thresholding applied Fig. generated with Metaplotlib}}{17}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2.4}{\ignorespaces K-means clustering method for k = 16\cite  {segm}}}{17}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Using the methods}{17}}
-\@writefile{lol}{\contentsline {lstlisting}{contaminated.py}{17}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Choosing detection system parameters}{17}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Manual parameters finding}{17}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Brute force testing}{17}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Phisical system implementation}{17}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Raspberry Pi}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2.3}{\ignorespaces Different thresholding applied Fig. generated with Metaplotlib}}{18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2.4}{\ignorespaces K-means clustering method for k = 16\cite  {segm}}}{18}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Using the methods}{18}}
+\@writefile{lol}{\contentsline {lstlisting}{contaminated.py}{18}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Choosing detection system parameters}{18}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Manual parameters finding}{18}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Brute force testing}{18}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Phisical system implementation}{18}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Raspberry Pi}{18}}
 \citation{stackos}
 \citation{chibi}
 \citation{rodos}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Further research and development}{18}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Operating Systems}{18}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Further research and development}{19}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Operating Systems}{19}}
 \bibcite{eggprop}{1}
 \bibcite{agri}{2}
 \bibcite{svm}{3}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Platforms}{20}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Server and logging}{20}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.4}One month prtotype testing and enviroment of work tuning}{20}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5}Obtaining more image data in better quality}{20}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.6}Machine learning}{20}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusions}{20}}
 \bibcite{nondestr}{4}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Platforms}{19}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Server and logging}{19}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.4}Machine learning}{19}}
-\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusions}{19}}
 \bibcite{learnopencv}{5}
 \bibcite{performance}{6}
 \bibcite{hgtcv}{7}

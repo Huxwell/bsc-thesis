@@ -149,7 +149,6 @@ This company currently is undergoing a procedure of obtaining US Food Drug Admin
 Executives of this client suspect that using machines with better egg separation will increase their chance for positive outcome of above process.\\
 A non-disclosure agreement was signed between this client and ovo-tech, thus further expanding this topic in scope of this thesis is not possible.
 
-
 \section{Problem analysis}
 \subsection{Establishing framework for product cleanness assessment}
 
@@ -199,19 +198,21 @@ Despite the fact, that client decided that chalaza position and amount are irrel
 
 Different techniques for automatic, non-destructive egg quality grading have been investigated.
 Among them, the following are worth mentioning:
-- Intelligent systems based on visible-infrared transmittance spectroscopy\cite{agri}
-- Fourier frequency analysis of a vibration-based response on impact force\cite{svm} 
-- Ultrasonic, magnetic resonance, electric resistance, electric nose\cite{nondestr}  
+\begin{itemize}
+\item Intelligent systems based on visible-infrared transmittance spectroscopy\cite{agri}
+\item Fourier frequency analysis of a vibration-based response on impact force\cite{svm} 
+\item Ultrasonic, magnetic resonance, electric resistance, electric nose\cite{nondestr}  
+\end{itemize}
 All methods listed above require very specific equipment, are prone to overfitting and take in to account assumption that does not has to be satisfied for problem considered in this thesis: the egg shell should not be damaged.
 
 Since in this very special case, eggs are already broken, simplified and different methods can be considered.
 Initially, two ideas were researched by author of this thesis:
-- Proximity sensor utilization
-- Using laser / narrow light beam 
-Both methods would identify the intact yolk basing on its height and wouldn’t require much processing (an Arduino Uno or other ATMega based circuits might be sufficient).
-
-Nevertheless, both of them had to be rejected, since intact yolks presence in the tested batch is not sufficient for batch accepting – absence of egg yolk parts is also required (see subchapter 2.1).
-
+\begin{itemize}
+\item Proximity sensor utilization
+\item Using laser / narrow light beam 
+\end{itemize}
+Both methods would identify the intact yolk basing on its height and wouldn’t require much processing (an Arduino Uno or other ATMega based circuits might be sufficient).\\
+Nevertheless, both of them had to be rejected, since intact yolks presence in the tested batch is not sufficient for batch accepting – absence of egg yolk parts is also required (see subchapter 2.1).\\
 Finally, using images of the batch obtained from camera and processing it was chosen as a most promising option for further research.
 
 
@@ -222,26 +223,30 @@ Finally, using images of the batch obtained from camera and processing it was ch
 
 
 
-\section{Batch state detection system}
+\section{Batch state detection system design}
 
-\subsection{System design}
+\subsection{System structure}
+The system is expected to replace Quality control module (See. Figure 1.2.3).\\
+The egg acumulation will not logner be required, as well as the work of qualified expert that opticaly assased the egg quality is not needed anymore.\\
 
+A camera will be placed on top of Separator module part, where cracked eggs are transported by sliding to the separating part.\\
 
-Firstly the preprocessing will be done to eliminate unimportant data (reduce the dimensionality), reduce noises and extract interesting image areas.
+The processing device will use the frames of camera image. Some of the frames will be skipped to reduce amount of data.\\
+Frameskipping ratio depends on decision algorithm and device performance.\\
 
-Secondly the image will be segmented to extract egg yolk (whole and damaged).
+The processing device will use the frames, to make a decision whether or nor the egg barch visible on the frame is acceptable, or represent a badly cracked egg.\\
+A signal will be send to element that will either remove egg batch from the processing plant or let is pass further.\\
 
-Thirdly two options will be tested:\\
-- The undamaged egg yolks will be detected and deleted from the image. Than the amount of remaining yolk parts will be counted. If it will exceed the threshold value, the signal for removing the product batch will be sent.\\
-- The extracted egg yolk will be graded in terms of shape similarity to a single, intact yolk
+Development of this physical element is done by OVO-TECH company and is not analised in the thesis. OVO-TECH declared, that having +5V signal for positive batch, and -5V for negative is enough for them to work on their part.
 
-The best obtained combination of preprocessing, segmentation and grading parameters will be used in a final algorithm that will be implemented in Raspberry Pi 2 device with camera module, and than tested in the Rz-1 processing plant.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\paperwidth]{system}
-\caption{System design}
+\caption{System structure}
 \end{figure}
+
+
 
 \subsection{Detecting batch state with camera image}
 
@@ -253,20 +258,59 @@ When it comes to assessment of camera image, 4 approaches are widely considered:
 \item Neural networks which are used as a special case of either machine learning process or a part of it 
 \end{enumerate}
 First case was considered, since it could be implemented on Arduino Uno, other ATMega based platform or real-time systems working on PLC controllers such as LOGO! 7, which are often used in factories due to their reliability (apart from Stuxnet-class worms, that has been firstly observed in 2010, no other security threads are believed to exist).\\
-Unfortunately, the problem is more complex than simply deciding whether the product is present or not; or whether the product is yellow or not, thus more advanced processing is required.
+Unfortunately, the problem is more complex than simply deciding whether the product is present or not; or whether the product is yellow or not, thus more advanced processing is required.\\
 
-Second case will be expanded in the next subchapter and has been chosen as main method that will be implemented and tested in this thesis.
+Second case will be expanded in the next subchapter and has been chosen as main method that will be implemented and tested in this thesis.\\
 
 Last two approaches will be tested if the 2nd approach will provide to be insufficient.\\
-It is worth mentioning, that for (3) Support Vector Machines was considered, since it classifies data to exactly two classes (i.e. proper and improper egg mass).
+It is worth mentioning, that for (3) Support Vector Machines was considered, since it classifies data to exactly two classes (i.e. proper and improper egg mass).\\
 
 Also, Haar Features Cascade was tested, but data amount obtained for testing was insufficient, and the methods popular implementations are focused on locating the particular object on image rather than on comparing two pattern cases.\\
+
 (4) Case was considered and the author build a multilayered perceptron network working with MNIST database in order to better understand the method.\\
 The method application will be researched further on beyond the scope of this work.
 
 
 
 \subsection{Detection algorithm}
+
+Frames are acquired from the camera module.
+
+Than, two copies of the frame are processed independently.
+
+\begin{description}
+  \item[Firstly,]one channel is extracted from the image.\\
+  Its state is passed further as image, along all the steps.
+  \item[Secondly,]the channel is a subject to preprocessing, that eliminates the unimportat data and reduces the data dimentionality.\\ 
+  Amount of noise is reducted.
+  \item[Thirdly,]the image is segmentated, and the shape recognition methods are used to detect existance, position and size of the egg yolk.
+  \item[Independently,]other copy of the image is a subject to different color scale.
+  \item[Then,]only one channel is extracted from the image
+  \item[Finally,]the information from first copy is used to remove intact egg region from second copy.\\The first copy is no logner needed and its rresources are freed.
+\end{description}
+
+Choosen channel of transformed second copy (with intact egg excluded) serve as the only image now.\\
+It is processed in a following way:
+
+\begin{description}
+  \item[Firstly,]an attempt is made to dilter out the light reflections and flares from the image.\\
+  Hopefully, during the further development, above artifacts can be removed in a phisical way, by mounting and lighting the device in a very specific way.\\
+  For now nevertheless, this step is necessary.\\
+  \item[Secondly,]image is segmentated with thresholding.
+  \item[Thirdly,]noise (defined as small blobs) is deleted.
+  \item[Finally,]the obtained image is expected to contain only unwanted, damaged egg mass.\\
+  Amount of pixels contaning it is counted.
+  \item[Decision] is made basing on the obtained amount.\\
+  It takes a form of signal sent to phisical element that either removes the egg batch or let it through.
+\end{description}
+
+
+Thirdly two options will be tested:\\
+- The undamaged egg yolks will be detected and deleted from the image. Than the amount of remaining yolk parts will be counted. If it will exceed the threshold value, the signal for removing the product batch will be sent.\\
+- The extracted egg yolk will be graded in terms of shape similarity to a single, intact yolk
+
+The best obtained combination of preprocessing, segmentation and grading parameters will be used in a final algorithm that will be implemented in Raspberry Pi 2 device with camera module, and than tested in the Rz-1 processing plant.
+
 
 \begin{figure}[H]
 \centering
@@ -532,7 +576,10 @@ Also, external real-time clock (such as AD9850 Pulse generator) might be require
 Gathering the data about egg quality, recognition performance a
 d effectiveness is a possibility that has to be addressed.\\
 Raspberry Pi 2 platform is capable of working as a server and thus provide system manufacturer a remote access to the its operations.
+\subsection{One month prtotype testing and enviroment of work tuning}
+\subsection{Obtaining more image data in better quality}
 \subsection{Machine learning}
+
 \section{Conclusions}
 
 
