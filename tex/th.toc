@@ -6,25 +6,32 @@
 \contentsline {section}{\numberline {2}Problem analysis}{6}
 \contentsline {subsection}{\numberline {2.1}Establishing framework for product cleanness assessment}{6}
 \contentsline {subsection}{\numberline {2.2}Techniques of automatic egg quality assessment}{7}
-\contentsline {subsection}{\numberline {2.3}Detecting batch state with camera image}{8}
-\contentsline {subsection}{\numberline {2.4}Chosen method structure}{8}
-\contentsline {section}{\numberline {3}Batch state detection system}{9}
-\contentsline {subsection}{\numberline {3.1}System design}{9}
-\contentsline {subsection}{\numberline {3.2}Detection Algorithm}{9}
-\contentsline {section}{\numberline {4}Egg yolk detection}{9}
-\contentsline {subsection}{\numberline {4.1}Methods overview}{9}
-\contentsline {subsection}{\numberline {4.2}Circle Hough Transform (CHT)}{9}
-\contentsline {subsection}{\numberline {4.3}Erosion and Dilatation}{11}
-\contentsline {subsection}{\numberline {4.4}Gaussian blur}{11}
-\contentsline {subsection}{\numberline {4.5}Channeling and HSV conversion}{12}
-\contentsline {subsection}{\numberline {4.6}Finding optimal parameter values}{12}
-\contentsline {subsection}{\numberline {4.7}Overfitting}{12}
-\contentsline {section}{\numberline {5}Contaminated product recognition}{12}
-\contentsline {subsection}{\numberline {5.1}General idea}{12}
-\contentsline {subsection}{\numberline {5.2}Thresholding}{13}
-\contentsline {section}{\numberline {6}Choosing detection system parameters}{15}
-\contentsline {subsection}{\numberline {6.1}Brute force testing}{15}
-\contentsline {section}{\numberline {7}Phisical system implementation}{15}
-\contentsline {subsection}{\numberline {7.1}Raspberry Pi}{15}
-\contentsline {section}{\numberline {8}Conclusions}{15}
-\contentsline {subsection}{\numberline {8.1}Beyond the scope}{15}
+\contentsline {section}{\numberline {3}Batch state detection system}{8}
+\contentsline {subsection}{\numberline {3.1}System design}{8}
+\contentsline {subsection}{\numberline {3.2}Detecting batch state with camera image}{8}
+\contentsline {subsection}{\numberline {3.3}Detection algorithm}{10}
+\contentsline {subsection}{\numberline {3.4}Algorithm programming}{11}
+\contentsline {section}{\numberline {4}Egg yolk detection}{11}
+\contentsline {subsection}{\numberline {4.1}Methods overview}{11}
+\contentsline {subsection}{\numberline {4.2}Circle Hough Transform (CHT)}{12}
+\contentsline {subsection}{\numberline {4.3}Erosion and Dilatation}{13}
+\contentsline {subsection}{\numberline {4.4}Gaussian blur}{14}
+\contentsline {subsection}{\numberline {4.5}Channeling and HSV conversion}{15}
+\contentsline {subsection}{\numberline {4.6}Using the methods}{15}
+\contentsline {subsection}{\numberline {4.7}Finding optimal parameter values}{15}
+\contentsline {subsection}{\numberline {4.8}Overfitting}{15}
+\contentsline {section}{\numberline {5}Contaminated product recognition}{15}
+\contentsline {subsection}{\numberline {5.1}General idea}{15}
+\contentsline {subsection}{\numberline {5.2}Thresholding}{15}
+\contentsline {subsection}{\numberline {5.3}Using the methods}{17}
+\contentsline {section}{\numberline {6}Choosing detection system parameters}{17}
+\contentsline {subsection}{\numberline {6.1}Manual parameters finding}{17}
+\contentsline {subsection}{\numberline {6.2}Brute force testing}{17}
+\contentsline {section}{\numberline {7}Phisical system implementation}{17}
+\contentsline {subsection}{\numberline {7.1}Raspberry Pi}{17}
+\contentsline {section}{\numberline {8}Further research and development}{18}
+\contentsline {subsection}{\numberline {8.1}Operating Systems}{18}
+\contentsline {subsection}{\numberline {8.2}Platforms}{19}
+\contentsline {subsection}{\numberline {8.3}Server and logging}{19}
+\contentsline {subsection}{\numberline {8.4}Machine learning}{19}
+\contentsline {section}{\numberline {9}Conclusions}{19}

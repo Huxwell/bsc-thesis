@@ -10,6 +10,7 @@
 \titleformat*{\subsection}{\fontsize{13pt}{2}\bfseries}
 \titleformat*{\subsubsection}{\fontsize{13pt}{2}\bfseries}
 \usepackage[T1]{fontenc}
+\usepackage{listings}
 \usepackage{mathptmx}
 \usepackage{graphicx}
 \usepackage{enumitem}
@@ -19,18 +20,19 @@
 
 \tableofcontents
 
-The scope of this work is process of creating a device that automatically assigns broken eggs one of the three following classes: intact yolk, damaged yolk, clear line.
+fragment streszczenia:
+The scope of this work is process of creating a device that automatically assigns broken eggs one of the three following classes: intact yolk, damaged yolk, clear line.\\
 The implementation of such device will be preceded with research that compares various methods of recognizing the camera image, taking into account their performance in terms of computation resources, and in terms of correctness of the recognition
 
 \section{Introduction}
 \subsection{Research scope}
-In 2014 creation of  camera based  module for chicken egg processing machines was requested by OVO-TECH company (the client).
-The module is supposed to increase quality of egg-mass based  products made with use of  client machines.
+In 2014 creation of  camera based  module for chicken egg processing machines was requested by OVO-TECH company (the client).\\
+The module is supposed to increase quality of egg-mass based  products made with use of  client machines.\\
 
-During last 4 years multiple attempts were made by client to separate whites from yolks of freshly broken eggs in a mechanic way. 
+During last 4 years multiple attempts were made by client to separate whites from yolks of freshly broken eggs in a mechanic way.\\ 
 Obtained solutions proved to be working good enough for some companies, while other rejected them as imperfect and declared will to buy clients devices in the future, provided that adequate improvements will be made.
 
-The scope of this thesis is overviewing the possibilities of resolving client needs with image processing mechanisms that will optically detect state of object (batch of  intermediate product) and judge whether or not it should be discarded from the processing plant.
+The scope of this thesis is overviewing the possibilities of resolving client needs with image processing mechanisms that will optically detect state of object (batch of  intermediate product) and judge whether or not it should be discarded from the processing plant.\\
 Moreover, a process of creating a prototype device using tested method  is described.
 
 Problems such as:
@@ -101,7 +103,7 @@ More advanced OVO-TECH models such us RZ-3, RZ-6 and RZ-8 will be also considere
 
 \subsection{Problem description}
 
-If an egg processed by rz-1 machine is old or the chicken was feed improperly the yolk might be either broken already inside the egg, or might break during the cracking  phase due to cracker imperfections such us being calibrated for different size or weight eggs.
+If an egg processed by rz-1 machine is old or the chicken was feed improperly the yolk might be either broken already inside the egg, or might break during the cracking  phase due to cracker imperfections such us being calibrated for different size or weight eggs.\\
 A mixture of damaged yolk and white is created in a result, and it’s not possible to separate it into two initial components using  the rz-1 separation  module.
 
 Batch of such mixture should be removed from  the processing plant, since it would contaminate pure egg white product otherwise. 
@@ -121,15 +123,15 @@ Batch of such mixture should be removed from  the processing plant, since it wou
 
 \subsection{Demand for improvements}
 
-Nine companies were inquired whether or not would they invest in improved Ovo-tech machine, provided that egg white will be visually clean of yolk parts. 
-Seven of them replied positively that they would seriously consider such offer since their processing plants would benefit in terms of product quality or manpower cost on such improvement.
+Nine companies were inquired whether or not would they invest in improved Ovo-tech machine, provided that egg white will be visually clean of yolk parts.\\
+Seven of them replied positively that they would seriously consider such offer since their processing plants would benefit in terms of product quality or manpower cost on such improvement.\\
 Remaining 2 companies did not answer the question.
 
-One should consider why better separation is a requirement for those companies.
+One should consider why better separation is a requirement for those companies.\\
 Following reasons were presented:
 
-- Confectionaries and bakeries utilize egg white foam as an ingredient for their products. 
-Egg white foam is obtained by aeration (also known as beating / foaming / whipping) process.
+- Confectionaries and bakeries utilize egg white foam as an ingredient for their products.\\
+Egg white foam is obtained by aeration (also known as beating / foaming / whipping) process.\\
 Comprehensive process description was provided by one of the bakers:
 
 "When air is incorporated into a liquid or viscous solution, the solution entraps the air bubbles, forming a foam. If the foam is stabilized by proteins, it leavens a food, increasing its height and reducing its density. The viscosity of all egg products is ideal for incorporating air cells during the whipping or beating process. As whipping or beating progresses, air bubbles decrease in size and increase in number, all the time surrounded by egg proteins. Liquid egg products have low air-liquid interfacial tension; thus, when eggs are beaten or whipped, the proteins denature, or simply, they unfold. This exposes two oppositely charged ends of the protein molecule: the hydrophobic, or water-hating end, and the hydrophilic, or water-loving ends. The proteins align themselves between the air and water, securing the air bubbles with their hydrophilic chains pointing into the water and dangling their hydrophobic chains in the air. During baking, these proteins bond with each other, forming a delicate, yet reinforced network.
@@ -141,17 +143,17 @@ Whole eggs and egg yolks can also increase the volume of foods, including certai
 - Ovo-tech observed that a simple dependence exists: the older the egg is, the more likely its yolk is degenerated inside the egg shell.
 Thus eliminating the batches containing fuzzy yolk should decrease chances of accidentally processing the contaminated eggs, while the risk of egg contamination generally increases with egg age.
 
-- One of the Ovo-tech clients is a biotechnology company that manufacture medicine out of genetically modified eggs.
-The company purchased some ovo-tech machines, but is nevertheless displeased with their separation ratio.
-This company currently is undergoing a procedure of obtaining US Food Drug Administration (FDA) approval for wide distribution of their egg-based medicine.
-Executives of this client suspect that using machines with better egg separation will increase their chance for positive outcome of above process.
+- One of the Ovo-tech clients is a biotechnology company that manufacture medicine out of genetically modified eggs.\\
+The company purchased some ovo-tech machines, but is nevertheless displeased with their separation ratio.\\
+This company currently is undergoing a procedure of obtaining US Food Drug Administration (FDA) approval for wide distribution of their egg-based medicine.\\
+Executives of this client suspect that using machines with better egg separation will increase their chance for positive outcome of above process.\\
 A non-disclosure agreement was signed between this client and ovo-tech, thus further expanding this topic in scope of this thesis is not possible.
 
 
 \section{Problem analysis}
 \subsection{Establishing framework for product cleanness assessment}
 
-The requirement is to create a system able to detect all badly-cracked eggs.
+The requirement is to create a system able to detect all badly-cracked eggs.\\
 After request for clarification, client made 60+ pictures of product during machine operation and classified them manually, thus requirement is less ambiguous.
 
 Client decided that intact egg yolks should be removed from processing line if:
@@ -182,7 +184,7 @@ also, there is no need to do anything when:
 \end{figure}
 Source: own materials 
 
-Also, a problem is constituted by chalaza – a usually white element that is attached to egg yolk for in-egg suspension.
+Also, a problem is constituted by chalaza - a usually white element that is attached to egg yolk for in-egg suspension.\\
 Despite the fact, that client decided that chalaza position and amount are irrelevant to him, its appearance may increase difficulty of the recognition problem if identified as parts of damaged egg yolk.
 
  
@@ -212,6 +214,35 @@ Nevertheless, both of them had to be rejected, since intact yolks presence in th
 
 Finally, using images of the batch obtained from camera and processing it was chosen as a most promising option for further research.
 
+
+
+
+
+
+
+
+
+\section{Batch state detection system}
+
+\subsection{System design}
+
+
+Firstly the preprocessing will be done to eliminate unimportant data (reduce the dimensionality), reduce noises and extract interesting image areas.
+
+Secondly the image will be segmented to extract egg yolk (whole and damaged).
+
+Thirdly two options will be tested:\\
+- The undamaged egg yolks will be detected and deleted from the image. Than the amount of remaining yolk parts will be counted. If it will exceed the threshold value, the signal for removing the product batch will be sent.\\
+- The extracted egg yolk will be graded in terms of shape similarity to a single, intact yolk
+
+The best obtained combination of preprocessing, segmentation and grading parameters will be used in a final algorithm that will be implemented in Raspberry Pi 2 device with camera module, and than tested in the Rz-1 processing plant.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\paperwidth]{system}
+\caption{System design}
+\end{figure}
+
 \subsection{Detecting batch state with camera image}
 
 When it comes to assessment of camera image, 4 approaches are widely considered:
@@ -221,51 +252,57 @@ When it comes to assessment of camera image, 4 approaches are widely considered:
 \item Machine learning approach
 \item Neural networks which are used as a special case of either machine learning process or a part of it 
 \end{enumerate}
-First case was considered, since it could be implemented on Arduino Uno, other ATMega based platform or real-time systems working on PLC controllers such as LOGO! 7, which are often used in factories due to their reliability (apart from Stuxnet-class worms, that has been firstly observed in 2010, no other security threads are believed to exist).
+First case was considered, since it could be implemented on Arduino Uno, other ATMega based platform or real-time systems working on PLC controllers such as LOGO! 7, which are often used in factories due to their reliability (apart from Stuxnet-class worms, that has been firstly observed in 2010, no other security threads are believed to exist).\\
 Unfortunately, the problem is more complex than simply deciding whether the product is present or not; or whether the product is yellow or not, thus more advanced processing is required.
 
 Second case will be expanded in the next subchapter and has been chosen as main method that will be implemented and tested in this thesis.
 
-Last two approaches will be tested if the 2nd approach will provide to be insufficient.
+Last two approaches will be tested if the 2nd approach will provide to be insufficient.\\
 It is worth mentioning, that for (3) Support Vector Machines was considered, since it classifies data to exactly two classes (i.e. proper and improper egg mass).
 
-Also, Haar Features Cascade was tested, but data amount obtained for testing was insufficient, and the methods popular implementations are focused on locating the particular object on image rather than on comparing two pattern cases.
-(4) Case was considered and the author build a multilayered perceptron network working with MNIST database in order to better understand the method.
+Also, Haar Features Cascade was tested, but data amount obtained for testing was insufficient, and the methods popular implementations are focused on locating the particular object on image rather than on comparing two pattern cases.\\
+(4) Case was considered and the author build a multilayered perceptron network working with MNIST database in order to better understand the method.\\
 The method application will be researched further on beyond the scope of this work.
 
 
 
+\subsection{Detection algorithm}
 
-
-\subsection{Chosen method structure}
-
-Firstly the preprocessing will be done to eliminate unimportant data (reduce the dimensionality), reduce noises and extract interesting image areas.
-
-Secondly the image will be segmented to extract egg yolk (whole and damaged).
-
-Thirdly two options will be tested:
-- The undamaged egg yolks will be detected and deleted from the image. Than the amount of remaining yolk parts will be counted. If it will exceed the threshold value, the signal for removing the product batch will be sent.
-- The extracted egg yolk will be graded in terms of shape similarity to a single, intact yolk
-
-The best obtained combination of preprocessing, segmentation and grading parameters will be used in a final algorithm that will be implemented in Raspberry Pi 2 device with camera module, and than tested in the Rz-1 processing plant.
-\section{Batch state detection system}
-\subsection{System design}
-lorem ipsum
-\subsection{Detection Algorithm}
-lorem ipsum
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\paperwidth]{algorithm}
+\includegraphics[width=0.5\paperwidth]{algorithmV}
 \caption{Detection Algorithm}
 \end{figure}
-lorem ipsum
+
+
+\subsection{Algorithm programming}
+Decision have been made, to utilise OpenCV computer vision library for batch state recognition.\\
+OepnCV is designed for computational efficiency, with strong focus on real-time applications.\\
+It has been written in optimised C and takes advantages of multicore processors.\\
+It provides simple-to-use interfece that enables building sophisticated computer vision solutions.\\
+The library features more than 500 functions that process images, a general Machine Leraning Library (including Multilayered Perceptron Networks).\\
+It is used since 1999 by major institutions such as Stanford University and is mantained and developed by specialists from companies such us IBM, Microsoft, Intel, Sony, Siemens, and Google.\cite{learnopencv}
+
+First recognition attempts were done by the author of thesis using Android 4.3 running on Samsung N7100 Galaxy Note II smarpthon, utilising its build in camera.\\
+The initial code was written with use of Java distribution of OpenCV library, as well as Android SDK.\\
+Sadly, the performance of developed pre-prototype was very poor and a single frame was processed in more than 3 seconds.\\
+Another version was build in a way that most resource consuming operations (such us Hough Circle Transform and all array operations) were rewritten in C language.\\
+For that purpouse original C version of OpenCV was utilised, as well as NDK (Native Development Kit for Android).
+
+Nevertheless, author of this thesis, decided that despite Android aviability for embedded platforms, it is no a platform suitable for factory tasks, due to big overhead, long booting and variety of functions that will not be utilised.
+
+Raspbian Linux "Jessie" distribution was picked as the adequate one to host recognition algorithm accopmanied with Python 2.7 language.\\
+Python is well supported on Raspian, it produces small amount of code, and can be executed fast in terms of computational time if the speciffic C-written functions are called.\cite{performance}\\
+For author, a case occured, that 39-lines code snippet that recognise nested regions of image, written in C took only 6 code lines after rewritting it in Python.
+
+
 \section{Egg yolk detection}
 \subsection{Methods overview}
-An egg yolk, when intact and fresh can be approximated with sphere which projects as circle-like shape on 2D image.
-Methods presented below enable to filter out the unnecessary noise, simplify the image and detect the yolk shape.
+An egg yolk, when intact and fresh can be approximated with sphere which projects as circle-like shape on 2D image.\\
+Methods presented below enable to filter out the unnecessary noise, simplify the image and detect the yolk shape.\\
 While not all of them were used in the final detection algorithm, they were giving promising results on the early stage prototypes.
 
-Following methods treat images as 1, 8, or 24-bit encoded matrices, thus both terms are used synonymously. 
+Following methods treat images as 1, 8, or 24-bit encoded matrices, thus both terms are used synonymously.\\
 x and y denote pixel position.
 
 \subsection{Circle Hough Transform (CHT)}
@@ -273,10 +310,10 @@ Circle Hough Transform is an algorithm used for retrieving 3 parameters defining
 - (xc, yc) - position of shapes center
 - r - its radius
 
-To understand the way CHT works, simplified case is considered:
-The image is 1-bit encoded; the radius r and position (xp,yp) of a point lying on the searched circle are known.
-Potential circles space is created by treating points on a circle of radius r centered in (xp,yp) as centers for potential circles.
-For every potential circle, number of intersecting points is counted.
+To understand the way CHT works, simplified case is considered:\\
+The image is 1-bit encoded; the radius r and position (xp,yp) of a point lying on the searched circle are known.\\
+Potential circles space is created by treating points on a circle of radius r centered in (xp,yp) as centers for potential circles.\\
+For every potential circle, number of intersecting points is counted.\\
 The potential circle with largest number of intersections is chosen as the best fitting one.
 
  
@@ -286,8 +323,8 @@ The potential circle with largest number of intersections is chosen as the best 
 \caption{Potential circles space\cite{craters}}
 \end{figure}
 
-In the full cases, such procedure is repeated for every image point, and the intersections numbers are stored in accumulation matrix.\cite{hgt}
-To reduce computation time and false detection rate, minimum distance between image centers is given as a parameter min-dist.
+In the full cases, such procedure is repeated for every image point, and the intersections numbers are stored in accumulation matrix.\cite{hgt}\\
+To reduce computation time and false detection rate, minimum distance between image centers is given as a parameter min-dist.\\
 Threshold value param-2 is defined as minimum number of intersections to treat circle candidate as detected circle.
  
 \begin{figure}[H]
@@ -296,15 +333,15 @@ Threshold value param-2 is defined as minimum number of intersections to treat c
 \caption{Accumulation matrix with two good circle candidates\cite{hgt}}
 \end{figure}
 
-If r is unknown, min-radius and max-radius parameters are defined, and the algorithm repeats the procedure for all possible integer r in range of above parameters.
-OpenCV utilizes Canny edge detector for finding the potential intersection points, thus operates not only on 1-bit images, but also in 8-bit grayscale and 24-bit bgr images and provides smaller number of false positives.\cite{mastercv}
+If r is unknown, min-radius and max-radius parameters are defined, and the algorithm repeats the procedure for all possible integer r in range of above parameters.\\
+OpenCV utilizes Canny edge detector for finding the potential intersection points, thus operates not only on 1-bit images, but also in 8-bit grayscale and 24-bit bgr images and provides smaller number of false positives.\cite{mastercv}\\
 param-1 is introduced as higher threshold for Canny edge detector, while the lower threshold is set to 0.5 * param-1\cite{fd} .
 
 
 \subsection{Erosion and Dilatation}
-Erosion and dilatation are two morphological filters that enable to filter out unnecessary noise from the image.
-Combined, they leave the core information (biggest blobs) intact or amplified, while small elements are deleted.
-It is easily applied to binary images:
+Erosion and dilatation are two morphological filters that enable to filter out unnecessary noise from the image.\\
+Combined, they leave the core information (biggest blobs) intact or amplified, while small elements are deleted.\\
+It is easily applied to binary images:\\
 A ROI (region of interest, a rectangular part of image) moves through image pixel by pixel and is compared to previously defined kernel (binary matrix, usually symmetric with respect to both diagonals).
 
  
@@ -314,12 +351,12 @@ A ROI (region of interest, a rectangular part of image) moves through image pixe
 \caption{A diamond-shaped kernel\cite{morph}}
 \end{figure}
 
-The consecutive pixels of on ROI that matches kernel elements with value 0 remain intact.
-Pixels of ROI that matches kernel 1-valued elements changes to:
-1-ns if at least one of them is 1 for Dilatation
+The consecutive pixels of on ROI that matches kernel elements with value 0 remain intact.\\
+Pixels of ROI that matches kernel 1-valued elements changes to:\\
+1-ns if at least one of them is 1 for Dilatation\\
 0-s if at least one of them is 0 for Erosion.
 
-Erosion gives the effect of ‘shrinking’ the objects (and if they are small enough, they are deleted).
+Erosion gives the effect of ‘shrinking’ the objects (and if they are small enough, they are deleted).\\
 Dilatation makes the objects bigger.
 
  
@@ -330,7 +367,7 @@ Dilatation makes the objects bigger.
 \end{figure}
 
 
-When these methods are used multiple times, and convoluted, they filter out the noise.
+When these methods are used multiple times, and convoluted, they filter out the noise.\\
 Perimeter Determination and Skeletonization are widely used contour detection functions which utilize erosion and dilatation\cite{erdil}.
 
 
@@ -350,7 +387,7 @@ Gaussian blur drastically reduces number of false-positive Hough circles detecti
 \end{figure}
 
 
-sigma, ksize.width, ksize.height  parameters are introducted. 
+sigma, ksize.width, ksize.height  parameters are introducted.\\
 Ksize stands for size of precomputed kernel, that is convoluted with ROIs on the image.
 
 The term ‘convolution’ might be misleading and for the scope of image processing tasks is defined as picewise multipling two matrices and than summing the obtained values:
@@ -374,6 +411,9 @@ The term ‘convolution’ might be misleading and for the scope of image proces
 
 \subsection{Channeling and HSV conversion}
 lorem ipsum
+\subsection{Using the methods}
+\lstinputlisting[language=Python]{yolk.py}
+
 \subsection{Finding optimal parameter values}
 lorem ipsum
 \subsection{Overfitting}
@@ -383,14 +423,18 @@ lorem ipsum
 lorem ipsum
 \subsection{Thresholding}
 
-Thresholding is a simple case of image segmentation.
-It can be used to convert one channel (in most cases grayscale) image to binary image.
-The basic binary thresholding mode sets every pixel of destination matrix to
-	0 if the source matrix value is smaller than threshold (integer parameter)
-	1 if the source matrix value is bigger than threshold.
+Thresholding is a simple case of image segmentation.\\
+It can be used to convert one channel (in most cases grayscale) image to binary image.\\
+The basic binary thresholding mode sets every pixel of destination matrix to:
+\begin{itemize}
+\item 0 if the source matrix value is smaller than threshold (integer parameter)
+\item 1 if the source matrix value is bigger than threshold.
+\end{itemize}
 The truncate version sets every pixel of destination matrix to
-	threshold if the source matrix value is smaller than threshold, or
-	leaves it unaltered otherwise.
+\begin{itemize}
+\item threshold if the source matrix value is smaller than threshold, or
+\item leaves it unaltered otherwise.
+\end{itemize}
 Various modes and modifications are used depending on coding schema and colors distribution.
   
 \begin{figure}[H]
@@ -401,13 +445,13 @@ Various modes and modifications are used depending on coding schema and colors d
 
 
 
-Finding optimal threshold value finding is a time consuming process and it often gives satisfactory results only for small set of images.
+Finding optimal threshold value finding is a time consuming process and it often gives satisfactory results only for small set of images.\\
 Therefore Otsu Binarization algorithm for automatically selecting threshold is used.
 
-Moreover using one threshold value for whole image may not work properly if the lighting conditions differ in different image areas.\cite{thre}
-Adaptive Thresholding utilize different threshold values for different ROIs. 
-Two modes are often used: Adaptive Mean and Adaptive Gaussian.
-First compute threshold value as mean of neighborhood values.
+Moreover using one threshold value for whole image may not work properly if the lighting conditions differ in different image areas.\cite{thre}\\
+Adaptive Thresholding utilize different threshold values for different ROIs.\\
+Two modes are often used: Adaptive Mean and Adaptive Gaussian.\\
+First compute threshold value as mean of neighborhood values.\\
 Second uses weighted sum neighborhood values.
  
 \begin{figure}[H]
@@ -431,20 +475,73 @@ For more general cases (i.e. multichannel images, assigning more colors) cluster
 \includegraphics[width=0.4\paperwidth]{kmeans}
 \caption{K-means clustering method for k = 16\cite{segm}}
 \end{figure}
+\subsection{Using the methods}
+\lstinputlisting[language=Python]{contaminated.py}
 
 \section{Choosing detection system parameters}
+\subsection{Manual parameters finding}
+
 \subsection{Brute force testing}
 lorem ipsum
 \section{Phisical system implementation}
 \subsection{Raspberry Pi}
 lorem ipsum
+\section{Further research and development}
+
+Work on the solution developed in this thesis will be continued further on by the author and OVO-TECH company.\\
+The following alternative approaches and improvements in detection system will be taken into consideration
+\subsection{Operating Systems}
+Using alternative system operating on Rasperry Pi 2 platform might improve image processing performance. Therefore, more frames per second could be analized, more filters can be applied and higher resolution pictures could be used.
+Among over 20 avaliable ARM systems, presented below are most promising:
+\begin{itemize}
+  \item Minibian - a Raspbian image that is resource optimised.\\
+  Its current Raspian "Jessie" based version boots in 14secs, use only 29MB RAM and takse 451MB (compared to 1,2GB in original version). \\GUI, aplication clients, office suite and other non-necessary packages have been removed.\\ The image is targeted for embedded or server applications (NAS, Web server, electronic applications).
+  \item Arch Linux ARM
+  \item Gentoo
+  \item SliTaz
+  \item Windows 10 IoT Core - embedded solution developed by Microsoft. Guarantees extensive technical support.
+\end{itemize}
+
+Largest reliability and performance benefits are expected from using realtime-capable systems.\\
+Following solutions are avaliable or developed for Raspberry Pi:
+
+\begin{itemize}
+  \item RISC OS
+  \item Xenomai
+  \item PREEMPT\_RT kernel patch and High Resolution Timers\cite{stackos}
+  \item ChibiOS/RT\cite{chibi}
+  \item RODOS - an Open Source kernel project developed by the German Aerospace Center and Prof. Montenegro's University\cite{rodos}
+\end{itemize}
+
+Nevertheless advanced image processing, GPU access, utulisation of existing graphics libraries might be not avaliablie or require amount of effort unproportional to those benefits.\\
+Also, external real-time clock (such as AD9850 Pulse generator) might be required.
+
+\subsection{Platforms}
+\begin{itemize}
+  \item Arduino Uno R3 accompanied with DS1307 Real Time Clock - considered, but for now the image processing is to extensive in terms of image processing.\\
+  Having extremly cheap clones (4-20\$ on retail market) that fetures often stronger ATMega units is an advantage altough.
+  \item Intel Galileo Gen 2 - based on Intel Quark 32-bit SoC X1000 processor, provides pins-compatible with shields designed for the Arduino Uno R3, what makes communication with other OVO-TECH machine modules easier and allows use of the mentioned above RTC.
+  \item PandaBoard - the OMAP4430 features 1 GHz dual-core ARM Cortex-A9 MPCore CPU (a big improvement compared to Cortex-A7 CPU in Raspberry Pi 2), 304 MHz GPU, and 1 GiB DDR2 SDRAM.\\
+  What is interesting, it provides a real-time clock, what makes it a candidate for real-time system (see section 8.1).
+  \item BeagleBoard xM - based on dual, 1,5GHz clocked ARM Cortex-A15  + dual ARM M4, 532 MHz GPu, often used with RISC-OS, having cheaper clones with more RAM.\\It is considered a stronger Raspberry Pi alternative.
+  \item Nvidia Jetson TK1 - build on quad ARM Cortex-A15, NVIDIA Kepler 192-cores CUDA GPU, 2 GiB RAM, optimised for OpenGL and OpenCV, equiped with SATA connector.\\
+  TK1 is the stronggest avaliable unit, what makes it also the most expensive one.
+
+\end{itemize}
+\subsection{Server and logging}
+Gathering the data about egg quality, recognition performance a
+d effectiveness is a possibility that has to be addressed.\\
+Raspberry Pi 2 platform is capable of working as a server and thus provide system manufacturer a remote access to the its operations.
+\subsection{Machine learning}
 \section{Conclusions}
-\subsection{Beyond the scope}
-lorem ipsum
 
 
-All the Web. sources have been checked for availability in November 2015.
-Web links are not included if articles are to be immediately found with search engines, which is consistent to MLN referencing convention.
+
+
+
+
+All the Web. sources have been checked for availability in November 2015.\\
+Web links are not included if articles are to be immediately found with search engines, which is consistent to MLN referencing convention.\\
 For modified web documents, date of last modification is shown.
 
 
@@ -468,6 +565,15 @@ Deng X., Wang Q., Chen H., Xie H.
 Ketelaerea B.,Bamelisa F., Kempsa1 B., Decuyperea1 E., Baerdemaekera J.
 \textit{Non-destructive measurements of the egg quality} World's Poultry Science Journal, Volume 60 / Issue 03,  Cambridge University Press, Print. 2004
  
+\bibitem{learnopencv}
+Bradski G. ,Kaehler A.
+\textit{Learning OpenCV: Computer Vision with the OpenCV Library} O'Reilly Media Inc., Print 2009
+
+
+\bibitem{performance} 
+Gorelick M., Ozsvald I.
+\textit{High Performance Python: Practical Performant Programming for Humans} O'Reilly Media Inc., Print 2014
+
 \bibitem{hgtcv} 
 Opencv Dev Team
 \textit{Hough Circle Transform} OpenCV 2.4.12.0 Documentation, Web. 2014
@@ -523,6 +629,20 @@ Barghout L., Sheynin J.
 \bibitem{segm} 
 Barghout L., Sheynin J.
 \textit{Image segmentation} Wikipedia, Wikimedia Foundation Inc, Web. 2015
+
+\bibitem{stackos} 
+Gupta V.
+\textit{Patchwork Gaurantee spinlocks implicit barrier for PREEMPT\_COUNT} The Linux Kernel Archives, Web. 2013
+
+\bibitem{chibi}
+Bate S.
+\textit{ChibiOS/RT on the Raspberry Pi} ChibiOS EmbeddedWare Web. 2015
+
+\bibitem{rodos}
+Montenegro S., Dannemann F. 
+\textit{Real Time Kernel Design for Dependability} DASIA 2009 DAta Systems In Aerospace, Paper. 2009
+
+
 
 \end{thebibliography}
 

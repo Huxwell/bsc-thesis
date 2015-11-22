@@ -1,0 +1,1 @@
+s_c = cv2.morphologyEx(s_c, cv2.MORPH_OPEN, cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(dilate_size,dilate_size)))
