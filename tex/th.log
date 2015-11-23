@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.2.7)  22 NOV 2015 16:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.2.7)  23 NOV 2015 19:31
 entering extended mode
 **th.tex
 (C:\Users\Orley\Desktop\thesis\docs\tex\th.tex
@@ -544,74 +544,128 @@ gs/conv.png>]
 ang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 ) (C:\Users\Orley\Desktop\thesis\docs\tex\yolk.py
-Overfull \hbox (41.56094pt too wide) in paragraph at lines 4--5
-[][][][][][][][][][][][][][][][][][][][][][] 
+Overfull \hbox (19.96072pt too wide) in paragraph at lines 10--11
+[][][][][][][][][][][][][][][][][][][][][] 
  []
 
-)
-Overfull \hbox (19.96072pt too wide) in paragraph at lines 5--459
-[][][][][][][][][][][] 
- []
-
-<imgs/thr.png, id=73, 601.24625pt x 408.52625pt>
+) <imgs/thr.png, id=73, 601.24625pt x 408.52625pt>
 File: imgs/thr.png Graphic file (type png)
  <use imgs/thr.png>
-Package pdftex.def Info: imgs/thr.png used on input line 486.
+Package pdftex.def Info: imgs/thr.png used on input line 482.
 (pdftex.def)             Requested size: 238.9995pt x 162.39153pt.
  [16 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/micro.png>]
-<imgs/thremeth.png, id=77, 606.265pt x 605.26125pt>
+<imgs/thremeth.png, id=78, 606.265pt x 605.26125pt>
 File: imgs/thremeth.png Graphic file (type png)
  <use imgs/thremeth.png>
-Package pdftex.def Info: imgs/thremeth.png used on input line 503.
+Package pdftex.def Info: imgs/thremeth.png used on input line 499.
 (pdftex.def)             Requested size: 238.9995pt x 238.59993pt.
 
-<imgs/diffthr.png, id=78, 589.0005pt x 444.4605pt>
+<imgs/diffthr.png, id=79, 589.0005pt x 444.4605pt>
 File: imgs/diffthr.png Graphic file (type png)
  <use imgs/diffthr.png>
-Package pdftex.def Info: imgs/diffthr.png used on input line 509.
+Package pdftex.def Info: imgs/diffthr.png used on input line 505.
 (pdftex.def)             Requested size: 238.9995pt x 180.3514pt.
 
 Underfull \vbox (badness 6348) has occurred while \output is active []
 
  [17 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/thr.png> <C:/Users/Orley/Desk
-top/thesis/docs/tex/imgs/thremeth.png>] <imgs/kmeans.png, id=82, 382.42876pt x 
+top/thesis/docs/tex/imgs/thremeth.png>] <imgs/kmeans.png, id=83, 382.42876pt x 
 248.93pt>
 File: imgs/kmeans.png Graphic file (type png)
 
 <use imgs/kmeans.png>
-Package pdftex.def Info: imgs/kmeans.png used on input line 519.
+Package pdftex.def Info: imgs/kmeans.png used on input line 515.
 (pdftex.def)             Requested size: 238.9995pt x 155.56946pt.
- (C:\Users\Orley\Desktop\thesis\docs\tex\contaminated.py)
-Overfull \hbox (372.76431pt too wide) in paragraph at lines 1--523
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ (C:\Users\Orley\Desktop\thesis\docs\tex\contaminated.py
+Overfull \hbox (178.36234pt too wide) in paragraph at lines 11--12
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[18 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/diffthr.png> <C:/Users/Orley/D
-esktop/thesis/docs/tex/imgs/kmeans.png>] [19] [20]
-Underfull \hbox (badness 1701) in paragraph at lines 612--614
+) [18 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/diffthr.png> <C:/Users/Orley
+/Desktop/thesis/docs/tex/imgs/kmeans.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 532--536
+
+ []
+
+<imgs/manual.jpg, id=88, 487.8225pt x 527.72156pt>
+File: imgs/manual.jpg Graphic file (type jpg)
+ <use imgs/manual.jpg>
+Package pdftex.def Info: imgs/manual.jpg used on input line 541.
+(pdftex.def)             Requested size: 298.75394pt x 323.19pt.
+
+(C:\Users\Orley\Desktop\thesis\docs\tex\trackbars.py [19 <C:/Users/Orley/Deskto
+p/thesis/docs/tex/imgs/manual.jpg>])
+Underfull \hbox (badness 10000) in paragraph at lines 555--558
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 562--564
+
+ []
+
+[20] (C:\Users\Orley\Desktop\thesis\docs\tex\script.py)
+Underfull \hbox (badness 10000) in paragraph at lines 589--591
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 592--593
+
+ []
+
+(C:\Users\Orley\Desktop\thesis\docs\tex\rpi.py [21]
+Overfull \hbox (48.76102pt too wide) in paragraph at lines 5--6
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (163.96219pt too wide) in paragraph at lines 15--16
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (178.36234pt too wide) in paragraph at lines 16--17
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) [22] [23]
+Underfull \hbox (badness 10000) in paragraph at lines 671--672
+
+ []
+
+<imgs/genetic.jpg, id=105, 676.77844pt x 489.32813pt>
+File: imgs/genetic.jpg Graphic file (type jpg)
+ <use imgs/genetic.jpg>
+Package pdftex.def Info: imgs/genetic.jpg used on input line 698.
+(pdftex.def)             Requested size: 418.25368pt x 302.41711pt.
+
+[24]
+Underfull \hbox (badness 1701) in paragraph at lines 734--736
 []\T1/ptm/m/n/12 Ketelaerea B.,Bamelisa F., Kempsa1 B., De-cuyperea1 E., Baerde
 -maek-era J. \T1/ptm/m/it/12 Non-
  []
 
-[21] (C:\Users\Orley\Desktop\thesis\docs\tex\th.aux) ) 
+[25 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/genetic.jpg>] [26]
+(C:\Users\Orley\Desktop\thesis\docs\tex\th.aux) ) 
 Here is how much of TeX's memory you used:
- 4154 strings out of 493921
- 59924 string characters out of 3151769
- 142658 words of memory out of 3000000
- 7373 multiletter control sequences out of 15000+200000
- 27068 words of font info for 45 fonts, out of 3000000 for 9000
+ 4212 strings out of 493921
+ 60905 string characters out of 3151769
+ 150662 words of memory out of 3000000
+ 7418 multiletter control sequences out of 15000+200000
+ 27563 words of font info for 47 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,5n,43p,1046b,1050s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/T
-iCTeX v1.0 for windows/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files
- (x86)/TiCTeX v1.0 for windows/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-><C:/Program Files (x86)/TiCTeX v1.0 for windows/MiKTeX/fonts/type1/urw/times/u
-tmb8a.pfb><C:/Program Files (x86)/TiCTeX v1.0 for windows/MiKTeX/fonts/type1/ur
-w/times/utmr8a.pfb><C:/Program Files (x86)/TiCTeX v1.0 for windows/MiKTeX/fonts
-/type1/urw/times/utmri8a.pfb>
-Output written on th.pdf (21 pages, 2539126 bytes).
+ 27i,5n,43p,1046b,1484s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/TiCTeX
+ v1.0 for windows/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86
+)/TiCTeX v1.0 for windows/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/
+Program Files (x86)/TiCTeX v1.0 for windows/MiKTeX/fonts/type1/urw/times/utmb8a
+.pfb><C:/Program Files (x86)/TiCTeX v1.0 for windows/MiKTeX/fonts/type1/urw/tim
+es/utmr8a.pfb><C:/Program Files (x86)/TiCTeX v1.0 for windows/MiKTeX/fonts/type
+1/urw/times/utmri8a.pfb>
+Output written on th.pdf (26 pages, 2768675 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
+ 131 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
 

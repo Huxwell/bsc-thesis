@@ -1,5 +1,12 @@
-r_c = cv2.GaussianBlur(r, (kernel,kernel), 0)
-val,s_c = cv2.threshold(s,thresh,255,cv2.THRESH_BINARY)
-circ_no = 0
-circles = cv2.HoughCircles(r_c,cv2.HOUGH_GRADIENT,1,dist,param1=par1,
-                           param2=par2,minRadius=90,maxRadius=230)
+def detect_yolks(frame):
+    b,g,r = cv2.split(frame)
+    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+    h,s,v = cv2.split(hsv)
+    g = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    # ...
+    # 'c' variable - channel is chosen among the above
+    c = cv2.GaussianBlur(c, (kernel,kernel), 0)
+    c = cv2.threshold(c,threshold,255,thresholding_method)
+    circles = cv2.HoughCircles(c,cv2.HOUGH_GRADIENT,1,dist,param1,
+                               param2,minRadius,maxRadius)
+    return circles

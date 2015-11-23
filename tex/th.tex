@@ -458,10 +458,6 @@ lorem ipsum
 \subsection{Using the methods}
 \lstinputlisting[language=Python]{yolk.py}
 
-\subsection{Finding optimal parameter values}
-lorem ipsum
-\subsection{Overfitting}
-lorem ipsum
 \section{Contaminated product recognition}
 \subsection{General idea}
 lorem ipsum
@@ -525,11 +521,92 @@ For more general cases (i.e. multichannel images, assigning more colors) cluster
 \section{Choosing detection system parameters}
 \subsection{Manual parameters finding}
 
-\subsection{Brute force testing}
-lorem ipsum
+There exist a set of parameters that define the mode, that previously explained methods operate as well as their instensivity.\\
+Finding optimal values of this parameters is a hard task, since for example CHT method didn't found a single egg yolk with defualt numbers.\\
+The following values have to be found:
+\begin{description}
+\item[param1] - lorem ipsum
+\item[threshold] - lorem ipsum
+\end{description}
+
+A script was developed, that displayed over 500 pictures for 0.3 second each in a loop.\\
+Trackbars was displayed above the frames, with every trackbar coresponding to one parameter that is supposed to be chosen.\\
+Beside, the already transformed frames after transormations were shown.\\
+The expert was reviewing the output while changing the trackbar positions to obtain an image that segmentates the egg yolk properly.\\
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\paperwidth]{manual}
+\caption{Screen of running one of the scripts used for manual parameter finding}
+\end{figure}
+
+Script crucial fragments:
+
+\lstinputlisting[language=Python]{trackbars.py}
+
+Unfortunately, while some parameters sets worked fine for some image sets, they failed with another ones.\\
+Nevertheless, the interesting intervals were obtained for each trakcbar. These intervals guaranteed that at least some of the graded images are segmentated in exptected way.\\
+This method resulted in excluding most parameters values and vastly reducting the optimising problem size.
+
+\subsection{Automatic parameters finding}
+
+A decision was made, to automatise process of assesing the segmentation and detection efficiency to get to optimal set of parameters.\\
+This process was done twice:\\
+\begin{description}
+\item[Firstly,] the egg yolk detection process was optimised.
+\item[Secondly,] the contaminated product detection utilising the previously otpimised egg yolk detector was perfected.
+\end{description}
+
+To accomplish first objective, avaliable images were devided into 3 subsets for first process:\\
+\begin{itemize}
+\item 0 intact yolks visible in a frame
+\item 1 egg present
+\item 2 eggs present
+\end{itemize}
+For the whole set, the recognition error was defined  as sum of missdetections for every subset.\\
+A simmilar procedure was conducted for second objective: the same images were devided into following subsets:
+\begin{itemize}
+\item Contaminated batches
+\item Batches with either only intact eggs or no egg mass at all
+\end{itemize}
+Error was defined as false negatives (good batch recognised as bad batch) number summed with false positives number multiplied by 3.\\
+Multipilication by '3' weight was conducted on false positives, since keeping the product clean is more important for the client, that utilising all the egg mass. 
+
+A script was developed, that automatically loaded the images and graded them for different parameter values.\\
+This process was very expensive in terms of processing time, and the parameters range and step was choosen to fill a night of i7-3520M 8GB RAM computer work.\\
+It was computed in a following way: elapsed time of one full imageset testing multiplied by number of possible paramter sets.\\
+The process was repeted by the author multiple times with different parameter intervals discovered in a process descriped in previous subsection.\\
+Various effort were made by the author to optimise imageset grading process, so bigger variety of parameters can be checked.\\
+Initialy, files were open prior to every image evaluation, later on all the images were loaded once, and every processing (channel spliting, colorscale conversion) was conducted before execution of the code nested in multiple loops.
+
+Crucial parts of the testing code:
+\lstinputlisting[language=Python]{script.py}
+
+
+\subsection{Overfitting}
+Overfitting is an unwanted effect that appears often in statistics and supervised machine learning.\\
+Overfitting means, that parameters of some model are fitting the specific modeled data case, rather than the general model.\\
+
+In this case it means, that the parameters of image processing that were found, maximise the recognition efficiency for the data provided by OVO-TECH, while a new data (with different kind of eggs, different kind of noise or with images made in different conditions) can be classified in improper way.\\
+
+Overfitting occurs mostly if:
+\begin{itemize}
+\item A set of sample data is too small
+\item A set of sample data is not diverse enough
+\item No regularisation or cross-validation methods are used
+\end{itemize}
+
+To reduce this effect, author used different dataset for getting the transform parameters, and different set (excluded 10% of data from every sample subset) for assesing the recognition quality.
+
+During protoype in factory testing and further development this issue will be addressed in extended way.
+
 \section{Phisical system implementation}
-\subsection{Raspberry Pi}
-lorem ipsum
+\subsection{Phisical Platform}
+\subsection{Camera module}
+\subsection{Programming raspberry pi}
+\lstinputlisting[language=Python]{rpi.py}
 \section{Further research and development}
 
 Work on the solution developed in this thesis will be continued further on by the author and OVO-TECH company.\\
@@ -573,11 +650,56 @@ Also, external real-time clock (such as AD9850 Pulse generator) might be require
 
 \end{itemize}
 \subsection{Server and logging}
-Gathering the data about egg quality, recognition performance a
-d effectiveness is a possibility that has to be addressed.\\
+Gathering the data about egg quality, recognition performance and effectiveness is a possibility that has to be addressed.\\
 Raspberry Pi 2 platform is capable of working as a server and thus provide system manufacturer a remote access to the its operations.
-\subsection{One month prtotype testing and enviroment of work tuning}
-\subsection{Obtaining more image data in better quality}
+\subsection{One month prototype testing and enviroment of work tuning}
+
+The prototype will be attached to the rz-1 machine operating at OVO-TECH headquaters for a month.\\
+During that time, led lights will indicate proper and improper egg batch.\\
+Recognition efficiency is now > 90\%. Two cases may occur, when the device is operating in working enviroment:
+\begin{itemize}
+\item Recognising efficiency will rise dramaticly, since the camera position will be fixed, and the background (separation module slope) will have uniform facture and color.\\
+The data provided by OVO-TECH for prototype construction covered various situations and backgrounds that will be invariant in factory application.
+\item Recognising efficiency will drop, due to varying egg quality, color and shape.
+\end{itemize}
+
+Two things will be done to improve image material quality registered by camera:
+\begin{itemize}
+\item Polarizing filter will be attached to the camera.
+\\It should eliminate or drasticlly decrease amount of white light reflexes.\\
+Those reflexes that make yolk appear as non-yolk at segmentated image.
+\item Lighting will be uniform due to covering camera and a fragment of transportation slope in a box-like container with invariant, non-shadowing lights inside of it.\\
+\end{itemize}
+
+
+\subsection{Testing new approaches}
+Current results (over 90% recognition efficiency
+
+Two approaches have came up after the prototype development and are to be implemented and tested:
+
+\begin{itemize}
+\item Circularity testing - height of the segmented yolk flow can be treated as a circle diameter. Than, area of obtained circle can be compared to area of observed egg yolk. If the difference is significant, it indicates that observed blob is not a whole egg.\\
+Using a derived method for positioning the center of such circle might work better than methods used up to now if a noncomplete part of egg is visible at the image.
+\item Watershed algorithm accompanied with extracting peaks of Euclidean Distance Transform is belived to work better than contour detection and thresholding methods with touching or overlapping objects.\\
+It might provide efficiency boost in case of RZ-1 processing plant operating in modes faster than precise mode.\cite{watershed}
+\end{itemize}
+
+\subsection{Obtaining more image data and parameters tuning}
+
+Larger dataset of more different egg types will enable to better tune the processing parameters.\\
+Since there are more than 10 parameters to adjust and the number of operations that are required rise exponentialy with parameters number and is multipied by sample amount, optimising such multivariate function is a hard task.\\
+Genetic algorithms are known to be a good metaheuristics for such tasks and should give better results in much less computation time that brute force parameter testing.\\
+Author developed a program that implements genetic algorithm in Java, that optimises 1,2 and 3-variate functions to understand and learn the genetic algorithm concepts.\\
+Further on, a ready, popular library will be used for this purpouse: a DEAP genetic programming library for Python.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\paperwidth]{genetic}
+\caption{Screen of Java genetic function optimiser written by author of this thesis \cite{morph}}
+\end{figure}
+
+
 \subsection{Machine learning}
 
 \section{Conclusions}
@@ -689,7 +811,9 @@ Bate S.
 Montenegro S., Dannemann F. 
 \textit{Real Time Kernel Design for Dependability} DASIA 2009 DAta Systems In Aerospace, Paper. 2009
 
-
+\bibitem{watershed}
+Rosebrock A.
+\textit{Watershed OpenCV} PyImageSearch Course, Web. 2015
 
 \end{thebibliography}
 
