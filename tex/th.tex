@@ -18,11 +18,43 @@
 
 \begin{document}
 
+Streszczenie:\\
+Zakresem poniższej pracy jest proces projektowania i tworzenia urządzenia, które automatycznie przypisuje rozbite jajka kurze do jednej z dwóch poniższych klas:\\
+\begin{enumerate}
+\item nieuszkodzone żółtka otoczone białkiem jajecznym albo czysta linia produkcyjna
+\item uszkodzone żółtka albo nieuszkodzone żółtka otoczone szczątkami uszkodzonych żółtek
+\end{enumerate}
+Implementacja urządzenia została poprzedzona badaniami, które porównują rózne metody oceniania obrazu z kamery, biorąc pod uwagę ich skuteczność pod względem zużycia zasobów obliczeniowych, oraz skuteczność klasyfikacji.\\
+Działający prototyp został opracowany i jest w trakcie testów.\\
+Urządzenie będzie masowo produkowane jako moduł wykorzystywanych w maszynie RZ-1 firmy OVO-Tech.\\
+Zwiększy on atrakcyjnośc maszyny dla następujących grup odbiorców:\\
+
+\begin{enumerate}
+\item Firmy framaceutyczne, które produkują lekarstwa z białka jajecznego i stawiają wygórowane wymagania pod względem czystości białka jajecznego
+\item Cukiernie, które wymagają czystego białka jajecznego do procesów piekarniczych takich jak ubijanie piany jajecznej.
+\item Firmy produkujące odżywki dla sportowców
+\end{enumerate}
+
+Summary:
+The scope of this work is process of creating a device that automatically assigns broken eggs into one of two following classes:
+\begin{enumerate}
+\item intact yolks surrounded with egg white or clear processing plant line
+\item damaged yolk or intack yolk surrounded with damaged yolk parts
+\end{enumerate}
+The implementation of such device is preceded with research that compares various methods of recognizing the camera image, taking into account their performance in terms of computation resources, and in terms of correctness of the recognition.\\
+The working prototype is sucessufully developed and tested.\\
+The device will be mass produced as a module of OVO-TECH rz-1 egg braking machine, to improve machine usefullnes for following recipients:
+\begin{enumerate}
+\item Pharmacery companies that manufacture medicines out of egg-white and requrie high standards in terms of egg-white cleaness
+\item Confectionaries that require clean egg white for baking procedures, such us egg foaming process
+\item Athletes nutrition produers
+\end{enumerate}
+
+
+
 \tableofcontents
 
-fragment streszczenia:
-The scope of this work is process of creating a device that automatically assigns broken eggs one of the three following classes: intact yolk, damaged yolk, clear line.\\
-The implementation of such device will be preceded with research that compares various methods of recognizing the camera image, taking into account their performance in terms of computation resources, and in terms of correctness of the recognition
+
 
 \section{Introduction}
 \subsection{Research scope}
@@ -303,11 +335,6 @@ It is processed in a following way:
   \item[Decision] is made basing on the obtained amount.\\
   It takes a form of signal sent to phisical element that either removes the egg batch or let it through.
 \end{description}
-
-
-Thirdly two options will be tested:\\
-- The undamaged egg yolks will be detected and deleted from the image. Than the amount of remaining yolk parts will be counted. If it will exceed the threshold value, the signal for removing the product batch will be sent.\\
-- The extracted egg yolk will be graded in terms of shape similarity to a single, intact yolk
 
 The best obtained combination of preprocessing, segmentation and grading parameters will be used in a final algorithm that will be implemented in Raspberry Pi 2 device with camera module, and than tested in the Rz-1 processing plant.
 
