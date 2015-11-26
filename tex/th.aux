@@ -12,8 +12,8 @@
 \@writefile{toc}{\select@language{english}}
 \@writefile{lof}{\select@language{english}}
 \@writefile{lot}{\select@language{english}}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Research scope}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Research scope}{3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.1.1}{\ignorespaces Clients egg braking machines operating over the world}}{3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Host machine}{3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.2.1}{\ignorespaces Rz-1 unit baisic parameters}}{4}}
@@ -41,96 +41,103 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {3.3.1}{\ignorespaces Detection Algorithm}}{12}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Algorithm programming}{12}}
 \citation{performance}
-\citation{hgtcv}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Egg yolk detection}{13}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Methods overview}{13}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Circle Hough Transform (CHT)}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}General idea}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Extracting channels}{13}}
+\citation{hsv}
+\citation{hue}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2.1}{\ignorespaces Three channels of RGB image. Src: www.commons.wikimedia.org}}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}HSV scale conversion}{14}}
+\citation{hgtcv}
 \citation{craters}
 \citation{hgt}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3.1}{\ignorespaces HSV Cilinder. Src: www.doc.qt.io}}{15}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Circle Hough Transform (CHT)}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4.1}{\ignorespaces Potential circles space\cite  {craters}}}{15}}
 \citation{hgt}
 \citation{mastercv}
 \citation{fd}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2.1}{\ignorespaces Potential circles space\cite  {craters}}}{14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2.2}{\ignorespaces Accumulation matrix with two good circle candidates\cite  {hgt}}}{14}}
 \citation{morph}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4.2}{\ignorespaces Accumulation matrix with two good circle candidates\cite  {hgt}}}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Erosion and Dilatation}{16}}
 \citation{erdil}
 \citation{erdil}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Erosion and Dilatation}{15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3.1}{\ignorespaces A diamond-shaped kernel\cite  {morph}}}{15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3.2}{\ignorespaces Orignal image, eroded image, dilated image.\cite  {erdil}}}{15}}
 \citation{cv}
 \citation{cnoisy}
 \citation{featproc}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5.1}{\ignorespaces A diamond-shaped kernel\cite  {morph}}}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5.2}{\ignorespaces Orignal image, eroded image, dilated image.\cite  {erdil}}}{17}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Gaussian blur}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6.1}{\ignorespaces Gauss function in two dimension\cite  {featproc}}}{17}}
 \citation{gimp}
 \citation{cnoisy}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Gaussian blur}{16}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4.1}{\ignorespaces Gauss function in two dimension\cite  {featproc}}}{16}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4.2}{\ignorespaces Convolution of 3x3 matrices\cite  {gimp}}}{16}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4.3}{\ignorespaces Microscope image before and after applying gaussian filter\cite  {cnoisy}}}{16}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Channeling and HSV conversion}{16}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Using the methods}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6.2}{\ignorespaces Convolution of 3x3 matrices\cite  {gimp}}}{18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6.3}{\ignorespaces Microscope image before and after applying gaussian filter\cite  {cnoisy}}}{18}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Methods execution}{18}}
+\@writefile{lol}{\contentsline {lstlisting}{yolk.py}{18}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Contaminated product recognition}{18}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Subtracting yolk image}{18}}
 \citation{thre}
-\@writefile{lol}{\contentsline {lstlisting}{yolk.py}{17}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Contaminated product recognition}{17}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}General idea}{17}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Thresholding}{17}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2.1}{\ignorespaces Different Thresholding modes generated with Metaplotlib}}{17}}
 \citation{thre}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Thresholding}{19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2.1}{\ignorespaces Different Thresholding modes generated with Metaplotlib}}{19}}
 \citation{lesscv}
 \citation{segm}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2.2}{\ignorespaces Threshold computing methods12\cite  {thre}}}{18}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2.3}{\ignorespaces Different thresholding applied Fig. generated with Metaplotlib}}{18}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2.4}{\ignorespaces K-means clustering method for k = 16\cite  {segm}}}{19}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Using the methods}{19}}
-\@writefile{lol}{\contentsline {lstlisting}{contaminated.py}{19}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Choosing detection system parameters}{19}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Manual parameters finding}{19}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.1.1}{\ignorespaces Screen of running one of the scripts used for manual parameter finding}}{20}}
-\@writefile{lol}{\contentsline {lstlisting}{trackbars.py}{20}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Automatic parameters finding}{21}}
-\@writefile{lol}{\contentsline {lstlisting}{script.py}{21}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Overfitting}{22}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Phisical system implementation}{22}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Phisical Platform}{22}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Camera module}{22}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Programming raspberry pi}{22}}
-\@writefile{lol}{\contentsline {lstlisting}{rpi.py}{22}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2.2}{\ignorespaces Threshold computing methods12\cite  {thre}}}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2.3}{\ignorespaces Different thresholding applied Fig. generated with Metaplotlib}}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2.4}{\ignorespaces K-means clustering method for k = 16\cite  {segm}}}{21}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Methods execution}{21}}
+\@writefile{lol}{\contentsline {lstlisting}{contaminated.py}{21}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Choosing detection system parameters}{21}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Manual parameters finding}{21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1.1}{\ignorespaces Screen of running one of the scripts used for manual parameter finding}}{22}}
+\@writefile{lol}{\contentsline {lstlisting}{trackbars.py}{22}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Automatic parameters finding}{23}}
+\@writefile{lol}{\contentsline {lstlisting}{script.py}{23}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Overfitting}{24}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Phisical system implementation}{24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Phisical Platform}{24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Camera module}{24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Programming raspberry pi}{24}}
+\@writefile{lol}{\contentsline {lstlisting}{rpi.py}{24}}
 \citation{stackos}
 \citation{chibi}
 \citation{rodos}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Further research and development}{23}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Operating Systems}{23}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Platforms}{24}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Server and logging}{24}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.4}One month prototype testing and enviroment of work tuning}{24}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Further research and development}{25}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Operating Systems}{25}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Platforms}{26}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Server and logging}{26}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.4}One month prototype testing and enviroment of work tuning}{26}}
 \citation{watershed}
 \citation{morph}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.5}Testing new approaches}{25}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.6}Obtaining more image data and parameters tuning}{25}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5}Testing new approaches}{27}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.6}Obtaining more image data and parameters tuning}{27}}
 \bibcite{eggprop}{1}
 \bibcite{agri}{2}
 \bibcite{svm}{3}
 \bibcite{nondestr}{4}
-\bibcite{learnopencv}{5}
-\bibcite{performance}{6}
-\bibcite{hgtcv}{7}
-\@writefile{lof}{\contentsline {figure}{\numberline {8.6.1}{\ignorespaces Screen of Java genetic function optimiser written by author of this thesis \cite  {morph}}}{26}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.7}Machine learning}{26}}
-\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusions}{26}}
-\bibcite{craters}{8}
-\bibcite{hgt}{9}
-\bibcite{mastercv}{10}
-\bibcite{fd}{11}
-\bibcite{morph}{12}
-\bibcite{erdil}{13}
-\bibcite{cv}{14}
-\bibcite{cnoisy}{15}
-\bibcite{featproc}{16}
-\bibcite{gimp}{17}
-\bibcite{thre}{18}
-\bibcite{lesscv}{19}
-\bibcite{segm}{20}
-\bibcite{stackos}{21}
-\bibcite{chibi}{22}
-\bibcite{rodos}{23}
-\bibcite{watershed}{24}
+\bibcite{hsv}{5}
+\bibcite{hue}{6}
+\bibcite{learnopencv}{7}
+\@writefile{lof}{\contentsline {figure}{\numberline {8.6.1}{\ignorespaces Screen of Java genetic function optimiser written by author of this thesis \cite  {morph}}}{28}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.7}Machine learning}{28}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusions}{28}}
+\bibcite{performance}{8}
+\bibcite{hgtcv}{9}
+\bibcite{craters}{10}
+\bibcite{hgt}{11}
+\bibcite{mastercv}{12}
+\bibcite{fd}{13}
+\bibcite{morph}{14}
+\bibcite{erdil}{15}
+\bibcite{cv}{16}
+\bibcite{cnoisy}{17}
+\bibcite{featproc}{18}
+\bibcite{gimp}{19}
+\bibcite{thre}{20}
+\bibcite{lesscv}{21}
+\bibcite{segm}{22}
+\bibcite{stackos}{23}
+\bibcite{chibi}{24}
+\bibcite{rodos}{25}
+\bibcite{watershed}{26}

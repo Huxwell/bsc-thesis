@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.2.7)  23 NOV 2015 23:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.2.7)  26 NOV 2015 01:17
 entering extended mode
 **th.tex
 (C:\Users\Orley\Desktop\thesis\docs\tex\th.tex
@@ -760,90 +760,111 @@ File: imgs/algorithmV.png Graphic file (type png)
 Package pdftex.def Info: imgs/algorithmV.png used on input line 350.
 (pdftex.def)             Requested size: 298.75394pt x 588.55385pt.
  [11] [12 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/algorithmV.png>] [13] <i
-mgs/space.jpg, id=60, 297.11pt x 297.11pt>
+mgs/rgb.png, id=60, 401.5pt x 321.2pt>
+File: imgs/rgb.png Graphic file (type png)
+
+<use imgs/rgb.png>
+Package pdftex.def Info: imgs/rgb.png used on input line 402.
+(pdftex.def)             Requested size: 238.9995pt x 191.20213pt.
+ <imgs/hsv.png, id=61, 431.6125pt x 296.10625pt>
+File: imgs/hsv.png Graphic file (type png)
+
+<use imgs/hsv.png>
+Package pdftex.def Info: imgs/hsv.png used on input line 423.
+(pdftex.def)             Requested size: 238.9995pt x 163.96138pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/rgb.png>]
+<imgs/space.jpg, id=65, 297.11pt x 297.11pt>
 File: imgs/space.jpg Graphic file (type jpg)
-
-<use imgs/space.jpg>
-Package pdftex.def Info: imgs/space.jpg used on input line 399.
+ <use imgs/space.jpg>
+Package pdftex.def Info: imgs/space.jpg used on input line 442.
 (pdftex.def)             Requested size: 238.9995pt x 239.00757pt.
- <imgs/accu.png, id=61, 285.065pt x 275.0275pt>
+ [15 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/hsv.png (PNG copy)> <C:/Users
+/Orley/Desktop/thesis/docs/tex/imgs/space.jpg>]
+<imgs/accu.png, id=69, 285.065pt x 275.0275pt>
 File: imgs/accu.png Graphic file (type png)
-
-<use imgs/accu.png>
-Package pdftex.def Info: imgs/accu.png used on input line 409.
+ <use imgs/accu.png>
+Package pdftex.def Info: imgs/accu.png used on input line 452.
 (pdftex.def)             Requested size: 238.9995pt x 230.58507pt.
- [14 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/space.jpg> <C:/Users/Orley/De
-sktop/thesis/docs/tex/imgs/accu.png>]
-<imgs/diam.png, id=65, 272.01625pt x 126.4725pt>
+
+<imgs/diam.png, id=70, 272.01625pt x 126.4725pt>
 File: imgs/diam.png Graphic file (type png)
  <use imgs/diam.png>
-Package pdftex.def Info: imgs/diam.png used on input line 427.
+Package pdftex.def Info: imgs/diam.png used on input line 470.
 (pdftex.def)             Requested size: 238.9995pt x 111.12631pt.
 
-<imgs/lett.png, id=66, 449.68pt x 213.79875pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/accu.png>]
+<imgs/lett.png, id=74, 449.68pt x 213.79875pt>
 File: imgs/lett.png Graphic file (type png)
  <use imgs/lett.png>
-Package pdftex.def Info: imgs/lett.png used on input line 442.
+Package pdftex.def Info: imgs/lett.png used on input line 485.
 (pdftex.def)             Requested size: 238.9995pt x 113.63249pt.
- [15 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/diam.png> <C:/Users/Orley/Des
-ktop/thesis/docs/tex/imgs/lett.png>] <imgs/gauss.png, id=70, 265.99374pt x 76.2
-85pt>
+
+<imgs/gauss.png, id=75, 265.99374pt x 76.285pt>
 File: imgs/gauss.png Graphic file (type png)
-
-<use imgs/gauss.png>
-Package pdftex.def Info: imgs/gauss.png used on input line 462.
+ <use imgs/gauss.png>
+Package pdftex.def Info: imgs/gauss.png used on input line 505.
 (pdftex.def)             Requested size: 238.9995pt x 68.54527pt.
- <imgs/conv.png, id=71, 939.51pt x 100.375pt>
+ [17 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/diam.png> <C:/Users/Orley/Des
+ktop/thesis/docs/tex/imgs/lett.png> <C:/Users/Orley/Desktop/thesis/docs/tex/img
+s/gauss.png>] <imgs/conv.png, id=79, 939.51pt x 100.375pt>
 File: imgs/conv.png Graphic file (type png)
-
-<use imgs/conv.png>
-Package pdftex.def Info: imgs/conv.png used on input line 475.
+ <use imgs/conv.png>
+Package pdftex.def Info: imgs/conv.png used on input line 518.
 (pdftex.def)             Requested size: 478.00812pt x 51.06956pt.
 
-Overfull \hbox (22.764pt too wide) in paragraph at lines 475--476
+Overfull \hbox (22.764pt too wide) in paragraph at lines 518--519
  [][] 
  []
 
-<imgs/micro.png, id=72, 373.395pt x 180.675pt>
+<imgs/micro.png, id=80, 373.395pt x 180.675pt>
 File: imgs/micro.png Graphic file (type png)
  <use imgs/micro.png>
-Package pdftex.def Info: imgs/micro.png used on input line 482.
+Package pdftex.def Info: imgs/micro.png used on input line 525.
 (pdftex.def)             Requested size: 238.9995pt x 115.64537pt.
 
 ("C:\Program Files (x86)\TiCTeX v1.0 for windows\MiKTeX\tex\latex\listings\lstl
 ang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-) (C:\Users\Orley\Desktop\thesis\docs\tex\yolk.py [16 <C:/Users/Orley/Desktop/t
-hesis/docs/tex/imgs/gauss.png> <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/con
-v.png> <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/micro.png>]
+) (C:\Users\Orley\Desktop\thesis\docs\tex\yolk.py
 Overfull \hbox (19.96072pt too wide) in paragraph at lines 10--11
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) <imgs/thr.png, id=76, 601.24625pt x 408.52625pt>
+) [18 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/conv.png> <C:/Users/Orley/De
+sktop/thesis/docs/tex/imgs/micro.png>]
+<imgs/thr.png, id=85, 601.24625pt x 408.52625pt>
 File: imgs/thr.png Graphic file (type png)
  <use imgs/thr.png>
-Package pdftex.def Info: imgs/thr.png used on input line 515.
+Package pdftex.def Info: imgs/thr.png used on input line 565.
 (pdftex.def)             Requested size: 238.9995pt x 162.39153pt.
- [17 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/thr.png>]
-<imgs/thremeth.png, id=81, 606.265pt x 605.26125pt>
+
+<imgs/thremeth.png, id=86, 606.265pt x 605.26125pt>
 File: imgs/thremeth.png Graphic file (type png)
  <use imgs/thremeth.png>
-Package pdftex.def Info: imgs/thremeth.png used on input line 532.
+Package pdftex.def Info: imgs/thremeth.png used on input line 582.
 (pdftex.def)             Requested size: 238.9995pt x 238.59993pt.
 
-<imgs/diffthr.png, id=82, 589.0005pt x 444.4605pt>
+[19 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/thr.png>]
+<imgs/diffthr.png, id=91, 589.0005pt x 444.4605pt>
 File: imgs/diffthr.png Graphic file (type png)
  <use imgs/diffthr.png>
-Package pdftex.def Info: imgs/diffthr.png used on input line 538.
+Package pdftex.def Info: imgs/diffthr.png used on input line 588.
 (pdftex.def)             Requested size: 238.9995pt x 180.3514pt.
 
-<imgs/kmeans.png, id=83, 382.42876pt x 248.93pt>
+<imgs/kmeans.png, id=92, 382.42876pt x 248.93pt>
 File: imgs/kmeans.png Graphic file (type png)
  <use imgs/kmeans.png>
-Package pdftex.def Info: imgs/kmeans.png used on input line 548.
+Package pdftex.def Info: imgs/kmeans.png used on input line 598.
 (pdftex.def)             Requested size: 238.9995pt x 155.56946pt.
- [18 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/thremeth.png> <C:/Users/Orley
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/thremeth.png> <C:/Users/Orley
 /Desktop/thesis/docs/tex/imgs/diffthr.png>]
 (C:\Users\Orley\Desktop\thesis\docs\tex\contaminated.py
 Overfull \hbox (178.36234pt too wide) in paragraph at lines 11--12
@@ -851,34 +872,34 @@ Overfull \hbox (178.36234pt too wide) in paragraph at lines 11--12
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 565--569
+Underfull \hbox (badness 10000) in paragraph at lines 615--619
 
  []
 
-[19 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/kmeans.png>]
-<imgs/manual.jpg, id=92, 487.8225pt x 527.72156pt>
+[21 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/kmeans.png>]
+<imgs/manual.jpg, id=100, 487.8225pt x 527.72156pt>
 File: imgs/manual.jpg Graphic file (type jpg)
  <use imgs/manual.jpg>
-Package pdftex.def Info: imgs/manual.jpg used on input line 574.
+Package pdftex.def Info: imgs/manual.jpg used on input line 624.
 (pdftex.def)             Requested size: 298.75394pt x 323.19pt.
 
 (C:\Users\Orley\Desktop\thesis\docs\tex\trackbars.py)
-Underfull \hbox (badness 10000) in paragraph at lines 588--591
+Underfull \hbox (badness 10000) in paragraph at lines 638--641
 
  []
 
-[20 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/manual.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 595--597
+[22 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/manual.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 645--647
 
  []
 
 (C:\Users\Orley\Desktop\thesis\docs\tex\script.py)
-Underfull \hbox (badness 10000) in paragraph at lines 622--624
+Underfull \hbox (badness 10000) in paragraph at lines 672--674
 
  []
 
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 625--626
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 675--676
 
  []
 
@@ -897,36 +918,36 @@ Overfull \hbox (178.36234pt too wide) in paragraph at lines 16--17
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) [22] [23]
-Underfull \hbox (badness 10000) in paragraph at lines 704--705
+) [24] [25]
+Underfull \hbox (badness 10000) in paragraph at lines 754--755
 
  []
 
-[24] <imgs/genetic.jpg, id=108, 676.77844pt x 489.32813pt>
+[26] <imgs/genetic.jpg, id=117, 676.77844pt x 489.32813pt>
 File: imgs/genetic.jpg Graphic file (type jpg)
 
 <use imgs/genetic.jpg>
-Package pdftex.def Info: imgs/genetic.jpg used on input line 731.
+Package pdftex.def Info: imgs/genetic.jpg used on input line 781.
 (pdftex.def)             Requested size: 418.25368pt x 302.41711pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25]
-Underfull \hbox (badness 1701) in paragraph at lines 767--769
+ [27]
+Underfull \hbox (badness 1701) in paragraph at lines 817--819
 []\T1/ptm/m/n/12 Ketelaerea B.,Bamelisa F., Kempsa1 B., De-cuyperea1 E., Baerde
 -maek-era J. \T1/ptm/m/it/12 Non-
  []
 
-[26 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/genetic.jpg>] [27]
+[28 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/genetic.jpg>] [29]
 (C:\Users\Orley\Desktop\thesis\docs\tex\th.aux) ) 
 Here is how much of TeX's memory you used:
- 5237 strings out of 493921
- 71872 string characters out of 3151769
- 161331 words of memory out of 3000000
- 8406 multiletter control sequences out of 15000+200000
+ 5249 strings out of 493921
+ 72030 string characters out of 3151769
+ 160481 words of memory out of 3000000
+ 8416 multiletter control sequences out of 15000+200000
  33088 words of font info for 51 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,5n,43p,1046b,1752s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,5n,43p,1046b,1240s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/TiCTeX
  v1.0 for windows/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86
 )/TiCTeX v1.0 for windows/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/
@@ -934,9 +955,9 @@ Program Files (x86)/TiCTeX v1.0 for windows/MiKTeX/fonts/type1/urw/times/utmb8a
 .pfb><C:/Program Files (x86)/TiCTeX v1.0 for windows/MiKTeX/fonts/type1/urw/tim
 es/utmr8a.pfb><C:/Program Files (x86)/TiCTeX v1.0 for windows/MiKTeX/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on th.pdf (27 pages, 2770502 bytes).
+Output written on th.pdf (29 pages, 2942995 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
+ 142 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 116 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

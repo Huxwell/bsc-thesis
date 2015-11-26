@@ -374,13 +374,56 @@ For author, a case occured, that 39-lines code snippet that recognise nested reg
 
 
 \section{Egg yolk detection}
-\subsection{Methods overview}
+\subsection{General idea}
 An egg yolk, when intact and fresh can be approximated with sphere which projects as circle-like shape on 2D image.\\
 Methods presented below enable to filter out the unnecessary noise, simplify the image and detect the yolk shape.\\
 While not all of them were used in the final detection algorithm, they were giving promising results on the early stage prototypes.
 
 Following methods treat images as 1, 8, or 24-bit encoded matrices, thus both terms are used synonymously.\\
 x and y denote pixel position.
+\subsection{Extracting channels}
+In digital graphics color information is usually stored as a value from RGB (or BGR) additive color space.
+It means, that three numbers represent amount of red, green, anb blue subcolors that combined constitude a visible color.
+For this algorithm sake, it is assumed that every one of this numbers takes values from 0-255 interval and is encoded by 8bits, what sums to 24bit encoding for every RGB pixel.
+
+Alternativly, a simplified information may be processed: a grayscale image is made of pixels encoded by a single number that denotes the colors distance from being completly black; the higher is the number, the closer to being white it is.
+8bit encryption has been chosen for grayscale images.
+
+There is also an option to store binary black-and-white image with 1bit encoding (0 picked for black, 1 for white).
+ 
+A channel in this context is a grayscale image that represents intensity of single subcolor in RGB space. 
+For example, a red chanel is an image, in which 255 constitudes red pixel, and 0 means that pixel has no red subcolor.
+
+It is suspected by the author that using a single channel instead of comonly used RGB image may is more efficient and some unnecessary information in dropped.
+Particualary, an egg yolk that is visually yellow or red my be favoured in red or green channel.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\paperwidth]{rgb}
+\caption{Three channels of RGB image. Src: www.commons.wikimedia.org}
+\end{figure}
+
+
+\subsection{HSV scale conversion}
+
+Extending assumption from previous subchapter led author to belive that using a color space different than RGB might be more effective in recognition process.
+It might occur, that the problem of assigning color values associated with egg yolk is either linearly separable or close to hbeing such, and thus extracting only those pixels that constitude egg yolk might be possible.
+
+HSV cilindrical color space is known as being exceptionaly suitable as a preprocessing method used before image segmentation \cite{hsv}
+
+In HSV color is represented by Hue (angle of a point on a clinder), Saturation (a radius of a point) and Value (height of the point).
+
+Hue is defined as "the degree to which a stimulus can be described as similar to or different from stimuli that are described as red, green, blue, and yellow"\cite{hue}.
+Saturation stands for intensity of a prticular hue.
+Value is also defined as darkness of the color and is often treated as reverse grayscale channel.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\paperwidth]{hsv}
+\caption{HSV Cilinder. Src: www.doc.qt.io}
+\end{figure}
+
 
 \subsection{Circle Hough Transform (CHT)}
 Circle Hough Transform is an algorithm used for retrieving 3 parameters defining a circle-like shape on images\cite{hgtcv} : 
@@ -486,14 +529,21 @@ The term ‘convolution’ might be misleading and for the scope of image proces
   
 
 
-\subsection{Channeling and HSV conversion}
-lorem ipsum
-\subsection{Using the methods}
+
+\subsection{Methods execution}
 \lstinputlisting[language=Python]{yolk.py}
 
 \section{Contaminated product recognition}
-\subsection{General idea}
-lorem ipsum
+Methods descriped in previous chapter are used for contaminated product recognition, as well as two more presented below:
+
+\subsection{Subtracting yolk image}
+Subtracting image of detected intact egg yolks from the general image outputs an image that holds only unwanted egg yolk, egg white and its surrounding.
+Therefore, the problem would be reducted to simple assesing the amount of remaining egg yolk and comparing it to a threshold value for acceptable bad yolk ammount.
+
+The initial implementation for this methods was supposed to be obtained by filling the image with empty circles detected in the previous chapter.
+Unfortunately, it has been expreimentaly tested, that egg yolk is reflecting some yellow light on it's surroundings and it is very hard to filter them out, thus a bigger area is subtracted.
+Instead of circles, empty rectangles are drawn on the analised image. The rectangles fill the whole image height (since eggs do not slide parallely due to transporation slope design), and their width is equal to detected yolks diameter summed with an offset that covers reflecting light. The reactangles centeres are equal to yolk centers.
+
 \subsection{Thresholding}
 
 Thresholding is a simple case of image segmentation.\\
@@ -548,7 +598,7 @@ For more general cases (i.e. multichannel images, assigning more colors) cluster
 \includegraphics[width=0.4\paperwidth]{kmeans}
 \caption{K-means clustering method for k = 16\cite{segm}}
 \end{figure}
-\subsection{Using the methods}
+\subsection{Methods execution}
 \lstinputlisting[language=Python]{contaminated.py}
 
 \section{Choosing detection system parameters}
@@ -766,6 +816,15 @@ Deng X., Wang Q., Chen H., Xie H.
 \bibitem{nondestr} 
 Ketelaerea B.,Bamelisa F., Kempsa1 B., Decuyperea1 E., Baerdemaekera J.
 \textit{Non-destructive measurements of the egg quality} World's Poultry Science Journal, Volume 60 / Issue 03,  Cambridge University Press, Print. 2004
+ 
+
+\bibitem{hsv} 
+Li N., Bu J., Chun C. 
+\textit{2002 International Conference on Image Processing}, Volume 2, The Institute of Electrical and Electronics Engineers, Print. 2002
+
+\bibitem{hue}
+Fairchild M., 
+\textit{"Color Appearance Models: CIECAM02 and Beyond"}, Tutorial slides for IS\&T/SID 12th Color Imaging Conference Web. 2004
  
 \bibitem{learnopencv}
 Bradski G. ,Kaehler A.
