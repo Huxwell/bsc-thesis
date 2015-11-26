@@ -379,6 +379,8 @@ An egg yolk, when intact and fresh can be approximated with sphere which project
 Methods presented below enable to filter out the unnecessary noise, simplify the image and detect the yolk shape.\\
 While not all of them were used in the final detection algorithm, they were giving promising results on the early stage prototypes.
 
+Parameters, which values have to be found to correctly apply the methods are indicated with \textbf{bold font}.
+
 Following methods treat images as 1, 8, or 24-bit encoded matrices, thus both terms are used synonymously.\\
 x and y denote pixel position.
 \subsection{Extracting channels}
@@ -444,8 +446,8 @@ The potential circle with largest number of intersections is chosen as the best 
 \end{figure}
 
 In the full cases, such procedure is repeated for every image point, and the intersections numbers are stored in accumulation matrix.\cite{hgt}\\
-To reduce computation time and false detection rate, minimum distance between image centers is given as a parameter min-dist.\\
-Threshold value param-2 is defined as minimum number of intersections to treat circle candidate as detected circle.
+To reduce computation time and false detection rate, minimum distance between image centers is given as a parameter \textbf{minDist}.\\
+Threshold value \textbf{param2} is defined as minimum number of intersections to treat circle candidate as detected circle.
  
 \begin{figure}[H]
 \centering
@@ -455,7 +457,7 @@ Threshold value param-2 is defined as minimum number of intersections to treat c
 
 If r is unknown, min-radius and max-radius parameters are defined, and the algorithm repeats the procedure for all possible integer r in range of above parameters.\\
 OpenCV utilizes Canny edge detector for finding the potential intersection points, thus operates not only on 1-bit images, but also in 8-bit grayscale and 24-bit bgr images and provides smaller number of false positives.\cite{mastercv}\\
-param-1 is introduced as higher threshold for Canny edge detector, while the lower threshold is set to 0.5 * param-1\cite{fd} .
+\textbf{param1} is introduced as higher threshold for Canny edge detector, while the lower threshold is set to 0.5 * param-1\cite{fd} .
 
 
 \subsection{Erosion and Dilatation}
@@ -487,7 +489,8 @@ Dilatation makes the objects bigger.
 \end{figure}
 
 
-When these methods are used multiple times, and convoluted, they filter out the noise.\\
+When these methods are used multiple times, and convoluted, they filter out the noise.
+Using erosion and dilatation with the same kernel one ofter another is called opening.\\
 Perimeter Determination and Skeletonization are widely used contour detection functions which utilize erosion and dilatation\cite{erdil}.
 
 
@@ -602,15 +605,11 @@ For more general cases (i.e. multichannel images, assigning more colors) cluster
 \lstinputlisting[language=Python]{contaminated.py}
 
 \section{Choosing detection system parameters}
-\subsection{Manual parameters finding}
+\subsection{Manual parameters optimisation}
 
 There exist a set of parameters that define the mode, that previously explained methods operate as well as their instensivity.\\
-Finding optimal values of this parameters is a hard task, since for example CHT method didn't found a single egg yolk with defualt numbers.\\
-The following values have to be found:
-\begin{description}
-\item[param1] - lorem ipsum
-\item[threshold] - lorem ipsum
-\end{description}
+Finding optimal values of this parameters is a hard task, since for example CHT method was not able to found a single egg yolk with defualt numbers.\\
+
 
 A script was developed, that displayed over 500 pictures for 0.3 second each in a loop.\\
 Trackbars was displayed above the frames, with every trackbar coresponding to one parameter that is supposed to be chosen.\\
@@ -633,7 +632,7 @@ Unfortunately, while some parameters sets worked fine for some image sets, they 
 Nevertheless, the interesting intervals were obtained for each trakcbar. These intervals guaranteed that at least some of the graded images are segmentated in exptected way.\\
 This method resulted in excluding most parameters values and vastly reducting the optimising problem size.
 
-\subsection{Automatic parameters finding}
+\subsection{Automatic parameters optimisation}
 
 A decision was made, to automatise process of assesing the segmentation and detection efficiency to get to optimal set of parameters.\\
 This process was done twice:\\
@@ -681,9 +680,19 @@ Overfitting occurs mostly if:
 \item No regularisation or cross-validation methods are used
 \end{itemize}
 
-To reduce this effect, author used different dataset for getting the transform parameters, and different set (excluded 10% of data from every sample subset) for assesing the recognition quality.
+To reduce this effect, author used different dataset for getting the transform parameters, and different set (excluded 10\% of data from every sample subset) for assesing the recognition quality.
 
 During protoype in factory testing and further development this issue will be addressed in extended way.
+\subsection{Results}
+The following parameter values were obtained in a process of automatic parameters optimisation executed for on 195 sample photos that depict properly cracked egg and 388 depicting bad batches.
+The recognition accuracy maximised during optimisation process was 91,25\%, and the recognition accuracy on the testing set of 57 images was 84,2%.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\paperwidth]{params}
+\caption{Parameter values obtained in automatic parameters optimisation}
+\end{figure}
+
+
 
 \section{Phisical system implementation}
 \subsection{Phisical Platform}
@@ -756,7 +765,6 @@ Those reflexes that make yolk appear as non-yolk at segmentated image.
 
 
 \subsection{Testing new approaches}
-Current results (over 90% recognition efficiency
 
 Two approaches have came up after the prototype development and are to be implemented and tested:
 
@@ -787,7 +795,12 @@ Further on, a ready, popular library will be used for this purpouse: a DEAP gene
 
 \section{Conclusions}
 
-
+Folowing results were obtained in the system designing, tuning and testing process:
+\begin{enumerate}
+\item Recognising egg-batch state using camera image is an adequate method of solving the poroblem of inperfect egg-white separation.
+\item Simple image processing methods are cable of obtaining image recognition efficency higher than 84\% on this problem, even if lighting and camera placement conditions are unfavorable.
+\item An operational prototype device was constructed and implemented. It will be tested and improved further in order to introduce it to mass production. OVO-TECH will be expanding its R\&D section to obtain that goal.
+\end{enumerate}
 
 
 

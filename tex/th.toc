@@ -27,9 +27,10 @@
 \contentsline {subsection}{\numberline {5.2}Thresholding}{19}
 \contentsline {subsection}{\numberline {5.3}Methods execution}{21}
 \contentsline {section}{\numberline {6}Choosing detection system parameters}{21}
-\contentsline {subsection}{\numberline {6.1}Manual parameters finding}{21}
-\contentsline {subsection}{\numberline {6.2}Automatic parameters finding}{23}
+\contentsline {subsection}{\numberline {6.1}Manual parameters optimisation}{21}
+\contentsline {subsection}{\numberline {6.2}Automatic parameters optimisation}{22}
 \contentsline {subsection}{\numberline {6.3}Overfitting}{24}
+\contentsline {subsection}{\numberline {6.4}Results}{24}
 \contentsline {section}{\numberline {7}Phisical system implementation}{24}
 \contentsline {subsection}{\numberline {7.1}Phisical Platform}{24}
 \contentsline {subsection}{\numberline {7.2}Camera module}{24}
@@ -38,7 +39,7 @@
 \contentsline {subsection}{\numberline {8.1}Operating Systems}{25}
 \contentsline {subsection}{\numberline {8.2}Platforms}{26}
 \contentsline {subsection}{\numberline {8.3}Server and logging}{26}
-\contentsline {subsection}{\numberline {8.4}One month prototype testing and enviroment of work tuning}{26}
+\contentsline {subsection}{\numberline {8.4}One month prototype testing and enviroment of work tuning}{27}
 \contentsline {subsection}{\numberline {8.5}Testing new approaches}{27}
 \contentsline {subsection}{\numberline {8.6}Obtaining more image data and parameters tuning}{27}
 \contentsline {subsection}{\numberline {8.7}Machine learning}{28}
