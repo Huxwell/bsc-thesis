@@ -11,36 +11,37 @@
 \contentsline {subsection}{\numberline {2.2}Techniques of automatic egg quality assessment}{8}
 \contentsline {section}{\numberline {3}Batch state detection system design}{9}
 \contentsline {subsection}{\numberline {3.1}System structure}{9}
-\contentsline {subsection}{\numberline {3.2}Detecting batch state with camera image}{10}
-\contentsline {subsection}{\numberline {3.3}Detection algorithm}{11}
-\contentsline {subsection}{\numberline {3.4}Algorithm programming}{12}
-\contentsline {section}{\numberline {4}Egg yolk detection}{13}
-\contentsline {subsection}{\numberline {4.1}General idea}{13}
-\contentsline {subsection}{\numberline {4.2}Extracting channels}{13}
-\contentsline {subsection}{\numberline {4.3}HSV scale conversion}{14}
-\contentsline {subsection}{\numberline {4.4}Circle Hough Transform (CHT)}{15}
-\contentsline {subsection}{\numberline {4.5}Erosion and Dilatation}{16}
-\contentsline {subsection}{\numberline {4.6}Gaussian blur}{17}
-\contentsline {subsection}{\numberline {4.7}Methods execution}{18}
-\contentsline {section}{\numberline {5}Contaminated product recognition}{18}
-\contentsline {subsection}{\numberline {5.1}Subtracting yolk image}{18}
-\contentsline {subsection}{\numberline {5.2}Thresholding}{19}
-\contentsline {subsection}{\numberline {5.3}Methods execution}{21}
-\contentsline {section}{\numberline {6}Choosing detection system parameters}{21}
-\contentsline {subsection}{\numberline {6.1}Manual parameters optimisation}{21}
-\contentsline {subsection}{\numberline {6.2}Automatic parameters optimisation}{22}
-\contentsline {subsection}{\numberline {6.3}Overfitting}{24}
-\contentsline {subsection}{\numberline {6.4}Results}{24}
-\contentsline {section}{\numberline {7}Phisical system implementation}{24}
-\contentsline {subsection}{\numberline {7.1}Phisical Platform}{24}
-\contentsline {subsection}{\numberline {7.2}Camera module}{24}
-\contentsline {subsection}{\numberline {7.3}Programming raspberry pi}{24}
-\contentsline {section}{\numberline {8}Further research and development}{25}
-\contentsline {subsection}{\numberline {8.1}Operating Systems}{25}
-\contentsline {subsection}{\numberline {8.2}Platforms}{26}
-\contentsline {subsection}{\numberline {8.3}Server and logging}{26}
-\contentsline {subsection}{\numberline {8.4}One month prototype testing and enviroment of work tuning}{27}
-\contentsline {subsection}{\numberline {8.5}Testing new approaches}{27}
-\contentsline {subsection}{\numberline {8.6}Obtaining more image data and parameters tuning}{27}
-\contentsline {subsection}{\numberline {8.7}Machine learning}{28}
-\contentsline {section}{\numberline {9}Conclusions}{28}
+\contentsline {subsection}{\numberline {3.2}Hardware and operating system choice}{10}
+\contentsline {subsection}{\numberline {3.3}Detecting batch state with camera image}{12}
+\contentsline {subsection}{\numberline {3.4}Detection algorithm}{12}
+\contentsline {subsection}{\numberline {3.5}Software choice}{14}
+\contentsline {section}{\numberline {4}Egg yolk detection}{15}
+\contentsline {subsection}{\numberline {4.1}General idea}{15}
+\contentsline {subsection}{\numberline {4.2}Extracting channels}{15}
+\contentsline {subsection}{\numberline {4.3}HSV scale conversion}{16}
+\contentsline {subsection}{\numberline {4.4}Circle Hough Transform (CHT)}{17}
+\contentsline {subsection}{\numberline {4.5}Erosion and Dilatation}{18}
+\contentsline {subsection}{\numberline {4.6}Gaussian blur}{19}
+\contentsline {subsection}{\numberline {4.7}Methods execution}{20}
+\contentsline {section}{\numberline {5}Contaminated product recognition}{20}
+\contentsline {subsection}{\numberline {5.1}Subtracting yolk image}{20}
+\contentsline {subsection}{\numberline {5.2}Thresholding}{21}
+\contentsline {subsection}{\numberline {5.3}Methods execution}{24}
+\contentsline {section}{\numberline {6}Choosing detection system parameters}{24}
+\contentsline {subsection}{\numberline {6.1}Manual parameters optimisation}{24}
+\contentsline {subsection}{\numberline {6.2}Automatic parameters optimisation}{26}
+\contentsline {subsection}{\numberline {6.3}Overfitting}{27}
+\contentsline {subsection}{\numberline {6.4}Results}{27}
+\contentsline {section}{\numberline {7}Phisical system implementation}{28}
+\contentsline {subsection}{\numberline {7.1}Hardware problems}{28}
+\contentsline {subsection}{\numberline {7.2}Camera module configuration}{28}
+\contentsline {subsection}{\numberline {7.3}Operating system configuration}{28}
+\contentsline {subsection}{\numberline {7.4}Python and OpenCV configuration}{28}
+\contentsline {subsection}{\numberline {7.5}Code deployment}{28}
+\contentsline {section}{\numberline {8}Further research and development}{28}
+\contentsline {subsection}{\numberline {8.1}Server and logging}{29}
+\contentsline {subsection}{\numberline {8.2}One month prototype testing and enviroment of work tuning}{29}
+\contentsline {subsection}{\numberline {8.3}Testing new approaches}{29}
+\contentsline {subsection}{\numberline {8.4}Obtaining more image data and parameters tuning}{29}
+\contentsline {subsection}{\numberline {8.5}Machine learning}{30}
+\contentsline {section}{\numberline {9}Conclusions}{30}
