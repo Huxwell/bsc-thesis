@@ -42,5 +42,5 @@
 \contentsline {subsection}{\numberline {8.2}One month prototype testing and environment of work tuning}{30}
 \contentsline {subsection}{\numberline {8.3}Testing new approaches}{30}
 \contentsline {subsection}{\numberline {8.4}Obtaining more image data and parameters tuning}{31}
-\contentsline {subsection}{\numberline {8.5}Machine learning}{31}
-\contentsline {section}{\numberline {9}Conclusions}{31}
+\contentsline {subsection}{\numberline {8.5}Machine learning}{32}
+\contentsline {section}{\numberline {9}Conclusions}{32}
