@@ -32,16 +32,16 @@
 \contentsline {subsection}{\numberline {6.2}Automatic parameters optimisation}{26}
 \contentsline {subsection}{\numberline {6.3}Overfitting}{27}
 \contentsline {subsection}{\numberline {6.4}Results}{27}
-\contentsline {section}{\numberline {7}Phisical system implementation}{28}
+\contentsline {section}{\numberline {7}Physical system implementation}{28}
 \contentsline {subsection}{\numberline {7.1}Hardware problems}{28}
 \contentsline {subsection}{\numberline {7.2}Camera module configuration}{28}
 \contentsline {subsection}{\numberline {7.3}Operating system configuration}{28}
 \contentsline {subsection}{\numberline {7.4}Python and OpenCV configuration}{28}
 \contentsline {subsection}{\numberline {7.5}Code deployment}{28}
-\contentsline {section}{\numberline {8}Further research and development}{28}
+\contentsline {section}{\numberline {8}Further research and development}{29}
 \contentsline {subsection}{\numberline {8.1}Server and logging}{29}
-\contentsline {subsection}{\numberline {8.2}One month prototype testing and enviroment of work tuning}{29}
+\contentsline {subsection}{\numberline {8.2}One month prototype testing and environment of work tuning}{29}
 \contentsline {subsection}{\numberline {8.3}Testing new approaches}{29}
-\contentsline {subsection}{\numberline {8.4}Obtaining more image data and parameters tuning}{29}
+\contentsline {subsection}{\numberline {8.4}Obtaining more image data and parameters tuning}{30}
 \contentsline {subsection}{\numberline {8.5}Machine learning}{30}
 \contentsline {section}{\numberline {9}Conclusions}{30}

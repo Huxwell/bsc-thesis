@@ -44,15 +44,15 @@ Zwiększy on atrakcyjnośc maszyny dla następujących grup odbiorców:
 The scope of this work is process of creating a device that automatically assigns broken eggs into one of two following classes:
 \begin{enumerate}
 \item intact yolks surrounded with egg white or clear processing plant line
-\item damaged yolk or intack yolk surrounded with damaged yolk parts
+\item damaged yolk or intact yolk surrounded with damaged yolk parts
 \end{enumerate}
 The implementation of such device is preceded with research that compares various methods of recognizing the camera image, taking into account their performance in terms of computation resources, and in terms of correctness of the recognition.
-The working prototype is sucessufully developed and tested.
-The device will be mass produced as a module of OVO-TECH rz-1 egg braking machine, to improve machine usefullnes for following recipients:
+The working prototype is successfully developed and tested.
+The device will be mass produced as a module of OVO-TECH rz-1 egg braking machine, to improve machine usefulness for following recipients:
 \begin{enumerate}
-\item Pharmacery companies that manufacture medicines out of egg-white and requrie high standards in terms of egg-white cleaness
-\item Confectionaries that require clean egg white for baking procedures, such us egg foaming process
-\item Athletes nutrition produers
+\item Pharmaceutical companies that manufacture medicines out of egg-white and require high standards in terms of egg-white cleanness
+\item Confectioneries that require clean egg white for baking procedures, such us egg foaming process
+\item Athletes nutrition producers
 \end{enumerate}
 
 
@@ -101,7 +101,7 @@ The machine that will be extended with the module prototype prepared in this the
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{rz1table}
-\caption{Rz-1 unit baisic parameters}
+\caption{Rz-1 unit basic parameters}
 \end{figure}
 
 
@@ -142,7 +142,7 @@ More advanced OVO-TECH models such us RZ-3, RZ-6 and RZ-8 will be also considere
 \subsection{Problem description}
 
 If an egg processed by rz-1 machine is old or the chicken was feed improperly the yolk might be either broken already inside the egg, or might break during the cracking  phase due to cracker imperfections such us being calibrated for different size or weight eggs.
-A mixture of damaged yolk and white is created in a result, and it’s not possible to separate it into two initial components using  the rz-1 separation  module.
+A mixture of damaged yolk and white is created in a result, and it is not possible to separate it into two initial components using  the rz-1 separation  module.
 
 Batch of such mixture should be removed from  the processing plant, since it would contaminate pure egg white product otherwise. 
 
@@ -168,7 +168,7 @@ Remaining 2 companies did not answer the question.
 One should consider why better separation is a requirement for those companies.
 Following reasons were presented:
 
-- Confectionaries and bakeries utilize egg white foam as an ingredient for their products.
+- Confectioneries and bakeries utilize egg white foam as an ingredient for their products.
 Egg white foam is obtained by aeration (also known as beating / foaming / whipping) process.
 Comprehensive process description was provided by one of the bakers:
 
@@ -202,7 +202,7 @@ This is the most strict (in terms of cleanness) case, that generates less strict
 \item fuzzy (damaged) yolk that still keeps its shape without mixing with white
 \item damaged egg blobs surrounded with white
 \item egg-white homogeneous mixture
-\item egg-white nonhomogeneous mixture
+\item egg-white non-homogeneous mixture
 \end{enumerate}
 Two cases are accepted as proper product:
 \begin{enumerate}[resume]
@@ -249,7 +249,7 @@ Initially, two ideas were researched by author of this thesis:
 \item Proximity sensor utilization
 \item Using laser / narrow light beam 
 \end{itemize}
-Both methods would identify the intact yolk basing on its height and wouldn’t require much processing (an Arduino Uno or other ATMega based circuits might be sufficient).
+Both methods would identify the intact yolk basing on its height and would not require much processing (an Arduino Uno or other ATMega based circuits might be sufficient).
 Nevertheless, both of them had to be rejected, since intact yolks presence in the tested batch is not sufficient for batch accepting – absence of egg yolk parts is also required (see subchapter 2.1).
 Finally, using images of the batch obtained from camera and processing it was chosen as a most promising option for further research.
 
@@ -265,19 +265,19 @@ Finally, using images of the batch obtained from camera and processing it was ch
 
 \subsection{System structure}
 The system is expected to replace Quality control module (See. Figure 1.2.3).
-The egg acumulation will not logner be required, as well as the work of qualified expert that opticaly assased the egg quality is not needed anymore.
+The egg accumulation will not longer be required, as well as the work of qualified expert that optically assased the egg quality is not needed any more.
 UWAGA te zdania musza poleciec gdzies na poczatek inz
 
 
 A camera will be placed on top of Separator module part, where cracked eggs are transported by sliding to the separating part.
 
 The processing device will use the frames of camera image. Some of the frames will be skipped to reduce amount of data.
-Frameskipping ratio depends on decision algorithm and device performance.
+Frame-skipping ratio depends on decision algorithm and device performance.
 
-The processing device will use the frames, to make a decision whether or nor the egg barch visible on the frame is acceptable, or represent a badly cracked egg.
+The processing device will use the frames, to make a decision whether or nor the egg batch visible on the frame is acceptable, or represent a badly cracked egg.
 A signal will be send to element that will either remove egg batch from the processing plant or let is pass further.
 
-Development of this physical element is done by OVO-TECH company and is not analised in the thesis. OVO-TECH declared, that having +5V signal for positive batch, and -5V for negative is enough for them to work on their part.
+Development of this physical element is done by OVO-TECH company and is not analysed in the thesis. OVO-TECH declared, that having +5V signal for positive batch, and -5V for negative is enough for them to work on their part.
 
 
 \begin{figure}[H]
@@ -289,17 +289,17 @@ Development of this physical element is done by OVO-TECH company and is not anal
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\paperwidth]{phisical}
-\caption{Phisical system structure - camera and processing device - Raspberry Pi 2 (unmounted from RZ-1 machine)}
+\caption{Physical system structure - camera and processing device - Raspberry Pi 2 (unmounted from RZ-1 machine)}
 \end{figure}
 
 
 \subsection{Hardware and operating system choice}
 
-Among over 20 avaliable ARM systems, presented below were most interesting as possible to use in the system:
+Among over 20 available ARM systems, presented below were most interesting as possible to use in the system:
 \begin{itemize}
   \item Raspbian - a standard, default Raspberry Pi system in "Jessie" distribution.
   \item Minibian - a Raspbian image that is resource optimised.
-  Its current Raspian "Jessie" based version boots in 14secs, use only 29MB RAM and takse 451MB (compared to 1,2GB in original version). GUI, aplication clients, office suite and other non-necessary packages have been removed. The image is targeted for embedded or server applications (NAS, Web server, electronic applications).
+  Its current Raspian "Jessie" based version boots in 14secs, use only 29MB RAM and takes 451MB (compared to 1,2GB in original version). GUI, application clients, office suite and other non-necessary packages have been removed. The image is targeted for embedded or server applications (NAS, Web server, electronic applications).
   \item Arch Linux ARM
   \item Gentoo
   \item SliTaz
@@ -307,7 +307,7 @@ Among over 20 avaliable ARM systems, presented below were most interesting as po
 \end{itemize}
 
 Largest reliability and performance benefits are expected from using realtime-capable systems.
-Following solutions are avaliable or developed for Raspberry Pi:
+Following solutions are available or developed for Raspberry Pi:
 
 \begin{itemize}
   \item RISC OS
@@ -317,29 +317,29 @@ Following solutions are avaliable or developed for Raspberry Pi:
   \item RODOS - an Open Source kernel project developed by the German Aerospace Center and Prof. Montenegro's University\cite{rodos}
 \end{itemize}
 
-Nevertheless advanced image processing, GPU access, utulisation of existing graphics libraries might be not avaliablie or require amount of effort unproportional to those benefits.
+Nevertheless advanced image processing, GPU access, utilisation of existing graphics libraries might be not available or require amount of effort disproportional to those benefits.
 Also, external real-time clock (such as AD9850 Pulse generator) would be required.
 
-The decision was made, to use Raspbian as the operating system, because of its documentation aviability and good community support.
+The decision was made, to use Raspbian as the operating system, because of its documentation availability and good community support.
 
-Using alternative system operating on Rasperry Pi 2 platform might improve image processing performance. Therefore, more frames per second could be analized, more filters can be applied and higher resolution pictures could be used.
-Porting to one of the systems mentioned above will be considered in the future, during the process of designing mass-producted system version.
+Using alternative system operating on Raspberry Pi 2 platform might improve image processing performance. Therefore, more frames per second could be analized, more filters can be applied and higher resolution pictures could be used.
+Porting to one of the systems mentioned above will be considered in the future, during the process of designing mass-produced system version.
 
 Following platforms were considered, to be used as processing device and host chosen operating system:
 
 \begin{itemize}
-  \item Raspberry Pi 2 - featuring 900 MHz quad-core ARM Cortex-A7 and 1GB RAM, Broadcom VideoCore IV GPU, 4 USB ports, an ethernet port, 40 GPIO ports and camera module socket, its the most avaliablie of embedded pc ARM platforms.
+  \item Raspberry Pi 2 - featuring 900 MHz quad-core ARM Cortex-A7 and 1GB RAM, Broadcom VideoCore IV GPU, 4 USB ports, an ethernet port, 40 GPIO ports and camera module socket, its the most available of embedded pc ARM platforms.
   \item Arduino Uno R3 accompanied with DS1307 Real Time Clock - considered, but for now the image processing is to extensive in terms of image processing.
-  Having extremly cheap clones (4-20\$ on retail market) that fetures often stronger ATMega units is an advantage altough.
+  Having extremely cheap clones (4-20\$ on retail market) that features often stronger ATMega units is an advantage although.
   \item Intel Galileo Gen 2 - based on Intel Quark 32-bit SoC X1000 processor, provides pins-compatible with shields designed for the Arduino Uno R3, what makes communication with other OVO-TECH machine modules easier and allows use of the mentioned above RTC.
   \item PandaBoard - the OMAP4430 features 1 GHz dual-core ARM Cortex-A9 MPCore CPU (a big improvement compared to Cortex-A7 CPU in Raspberry Pi 2), 304 MHz GPU, and 1 GiB DDR2 SDRAM.
   What is interesting, it provides a real-time clock, what makes it a candidate for real-time system (see section 8.1).
   \item BeagleBoard xM - based on dual, 1,5GHz clocked ARM Cortex-A15  + dual ARM M4, 532 MHz GPu, often used with RISC-OS, having cheaper clones with more RAM.It is considered a stronger Raspberry Pi alternative.
   \item Nvidia Jetson TK1 - build on quad ARM Cortex-A15, NVIDIA Kepler 192-cores CUDA GPU, 2 GiB RAM, optimised for OpenGL and OpenCV, equiped with SATA connector.
-  TK1 is the stronggest avaliable unit, what makes it also the most expensive one.
+  TK1 is the strongest available unit, what makes it also the most expensive one.
 
-Raspberry Pi 2 was chosen, due to simillar reasons that Raspbian was picked.
-Similarry to Raspian, Raspberry Pi 2 may be replaced with different platform inlater design phases, when a prototype is operational and tested.
+Raspberry Pi 2 was chosen, due to similar reasons that Raspbian was picked.
+Similarly to Raspian, Raspberry Pi 2 may be replaced with different platform inlater design phases, when a prototype is operational and tested.
 
 As for camera module, a standard Raspberry Pi v1.3 5Mpix Camera module was shipped with the board and proves to be more then sufficient in terms of resolution and fps for now.
 
@@ -378,27 +378,27 @@ Than, two copies of the frame are processed independently.
 \begin{description}
   \item[Firstly,]one channel is extracted from the image.
   Its state is passed further as image, along all the steps.
-  \item[Secondly,]the channel is a subject to preprocessing, that eliminates the unimportat data and reduces the data dimentionality. 
-  Amount of noise is reducted.
-  \item[Thirdly,]the image is segmentated, and the shape recognition methods are used to detect existance, position and size of the egg yolk.
+  \item[Secondly,]the channel is a subject to preprocessing, that eliminates the unimportant data and reduces the data dimensionality. 
+  Amount of noise is reduced.
+  \item[Thirdly,]the image is segmentation, and the shape recognition methods are used to detect existence, position and size of the egg yolk.
   \item[Independently,]other copy of the image is a subject to different color scale.
   \item[Then,]only one channel is extracted from the image
-  \item[Finally,]the information from first copy is used to remove intact egg region from second copy.The first copy is no logner needed and its rresources are freed.
+  \item[Finally,]the information from first copy is used to remove intact egg region from second copy.The first copy is no longer needed and its resources are freed.
 \end{description}
 
-Choosen channel of transformed second copy (with intact egg excluded) serve as the only image now.
+Chosen channel of transformed second copy (with intact egg excluded) serve as the only image now.
 It is processed in a following way:
 
 \begin{description}
-  \item[Firstly,]an attempt is made to dilter out the light reflections and flares from the image.
-  Hopefully, during the further development, above artifacts can be removed in a phisical way, by mounting and lighting the device in a very specific way.
+  \item[Firstly,]an attempt is made to filter out the light reflections and flares from the image.
+  Hopefully, during the further development, above artefacts can be removed in a physical way, by mounting and lighting the device in a very specific way.
   For now nevertheless, this step is necessary.
   \item[Secondly,]image is segmentated with thresholding.
   \item[Thirdly,]noise (defined as small blobs) is deleted.
   \item[Finally,]the obtained image is expected to contain only unwanted, damaged egg mass.
-  Amount of pixels contaning it is counted.
+  Amount of pixels containing it is counted.
   \item[Decision] is made basing on the obtained amount.
-  It takes a form of signal sent to phisical element that either removes the egg batch or let it through.
+  It takes a form of signal sent to physical element that either removes the egg batch or let it through.
 \end{description}
 
 The best obtained combination of preprocessing, segmentation and grading parameters will be used in a final algorithm that will be implemented in Raspberry Pi 2 device with camera module, and than tested in the Rz-1 processing plant.
@@ -415,21 +415,21 @@ The best obtained combination of preprocessing, segmentation and grading paramet
 Decision have been made, to utilise OpenCV computer vision library for batch state recognition.
 OepnCV is designed for computational efficiency, with strong focus on real-time applications.
 It has been written in optimised C and takes advantages of multicore processors.
-It provides simple-to-use interfece that enables building sophisticated computer vision solutions.
-The library features more than 500 functions that process images, a general Machine Leraning Library (including Multilayered Perceptron Networks).
-It is used since 1999 by major institutions such as Stanford University and is mantained and developed by specialists from companies such us IBM, Microsoft, Intel, Sony, Siemens, and Google.\cite{learnopencv}
+It provides simple-to-use interface that enables building sophisticated computer vision solutions.
+The library features more than 500 functions that process images, a general Machine Learning Library (including Multilayered Perceptron Networks).
+It is used since 1999 by major institutions such as Stanford University and is maintained and developed by specialists from companies such us IBM, Microsoft, Intel, Sony, Siemens, and Google.\cite{learnopencv}
 
-First recognition attempts were done by the author of thesis using Android 4.3 running on Samsung N7100 Galaxy Note II smarpthon, utilising its build in camera.
+First recognition attempts were done by the author of thesis using Android 4.3 running on Samsung N7100 Galaxy Note II smartphone, utilising its build in camera.
 The initial code was written with use of Java distribution of OpenCV library, as well as Android SDK.
 Sadly, the performance of developed pre-prototype was very poor and a single frame was processed in more than 3 seconds.
 Another version was build in a way that most resource consuming operations (such us Hough Circle Transform and all array operations) were rewritten in C language.
-For that purpouse original C version of OpenCV was utilised, as well as NDK (Native Development Kit for Android).
+For that purpose original C version of OpenCV was utilised, as well as NDK (Native Development Kit for Android).
 
-Nevertheless, author of this thesis, decided that despite Android aviability for embedded platforms, it is no a platform suitable for factory tasks, due to big overhead, long booting and variety of functions that will not be utilised.
+Nevertheless, author of this thesis, decided that despite Android availability for embedded platforms, it is no a platform suitable for factory tasks, due to big overhead, long booting and variety of functions that will not be utilised.
 
-Raspbian Linux "Jessie" distribution was picked as the adequate one to host recognition algorithm accopmanied with Python 2.7 language.
-Python is well supported on Raspian, it produces small amount of code, and can be executed fast in terms of computational time if the speciffic C-written functions are called.\cite{performance}
-For author, a case occured, that 39-lines code snippet that recognise nested regions of image, written in C took only 6 code lines after rewritting it in Python.
+Raspbian Linux "Jessie" distribution was picked as the adequate one to host recognition algorithm accompanied with Python 2.7 language.
+Python is well supported on Raspian, it produces small amount of code, and can be executed fast in terms of computational time if the specific C-written functions are called.\cite{performance}
+For author, a case occurred, that 39-lines code snippet that recognise nested regions of image, written in C took only 6 code lines after rewriting it in Python.
 
 
 \section{Egg yolk detection}
@@ -444,19 +444,19 @@ Following methods treat images as 1, 8, or 24-bit encoded matrices, thus both te
 x and y denote pixel position.
 \subsection{Extracting channels}
 In digital graphics color information is usually stored as a value from RGB (or BGR) additive color space.
-It means, that three numbers represent amount of red, green, anb blue subcolors that combined constitude a visible color.
+It means, that three numbers represent amount of red, green, anb blue subcolors that combined constitute a visible color.
 For this algorithm sake, it is assumed that every one of this numbers takes values from 0-255 interval and is encoded by 8bits, what sums to 24bit encoding for every RGB pixel.
 
-Alternativly, a simplified information may be processed: a grayscale image is made of pixels encoded by a single number that denotes the colors distance from being completly black; the higher is the number, the closer to being white it is.
+Alternatively, a simplified information may be processed: a grayscale image is made of pixels encoded by a single number that denotes the colors distance from being completely black; the higher is the number, the closer to being white it is.
 8bit encryption has been chosen for grayscale images.
 
 There is also an option to store binary black-and-white image with 1bit encoding (0 picked for black, 1 for white).
  
 A channel in this context is a grayscale image that represents intensity of single subcolor in RGB space. 
-For example, a red chanel is an image, in which 255 constitudes red pixel, and 0 means that pixel has no red subcolor.
+For example, a red channel is an image, in which 255 constitutes red pixel, and 0 means that pixel has no red subcolor.
 
-It is suspected by the author that using a single channel instead of comonly used RGB image may is more efficient and some unnecessary information in dropped.
-Particualary, an egg yolk that is visually yellow or red my be favoured in red or green channel.
+It is suspected by the author that using a single channel instead of commonly used RGB image may is more efficient and some unnecessary information in dropped.
+Particularity, an egg yolk that is visually yellow or red my be favoured in red or green channel.
 
 \begin{figure}[H]
 \centering
@@ -468,21 +468,21 @@ Particualary, an egg yolk that is visually yellow or red my be favoured in red o
 \subsection{HSV scale conversion}
 
 Extending assumption from previous subchapter led author to belive that using a color space different than RGB might be more effective in recognition process.
-It might occur, that the problem of assigning color values associated with egg yolk is either linearly separable or close to hbeing such, and thus extracting only those pixels that constitude egg yolk might be possible.
+It might occur, that the problem of assigning color values associated with egg yolk is either linearly separable or close to being such, and thus extracting only those pixels that constitute egg yolk might be possible.
 
-HSV cilindrical color space is known as being exceptionaly suitable as a preprocessing method used before image segmentation \cite{hsv}
+HSV cylindrical color space is known as being exceptionally suitable as a preprocessing method used before image segmentation \cite{hsv}
 
-In HSV color is represented by Hue (angle of a point on a clinder), Saturation (a radius of a point) and Value (height of the point).
+In HSV color is represented by Hue (angle of a point on a cylinder), Saturation (a radius of a point) and Value (height of the point).
 
 Hue is defined as "the degree to which a stimulus can be described as similar to or different from stimuli that are described as red, green, blue, and yellow"\cite{hue}.
-Saturation stands for intensity of a prticular hue.
+Saturation stands for intensity of a particular hue.
 Value is also defined as darkness of the color and is often treated as reverse grayscale channel.
 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{hsv}
-\caption{HSV Cilinder. Src: www.doc.qt.io}
+\caption{HSV Cylinder. Src: www.doc.qt.io}
 \end{figure}
 
 
@@ -544,7 +544,7 @@ Dilatation makes the objects bigger.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{lett}
-\caption{Orignal image, eroded image, dilated image.\cite{erdil}}
+\caption{Original image, eroded image, dilated image.\cite{erdil}}
 \end{figure}
 
 
@@ -569,10 +569,10 @@ Gaussian blur drastically reduces number of false-positive Hough circles detecti
 \end{figure}
 
 
-sigma, ksize.width, ksize.height  parameters are introducted.
+sigma, ksize.width, ksize.height  parameters are introduced.
 Ksize stands for size of precomputed kernel, that is convoluted with ROIs on the image.
 
-The term ‘convolution’ might be misleading and for the scope of image processing tasks is defined as picewise multipling two matrices and than summing the obtained values:
+The term ‘convolution’ might be misleading and for the scope of image processing tasks is defined as piecewise multiplying two matrices and than summing the obtained values:
 
  
 \begin{figure}[H]
@@ -604,15 +604,15 @@ The term ‘convolution’ might be misleading and for the scope of image proces
 
 
 \section{Contaminated product recognition}
-Methods descriped in previous chapter are used for contaminated product recognition, as well as two more presented below:
+Methods described in previous chapter are used for contaminated product recognition, as well as two more presented below:
 
 \subsection{Subtracting yolk image}
 Subtracting image of detected intact egg yolks from the general image outputs an image that holds only unwanted egg yolk, egg white and its surrounding.
-Therefore, the problem would be reducted to simple assesing the amount of remaining egg yolk and comparing it to a threshold value for acceptable bad yolk ammount.
+Therefore, the problem would be reduced to simple assessing the amount of remaining egg yolk and comparing it to a threshold value for acceptable bad yolk amount.
 
 The initial implementation for this methods was supposed to be obtained by filling the image with empty circles detected in the previous chapter.
-Unfortunately, it has been expreimentaly tested, that egg yolk is reflecting some yellow light on it's surroundings and it is very hard to filter them out, thus a bigger area is subtracted.
-Instead of circles, empty rectangles are drawn on the analised image. The rectangles fill the whole image height (since eggs do not slide parallely due to transporation slope design), and their width is equal to detected yolks diameter summed with an offset that covers reflecting light. The reactangles centeres are equal to yolk centers.
+Unfortunately, it has been sentimentally tested, that egg yolk is reflecting some yellow light on it's surroundings and it is very hard to filter them out, thus a bigger area is subtracted.
+Instead of circles, empty rectangles are drawn on the analysed image. The rectangles fill the whole image height (since eggs do not slide parallely due to transportation slope design), and their width is equal to detected yolks diameter summed with an offset that covers reflecting light. The rectangles centeres are equal to yolk centers.
 
 \subsection{Thresholding}
 
@@ -644,8 +644,8 @@ Therefore Otsu Binarization algorithm for automatically selecting threshold is u
 Moreover using one threshold value for whole image may not work properly if the lighting conditions differ in different image areas.\cite{thre}
 Adaptive Thresholding utilize different threshold values for different ROIs.
 Two modes are often used: Adaptive Mean and Adaptive Gaussian.
-First compute threshold value as mean of neighborhood values.
-Second uses weighted sum neighborhood values.
+First compute threshold value as mean of neighbourhood values.
+Second uses weighted sum neighbourhood values.
  
 \begin{figure}[H]
 \centering
@@ -685,19 +685,19 @@ For more general cases (i.e. multichannel images, assigning more colors) cluster
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{bad}
-\caption{Properly segmentated damaged yolk mass}
+\caption{Properly segmented damaged yolk mass}
 \end{figure}
 
 \section{Choosing detection system parameters}
 \subsection{Manual parameters optimisation}
 
-There exist a set of parameters that define the mode, that previously explained methods operate as well as their instensivity.
-Finding optimal values of this parameters is a hard task, since for example CHT method was not able to found a single egg yolk with defualt numbers.
+There exist a set of parameters that define the mode, that previously explained methods operate as well as their insensitivity.
+Finding optimal values of this parameters is a hard task, since for example CHT method was not able to found a single egg yolk with default numbers.
 
 
-Few simillar cripts were developed, that displayed over 500 sample pictures pictures (provided by OVO-TECH) for 0.3 second each in a loop.
-Various trackbars was displayed above the frames, with every trackbar coresponding to one parameter that is supposed to be chosen.
-Beside, the already transformed frames after transormations were shown.
+Few similar scripts were developed, that displayed over 500 sample pictures pictures (provided by OVO-TECH) for 0.3 second each in a loop.
+Various trackbars was displayed above the frames, with every trackbar corresponding to one parameter that is supposed to be chosen.
+Beside, the already transformed frames after transformations were shown.
 The expert was reviewing the output while changing the trackbar positions to obtain an image that segmentates the egg yolk properly.
 
 \begin{figure}[H]
@@ -709,7 +709,7 @@ The expert was reviewing the output while changing the trackbar positions to obt
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\paperwidth]{manual}
-\caption{One of the scripts used for manual parameter inteveral finding}
+\caption{One of the scripts used for manual parameter interval finding}
 \end{figure}
 
 Script crucial fragments:
@@ -717,39 +717,39 @@ Script crucial fragments:
 \lstinputlisting[language=Python]{trackbars.py}
 
 Unfortunately, while some parameters sets worked fine for some image sets, they failed with another ones.
-Nevertheless, the interesting intervals were obtained for each trakcbar. These intervals guaranteed that at least some of the graded images are segmentated in exptected way.
-This method resulted in excluding most parameters values and vastly reducting the optimising problem size.
+Nevertheless, the interesting intervals were obtained for each trackbar. These intervals guaranteed that at least some of the graded images are segmentated in expected way.
+This method resulted in excluding most parameters values and vastly reducing the optimising problem size.
 
 \subsection{Automatic parameters optimisation}
 
-A decision was made, to automatise process of assesing the segmentation and detection efficiency to get to optimal set of parameters.
+A decision was made, to automatise process of assessing the segmentation and detection efficiency to get to optimal set of parameters.
 This process was done twice:
 \begin{description}
 \item[Firstly,] the egg yolk detection process was optimised.
-\item[Secondly,] the contaminated product detection utilising the previously otpimised egg yolk detector was perfected.
+\item[Secondly,] the contaminated product detection utilising the previously optimised egg yolk detector was perfected.
 \end{description}
 
-To accomplish first objective, avaliable images were devided into 3 subsets for first process:
+To accomplish first objective, available images were divided into 3 subsets for first process:
 \begin{itemize}
 \item 0 intact yolks visible in a frame
 \item 1 egg present
 \item 2 eggs present
 \end{itemize}
 For the whole set, the recognition error was defined  as sum of missdetections for every subset.
-A simmilar procedure was conducted for second objective: the same images were devided into following subsets:
+A similar procedure was conducted for second objective: the same images were divided into following subsets:
 \begin{itemize}
 \item Contaminated batches
 \item Batches with either only intact eggs or no egg mass at all
 \end{itemize}
 Error was defined as false negatives (good batch recognised as bad batch) number summed with false positives number multiplied by 3.
-Multipilication by '3' weight was conducted on false positives, since keeping the product clean is more important for the client, that utilising all the egg mass. 
+Multiplication by '3' weight was conducted on false positives, since keeping the product clean is more important for the client, that utilising all the egg mass. 
 
 A script was developed, that automatically loaded the images and graded them for different parameter values.
-This process was very expensive in terms of processing time, and the parameters range and step was choosen to fill a night of i7-3520M 8GB RAM computer work.
-It was computed in a following way: elapsed time of one full imageset testing multiplied by number of possible paramter sets.
-The process was repeted by the author multiple times with different parameter intervals discovered in a process descriped in previous subsection.
+This process was very expensive in terms of processing time, and the parameters range and step was chosen to fill a night of i7-3520M 8GB RAM computer work.
+It was computed in a following way: elapsed time of one full imageset testing multiplied by number of possible parameter sets.
+The process was repeated by the author multiple times with different parameter intervals discovered in a process descried in previous subsection.
 Various effort were made by the author to optimise imageset grading process, so bigger variety of parameters can be checked.
-Initialy, files were open prior to every image evaluation, later on all the images were loaded once, and every processing (channel spliting, colorscale conversion) was conducted before execution of the code nested in multiple loops.
+Initially, files were open prior to every image evaluation, later on all the images were loaded once, and every processing (channel splinting, colorscale conversion) was conducted before execution of the code nested in multiple loops.
 
 Crucial parts of the testing code:
 \lstinputlisting[language=Python]{script.py}
@@ -757,7 +757,7 @@ Crucial parts of the testing code:
 
 \subsection{Overfitting}
 Overfitting is an unwanted effect that appears often in statistics and supervised machine learning.
-Overfitting means, that parameters of some model are fitting the specific modeled data case, rather than the general model.
+Overfitting means, that parameters of some model are fitting the specific modelled data case, rather than the general model.
 
 In this case it means, that the parameters of image processing that were found, maximise the recognition efficiency for the data provided by OVO-TECH, while a new data (with different kind of eggs, different kind of noise or with images made in different conditions) can be classified in improper way.
 
@@ -768,9 +768,9 @@ Overfitting occurs mostly if:
 \item No regularisation or cross-validation methods are used
 \end{itemize}
 
-To reduce this effect, author used different dataset for getting the transform parameters, and different set (excluded 10\% of data from every sample subset) for assesing the recognition quality.
+To reduce this effect, author used different dataset for getting the transform parameters, and different set (excluded 10\% of data from every sample subset) for assessing the recognition quality.
 
-During protoype in factory testing and further development this issue will be addressed in extended way.
+During prototype in factory testing and further development this issue will be addressed in extended way.
 \subsection{Results}
 The following parameter values were obtained in a process of automatic parameters optimisation executed for on 195 sample photos that depict properly cracked egg and 388 depicting bad batches.
 The recognition accuracy maximised during optimisation process was 91,25\%, and the recognition accuracy on the testing set of 57 images was 84,2%.
@@ -782,8 +782,15 @@ The recognition accuracy maximised during optimisation process was 91,25\%, and 
 
 
 
-\section{Phisical system implementation}
+\section{Physical system implementation}
 \subsection{Hardware problems}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\paperwidth]{cable}
+\caption{Cord had to be shaped with a knife to fit into Raspberry Pi casing}
+\end{figure}
+
 \subsection{Camera module configuration}
 \subsection{Operating system configuration}
 \subsection{Python and OpenCV configuration}
@@ -797,13 +804,13 @@ The following alternative approaches and improvements in detection system will b
 \subsection{Server and logging}
 Gathering the data about egg quality, recognition performance and effectiveness is a possibility that has to be addressed.
 Raspberry Pi 2 platform is capable of working as a server and thus provide system manufacturer a remote access to the its operations.
-\subsection{One month prototype testing and enviroment of work tuning}
+\subsection{One month prototype testing and environment of work tuning}
 
-The prototype will be attached to the rz-1 machine operating at OVO-TECH headquaters for a month.
+The prototype will be attached to the rz-1 machine operating at OVO-TECH headquarters for a month.
 During that time, led lights will indicate proper and improper egg batch.
-Recognition efficiency is now > 90\%. Two cases may occur, when the device is operating in working enviroment:
+Recognition efficiency is now > 90\%. Two cases may occur, when the device is operating in working environment:
 \begin{itemize}
-\item Recognising efficiency will rise dramaticly, since the camera position will be fixed, and the background (separation module slope) will have uniform facture and color.
+\item Recognising efficiency will rise dramatically, since the camera position will be fixed, and the background (separation module slope) will have uniform facture and color.
 The data provided by OVO-TECH for prototype construction covered various situations and backgrounds that will be invariant in factory application.
 \item Recognising efficiency will drop, due to varying egg quality, color and shape.
 \end{itemize}
@@ -811,7 +818,7 @@ The data provided by OVO-TECH for prototype construction covered various situati
 Two things will be done to improve image material quality registered by camera:
 \begin{itemize}
 \item Polarizing filter will be attached to the camera.
-It should eliminate or drasticlly decrease amount of white light reflexes.
+It should eliminate or drastically decrease amount of white light reflexes.
 Those reflexes that make yolk appear as non-yolk at segmentated image.
 \item Lighting will be uniform due to covering camera and a fragment of transportation slope in a box-like container with invariant, non-shadowing lights inside of it.
 \end{itemize}
@@ -824,17 +831,17 @@ Two approaches have came up after the prototype development and are to be implem
 \begin{itemize}
 \item Circularity testing - height of the segmented yolk flow can be treated as a circle diameter. Than, area of obtained circle can be compared to area of observed egg yolk. If the difference is significant, it indicates that observed blob is not a whole egg.
 Using a derived method for positioning the center of such circle might work better than methods used up to now if a noncomplete part of egg is visible at the image.
-\item Watershed algorithm accompanied with extracting peaks of Euclidean Distance Transform is belived to work better than contour detection and thresholding methods with touching or overlapping objects.
+\item Watershed algorithm accompanied with extracting peaks of Euclidean Distance Transform is believed to work better than contour detection and thresholding methods with touching or overlapping objects.
 It might provide efficiency boost in case of RZ-1 processing plant operating in modes faster than precise mode.\cite{watershed}
 \end{itemize}
 
 \subsection{Obtaining more image data and parameters tuning}
 
 Larger dataset of more different egg types will enable to better tune the processing parameters.
-Since there are more than 10 parameters to adjust and the number of operations that are required rise exponentialy with parameters number and is multipied by sample amount, optimising such multivariate function is a hard task.
+Since there are more than 10 parameters to adjust and the number of operations that are required rise exponentially with parameters number and is multiplied by sample amount, optimising such multivariate function is a hard task.
 Genetic algorithms are known to be a good metaheuristics for such tasks and should give better results in much less computation time that brute force parameter testing.
 Author developed a program that implements genetic algorithm in Java, that optimises 1,2 and 3-variate functions to understand and learn the genetic algorithm concepts.
-Further on, a ready, popular library will be used for this purpouse: a DEAP genetic programming library for Python.
+Further on, a ready, popular library will be used for this purpose: a DEAP genetic programming library for Python.
 
 
 \begin{figure}[H]
@@ -848,10 +855,10 @@ Further on, a ready, popular library will be used for this purpouse: a DEAP gene
 
 \section{Conclusions}
 
-Folowing results were obtained in the system designing, tuning and testing process:
+Following results were obtained in the system designing, tuning and testing process:
 \begin{enumerate}
-\item Recognising egg-batch state using camera image is an adequate method of solving the poroblem of inperfect egg-white separation.
-\item Simple image processing methods are cable of obtaining image recognition efficency higher than 84\% on this problem, even if lighting and camera placement conditions are unfavorable.
+\item Recognising egg-batch state using camera image is an adequate method of solving the problem of imperfect egg-white separation.
+\item Simple image processing methods are cable of obtaining image recognition efficiency higher than 84\% on this problem, even if lighting and camera placement conditions are unfavourable.
 \item An operational prototype device was constructed and implemented. It will be tested and improved further in order to introduce it to mass production. OVO-TECH will be expanding its R\&D section to obtain that goal.
 \end{enumerate}
 

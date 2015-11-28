@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.2.7)  28 NOV 2015 00:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.2.7)  28 NOV 2015 14:23
 entering extended mode
 **th.tex
 (C:\Users\Orley\Desktop\thesis\docs\tex\th.tex
@@ -904,6 +904,12 @@ Overfull \hbox (22.764pt too wide) in paragraph at lines 779--780
 Underfull \vbox (badness 2384) has occurred while \output is active []
 
  [27]
+<imgs/cable.jpg, id=129, 509.65407pt x 347.79938pt>
+File: imgs/cable.jpg Graphic file (type jpg)
+ <use imgs/cable.jpg>
+Package pdftex.def Info: imgs/cable.jpg used on input line 790.
+(pdftex.def)             Requested size: 179.25418pt x 122.32597pt.
+
 (C:\Users\Orley\Desktop\thesis\docs\tex\rpi.py
 Overfull \hbox (48.76102pt too wide) in paragraph at lines 5--6
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
@@ -919,28 +925,29 @@ Overfull \hbox (178.36234pt too wide) in paragraph at lines 16--17
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) [28 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/params.jpg>] [29]
-<imgs/genetic.jpg, id=135, 676.77844pt x 489.32813pt>
+[28 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/params.jpg> <C:/Users/Orley/De
+sktop/thesis/docs/tex/imgs/cable.jpg>]) [29]
+<imgs/genetic.jpg, id=136, 676.77844pt x 489.32813pt>
 File: imgs/genetic.jpg Graphic file (type jpg)
  <use imgs/genetic.jpg>
-Package pdftex.def Info: imgs/genetic.jpg used on input line 842.
+Package pdftex.def Info: imgs/genetic.jpg used on input line 849.
 (pdftex.def)             Requested size: 418.25368pt x 302.41711pt.
 
 [30 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/genetic.jpg>]
-Underfull \hbox (badness 1701) in paragraph at lines 883--885
+Underfull \hbox (badness 1701) in paragraph at lines 890--892
 []\T1/ptm/m/n/12 Ketelaerea B.,Bamelisa F., Kempsa1 B., De-cuyperea1 E., Baerde
 -maek-era J. \T1/ptm/m/it/12 Non-
  []
 
 [31] [32] (C:\Users\Orley\Desktop\thesis\docs\tex\th.aux) ) 
 Here is how much of TeX's memory you used:
- 5284 strings out of 493921
- 72638 string characters out of 3151769
- 160256 words of memory out of 3000000
- 8444 multiletter control sequences out of 15000+200000
+ 5289 strings out of 493921
+ 72722 string characters out of 3151769
+ 159256 words of memory out of 3000000
+ 8448 multiletter control sequences out of 15000+200000
  33088 words of font info for 51 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,6n,43p,1046b,1608s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,6n,43p,1046b,1630s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x
 86)/TiCTeX v1.0 for windows/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/Program 
 Files (x86)/TiCTeX v1.0 for windows/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy1
@@ -948,9 +955,9 @@ Files (x86)/TiCTeX v1.0 for windows/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy1
 mes/utmb8a.pfb><C:/Program Files (x86)/TiCTeX v1.0 for windows/MiKTeX/fonts/typ
 e1/urw/times/utmr8a.pfb><C:/Program Files (x86)/TiCTeX v1.0 for windows/MiKTeX/
 fonts/type1/urw/times/utmri8a.pfb>
-Output written on th.pdf (32 pages, 3646775 bytes).
+Output written on th.pdf (32 pages, 3693092 bytes).
 PDF statistics:
- 161 PDF objects out of 1000 (max. 8388607)
+ 162 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 166 words of extra memory for PDF output out of 10000 (max. 10000000)
 
