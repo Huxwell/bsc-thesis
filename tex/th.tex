@@ -203,6 +203,9 @@ Precision mode is used widely with bad quality eggs to extend amount of time for
 
 The author idea is to replace the whole Quality Control module with custom designed module, that will automatically asses broken egg quality and remove them mechanically.
 The creation of the mechanical element is out of the scope of this work and is handled by Ovo-tech engineers.
+The egg accumulation will not longer be required, as well as the work of qualified expert that optically assased the egg quality is not needed any more.
+
+
 
 More advanced OVO-TECH models such us RZ-3, RZ-6 and RZ-8 will be also considered for further research.
 
@@ -263,7 +266,7 @@ Among them, the following are worth mentioning:
 \item Fourier frequency analysis of a vibration-based response on impact force\cite{svm} 
 \item Ultrasonic, magnetic resonance, electric resistance, electric nose\cite{nondestr}  
 \end{itemize}
-All methods listed above require very specific equipment, are prone to overfitting and take in to account assumption that does not has to be satisfied for problem considered in this thesis: the egg shell should not be damaged.
+All methods listed above require very specific equipment, are prone to overfitting and take in to account an assumption that does not has to be satisfied for problem considered in this thesis: the egg shell should not be damaged.
 
 Since in this very special case, eggs are already broken, simplified and different methods can be considered.
 Initially, two ideas were researched by author of this thesis:
@@ -273,10 +276,33 @@ Initially, two ideas were researched by author of this thesis:
 \end{itemize}
 Both methods would identify the intact yolk basing on its height and would not require much processing (an Arduino Uno or other ATMega based circuits might be sufficient).
 Nevertheless, both of them had to be rejected, since intact yolks presence in the tested batch is not sufficient for batch accepting – absence of egg yolk parts is also required (see subchapter 2.1).
+
+
 Finally, using images of the batch obtained from camera and processing it was chosen as a most promising option for further research.
 
 
 
+\subsection{Detecting batch state with camera image}
+
+When it comes to assessment of camera image, 4 approaches are widely considered:
+\begin{enumerate}
+\item Very easy scanning with photo sensors or very low resolution cameras
+\item Computer graphics preprocessing and segmentation accompanied with assessment of a parameter (number of pixels, number of feature points, percentage of one region that fills another bigger region and similar)
+\item Machine learning approach
+\item Neural networks which are used as a special case of either machine learning process or a part of it 
+\end{enumerate}
+First case was considered, since it could be implemented on Arduino Uno, other ATMega based platform or real-time systems working on PLC controllers such as LOGO! 7, which are often used in factories due to their reliability (apart from Stuxnet-class worms, that has been firstly observed in 2010, no other security threads are believed to exist).
+Unfortunately, the problem is more complex than simply deciding whether the product is present or not; or whether the product is yellow or not, thus more advanced processing is required.
+
+Second case will be expanded in the next two chapters and has been chosen as main method that will be implemented and tested in this thesis.
+
+Last two approaches will be tested if the 2nd approach will provide to be insufficient.
+It is worth mentioning, that for (3) Support Vector Machines was considered, since it classifies data to exactly two classes (i.e. proper and improper egg mass).
+
+Also, Haar Features Cascade was tested, but data amount obtained for testing was insufficient, and the methods popular implementations are focused on locating the particular object on image rather than on comparing two pattern cases.
+
+(4) Case was considered and the author build a multilayered perceptron network working with MNIST database in order to better understand the method.
+The method application will be researched further on beyond the scope of this work.
 
 
 
@@ -286,10 +312,6 @@ Finally, using images of the batch obtained from camera and processing it was ch
 \section{Batch state detection system design}
 
 \subsection{System structure}
-The system is expected to replace Quality control module (See. Figure 1.2.3).
-The egg accumulation will not longer be required, as well as the work of qualified expert that optically assased the egg quality is not needed any more.
-UWAGA te zdania musza poleciec gdzies na poczatek inz
-
 
 A camera will be placed on top of Separator module part, where cracked eggs are transported by sliding to the separating part.
 
@@ -367,27 +389,6 @@ As for camera module, a standard Raspberry Pi v1.3 5Mpix Camera module was shipp
 
 \end{itemize}
 
-\subsection{Detecting batch state with camera image}
-
-When it comes to assessment of camera image, 4 approaches are widely considered:
-\begin{enumerate}
-\item Very easy scanning with photo sensors or very low resolution cameras
-\item Computer graphics preprocessing and segmentation accompanied with assessment of a parameter (number of pixels, number of feature points, percentage of one region that fills another bigger region and similar)
-\item Machine learning approach
-\item Neural networks which are used as a special case of either machine learning process or a part of it 
-\end{enumerate}
-First case was considered, since it could be implemented on Arduino Uno, other ATMega based platform or real-time systems working on PLC controllers such as LOGO! 7, which are often used in factories due to their reliability (apart from Stuxnet-class worms, that has been firstly observed in 2010, no other security threads are believed to exist).
-Unfortunately, the problem is more complex than simply deciding whether the product is present or not; or whether the product is yellow or not, thus more advanced processing is required.
-
-Second case will be expanded in the next subchapter and has been chosen as main method that will be implemented and tested in this thesis.
-
-Last two approaches will be tested if the 2nd approach will provide to be insufficient.
-It is worth mentioning, that for (3) Support Vector Machines was considered, since it classifies data to exactly two classes (i.e. proper and improper egg mass).
-
-Also, Haar Features Cascade was tested, but data amount obtained for testing was insufficient, and the methods popular implementations are focused on locating the particular object on image rather than on comparing two pattern cases.
-
-(4) Case was considered and the author build a multilayered perceptron network working with MNIST database in order to better understand the method.
-The method application will be researched further on beyond the scope of this work.
 
 
 
@@ -826,16 +827,21 @@ The following alternative approaches and improvements in detection system will b
 \subsection{Server and logging}
 Gathering the data about egg quality, recognition performance and effectiveness is a possibility that has to be addressed.
 Raspberry Pi 2 platform is capable of working as a server and thus provide system manufacturer a remote access to the its operations.
+
+Such process may generate additional benefit, which is deciding whether or not the processed eggs quality is good.
+
+Ovo-tech reported cases of unreliable egg suppliers, that shipped old, misclassified eggs either purposefully or unwillingly to the bakery companies.
+Such situation would be detected by monitoring statistics of how big percentage of processed eggs are badly broken.
 \subsection{One month prototype testing and environment of work tuning}
 
 The prototype will be attached to the rz-1 machine operating at OVO-TECH headquarters for a month.
 During that time, led lights will indicate proper and improper egg batch.
-Recognition efficiency is now > 90\%. Two cases may occur, when the device is operating in working environment:
-\begin{itemize}
+Recognition efficiency is now > 80\%. Two cases may occur, when the device is operating in working environment:
+\begin{enumerate}
 \item Recognising efficiency will rise dramatically, since the camera position will be fixed, and the background (separation module slope) will have uniform facture and color.
 The data provided by OVO-TECH for prototype construction covered various situations and backgrounds that will be invariant in factory application.
-\item Recognising efficiency will drop, due to varying egg quality, color and shape.
-\end{itemize}
+\item Recognising efficiency will drop, due to varying egg quality, color and shape (the overfitting problem).
+\end{enumerate}
 
 Two things will be done to improve image material quality registered by camera:
 \begin{itemize}
@@ -845,7 +851,7 @@ Those reflexes that make yolk appear as non-yolk at segmentated image.
 \item Lighting will be uniform due to covering camera and a fragment of transportation slope in a box-like container with invariant, non-shadowing lights inside of it.
 \end{itemize}
 
-
+Author and Ovo-tech expect a large efficiency increase after those modifications.
 \subsection{Testing new approaches}
 
 Two approaches have came up after the prototype development and are to be implemented and tested:
@@ -884,7 +890,7 @@ Following results were obtained in the system designing, tuning and testing proc
 \item An operational prototype device was constructed and implemented. It will be tested and improved further in order to introduce it to mass production. OVO-TECH will be expanding its R\&D section to obtain that goal.
 \end{enumerate}
 
-
+Both the project goals has been achieved.
 
 
 All the Web. sources have been checked for availability in November 2015.

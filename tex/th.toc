@@ -8,12 +8,12 @@
 \contentsline {subsection}{\numberline {2.1}Host machine}{6}
 \contentsline {subsection}{\numberline {2.2}Establishing framework for product cleanness assessment}{8}
 \contentsline {subsection}{\numberline {2.3}Techniques of automatic egg quality assessment}{9}
-\contentsline {section}{\numberline {3}Batch state detection system design}{10}
-\contentsline {subsection}{\numberline {3.1}System structure}{10}
-\contentsline {subsection}{\numberline {3.2}Hardware and operating system choice}{11}
-\contentsline {subsection}{\numberline {3.3}Detecting batch state with camera image}{13}
-\contentsline {subsection}{\numberline {3.4}Detection algorithm}{13}
-\contentsline {subsection}{\numberline {3.5}Software choice}{15}
+\contentsline {subsection}{\numberline {2.4}Detecting batch state with camera image}{10}
+\contentsline {section}{\numberline {3}Batch state detection system design}{11}
+\contentsline {subsection}{\numberline {3.1}System structure}{11}
+\contentsline {subsection}{\numberline {3.2}Hardware and operating system choice}{12}
+\contentsline {subsection}{\numberline {3.3}Detection algorithm}{13}
+\contentsline {subsection}{\numberline {3.4}Software choice}{15}
 \contentsline {section}{\numberline {4}Egg yolk detection}{16}
 \contentsline {subsection}{\numberline {4.1}General idea}{16}
 \contentsline {subsection}{\numberline {4.2}Extracting channels}{16}
