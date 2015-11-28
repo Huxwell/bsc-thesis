@@ -1,0 +1,55 @@
+\section{Introduction}
+\subsection{Research scope}
+In 2014 creation of  camera based  module for chicken egg processing machines was requested by OVO-TECH company (the client).
+The module is supposed to increase quality of egg-mass based  products made with use of  client machines.
+
+
+
+The scope of this thesis is overviewing the possibilities of resolving client needs with image processing mechanisms that will optically detect state of object (batch of  intermediate product) and judge whether or not it should be discarded from the processing plant.
+Moreover, a process of creating a prototype device using tested method  is described.
+
+Problems such as:
+- choosing image preprocessing methods
+- finding optimal  parameters for used image alternations
+- overfitting issues
+- real-device solution implementation, 
+- technical issues concerning the device choice, setup and performance 
+had been taken  into account during the research procedure.
+
+
+
+
+
+
+
+\subsection{Problem description}
+
+If an egg processed by rz-1 machine is old or the chicken was feed improperly the yolk might be either broken already inside the egg, or might break during the cracking  phase due to cracker imperfections such us being calibrated for different size or weight eggs.
+A mixture of damaged yolk and white is created in a result, and it is not possible to separate it into two initial components using  the rz-1 separation  module.
+
+Batch of such mixture should be removed from  the processing plant, since it would contaminate pure egg white product otherwise. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\paperwidth]{prop}
+\caption{Properly cracked egg}
+\end{figure} 
+
+ 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\paperwidth]{damg}
+\caption{Damaged yolk in improperly cracked egg}
+\end{figure}
+
+\subsection{Demand for improvements}
+
+
+One should consider why better separation is a requirement for those companies.
+Following reasons were presented:
+
+- Ovo-tech observed that a simple dependence exists: the older the egg is, the more likely its yolk is degenerated inside the egg shell.
+Thus eliminating the batches containing fuzzy yolk should decrease chances of accidentally processing the contaminated eggs, while the risk of egg contamination generally increases with egg age.
+
+
+A non-disclosure agreement was signed between this client and ovo-tech, thus further expanding this topic in scope of this thesis is not possible.

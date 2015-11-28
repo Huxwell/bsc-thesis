@@ -1,0 +1,124 @@
+\section{Introduction}
+\subsection{Research scope}
+In 2014 creation of  camera based  module for chicken egg processing machines was requested by OVO-TECH company (the client).
+The module is supposed to increase quality of egg-mass based  products made with use of  client machines.
+
+During last 4 years multiple attempts were made by client to separate whites from yolks of freshly broken eggs in a mechanic way. 
+Obtained solutions proved to be working good enough for some companies, while other rejected them as imperfect and declared will to buy clients devices in the future, provided that adequate improvements will be made.
+
+The scope of this thesis is overviewing the possibilities of resolving client needs with image processing mechanisms that will optically detect state of object (batch of  intermediate product) and judge whether or not it should be discarded from the processing plant.
+Moreover, a process of creating a prototype device using tested method  is described.
+
+Problems such as:
+- choosing image preprocessing methods
+- finding optimal  parameters for used image alternations
+- overfitting issues
+- real-device solution implementation, 
+- technical issues concerning the device choice, setup and performance 
+had been taken  into account during the research procedure.
+
+
+
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\paperwidth]{map}
+\caption{Clients egg braking machines operating over the world}
+\end{figure}
+
+Figure 1.1 Clients egg braking machines operating over the world
+
+
+\subsection{Host machine}
+The machine that will be extended with the module prototype prepared in this thesis is OVO-TECH RZ-1 model.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\paperwidth]{rz1table}
+\caption{Rz-1 unit basic parameters}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\paperwidth]{rz1crack}
+\caption{Egg cracking  module of RZ-1 unit}
+\end{figure}
+
+
+The machine operates in a following way:
+\begin{enumerate}
+\item Eggs are directed into one-line flow, and mechanically aligned
+
+\item Cracking module cuts the incoming egg surface from below with two knives that are aligned in direction of egg focal radius
+\item The knives imitate human hands work by opening the previously notched egg
+\item The cracked eggs are accumulated in a movable utensil for optical assessment. 
+If the egg yolk appears to be broken, it is removed by an operator from the processing plant
+\item Cracked eggs are transported by sliding to white and yolk separating module
+\item Separation  is done in a mechanic way while eggs slide over specificly shaped gap that only egg white fills in, while the egg yolks remain intact
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\paperwidth]{process}
+\caption{RZ-1 Egg processing  - process and plant structure}
+
+\end{figure}
+
+RZ-1 operates in two modes:
+- Precision mode
+- Fast mode
+
+Precision mode is used widely with bad quality eggs to extend amount of time for optical assessment in (5) phase.
+
+More advanced OVO-TECH models such us RZ-3, RZ-6 and RZ-8 will be also considered for further research.
+
+\subsection{Problem description}
+
+If an egg processed by rz-1 machine is old or the chicken was feed improperly the yolk might be either broken already inside the egg, or might break during the cracking  phase due to cracker imperfections such us being calibrated for different size or weight eggs.
+A mixture of damaged yolk and white is created in a result, and it is not possible to separate it into two initial components using  the rz-1 separation  module.
+
+Batch of such mixture should be removed from  the processing plant, since it would contaminate pure egg white product otherwise. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\paperwidth]{prop}
+\caption{Properly cracked egg}
+\end{figure} 
+
+ 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\paperwidth]{damg}
+\caption{Damaged yolk in improperly cracked egg}
+\end{figure}
+
+\subsection{Demand for improvements}
+
+Nine companies were inquired whether or not would they invest in improved Ovo-tech machine, provided that egg white will be visually clean of yolk parts.
+Seven of them replied positively that they would seriously consider such offer since their processing plants would benefit in terms of product quality or manpower cost on such improvement.
+Remaining 2 companies did not answer the question.
+
+One should consider why better separation is a requirement for those companies.
+Following reasons were presented:
+
+- Confectioneries and bakeries utilize egg white foam as an ingredient for their products.
+Egg white foam is obtained by aeration (also known as beating / foaming / whipping) process.
+Comprehensive process description was provided by one of the bakers:
+
+"When air is incorporated into a liquid or viscous solution, the solution entraps the air bubbles, forming a foam. If the foam is stabilized by proteins, it leavens a food, increasing its height and reducing its density. The viscosity of all egg products is ideal for incorporating air cells during the whipping or beating process. As whipping or beating progresses, air bubbles decrease in size and increase in number, all the time surrounded by egg proteins. Liquid egg products have low air-liquid interfacial tension; thus, when eggs are beaten or whipped, the proteins denature, or simply, they unfold. This exposes two oppositely charged ends of the protein molecule: the hydrophobic, or water-hating end, and the hydrophilic, or water-loving ends. The proteins align themselves between the air and water, securing the air bubbles with their hydrophilic chains pointing into the water and dangling their hydrophobic chains in the air. During baking, these proteins bond with each other, forming a delicate, yet reinforced network.
+
+Egg whites do this much better than yolks because of the unique proteins found in whites. In fact, even though the term foam technically refers to any system where there are entrapped air bubbles, in the food industry, when discussing egg white products, the term tends to be exclusive to egg whites foams. This is because egg whites, unlike any other natural food ingredient, are able to create the largest possible food foam, a foam six to eight times greater in volume than unwhipped, non-aerated liquid egg white
+
+Whole eggs and egg yolks can also increase the volume of foods, including certain baked goods and dairy desserts such as ice cream and custard, but just not as much as egg whites alone. Visually, whipped yolks may double or triple in volume, while whipped whole eggs produce less volume than either yolks or whites whipped separately. They are also less thick than yolks alone." \cite{eggprop}
+
+- Ovo-tech observed that a simple dependence exists: the older the egg is, the more likely its yolk is degenerated inside the egg shell.
+Thus eliminating the batches containing fuzzy yolk should decrease chances of accidentally processing the contaminated eggs, while the risk of egg contamination generally increases with egg age.
+
+- One of the Ovo-tech clients is a biotechnology company that manufacture medicine out of genetically modified eggs.
+The company purchased some ovo-tech machines, but is nevertheless displeased with their separation ratio.
+This company currently is undergoing a procedure of obtaining US Food Drug Administration (FDA) approval for wide distribution of their egg-based medicine.
+Executives of this client suspect that using machines with better egg separation will increase their chance for positive outcome of above process.
+A non-disclosure agreement was signed between this client and ovo-tech, thus further expanding this topic in scope of this thesis is not possible.
