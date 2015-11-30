@@ -2,7 +2,7 @@
 \select@language {polish}
 \select@language {english}
 \contentsline {section}{\numberline {1}Introduction}{3}
-\contentsline {subsection}{\numberline {1.1}Egg processing in industry}{3}
+\contentsline {subsection}{\numberline {1.1}Industrial egg processing}{3}
 \contentsline {subsection}{\numberline {1.2}Problem formulation}{5}
 \contentsline {section}{\numberline {2}Problem analysis}{6}
 \contentsline {subsection}{\numberline {2.1}Host machine}{6}
@@ -31,7 +31,7 @@
 \contentsline {subsection}{\numberline {6.2}Automatic parameters optimisation}{27}
 \contentsline {subsection}{\numberline {6.3}Overfitting}{28}
 \contentsline {subsection}{\numberline {6.4}Results}{28}
-\contentsline {section}{\numberline {7}Physical system implementation}{29}
+\contentsline {section}{\numberline {7}System implementation}{29}
 \contentsline {subsection}{\numberline {7.1}Hardware and OS issues}{29}
 \contentsline {subsection}{\numberline {7.2}Python and OpenCV configuration}{30}
 \contentsline {subsection}{\numberline {7.3}Code deployment}{31}

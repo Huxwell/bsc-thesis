@@ -25,11 +25,19 @@
 \begin{document}
 \selectlanguage{polish}
 \begin{abstract}
-Zakresem poniższej pracy jest proces projektowania i tworzenia urządzenia, które automatycznie przypisuje rozbite jajka kurze do jednej z dwóch poniższych klas:\\
+
+Simple object state detection using camera image / 
+
+W poniższej pracy przedstawiono proces projektowania i tworzenia systemu, które automatycznie przypisuje rozbite jajka kurze do jednej z dwóch poniższych klas:\\
 \begin{enumerate}
 \item nieuszkodzone żółtka otoczone białkiem jajecznym albo czysta linia produkcyjna
 \item uszkodzone żółtka albo nieuszkodzone żółtka otoczone szczątkami uszkodzonych żółtek
 \end{enumerate}
+
+UWAGA Najpierw przebadano. Potem zaprojektowano. Potem zaimplementowano.
+że kamera nad rynną w fabryce, że przeprowadziłem badania jakościowe. grupy odbiorców bez pkt. albo w ogóle bez grup odbiorców
+
+
 Implementacja urządzenia została poprzedzona badaniami, które porównują rózne metody oceniania obrazu z kamery, biorąc pod uwagę ich skuteczność pod względem zużycia zasobów obliczeniowych, oraz skuteczność klasyfikacji.\\
 Działający prototyp został opracowany i jest w trakcie testów.
 Urządzenie będzie masowo produkowane jako moduł wykorzystywanych w maszynie RZ-1 firmy OVO-Tech.
@@ -65,11 +73,10 @@ The device will be mass produced as a module of OVO-TECH rz-1 egg braking machin
 
 
 \section{Introduction}
-\subsection{Egg processing in industry}
+\subsection{Industrial egg processing}
 In a following thesis an industrial problem - chicken egg white and yolk separation - is analysed in terms of possible automation and improvements in currently used techniques.
 
-Chicken egg is a widely used ingredient of food, athletes nutrition and medicines. Simplified structure of chicken egg is commonly known: en egg 
-Prior to processing and using the egg, its shell has to be removed first, what is done in cracking process. It is estimated that 1.8 trillion chicken eggs are used yearly around the world\cite{trillion}, and most of them are consumed without their shells. 
+Chicken egg is a widely used ingredient of food, athletes nutrition and medicines. Simplified structure of chicken egg is commonly known: prior to processing and using the egg, its shell has to be removed first, what is done in cracking process. It is estimated that 1.8 trillion chicken eggs are used yearly around the world\cite{trillion}, and most of them are consumed without their shells. 
 
 \begin{figure}[H]
 \centering
@@ -112,9 +119,10 @@ Author of this thesis managed to find four companies that already produce machin
 \item Sanovo from Denmark
 \item Ovo-tech from Poland
 \end{itemize}
-Ovo-tech company was contacted by author and enquired about the way that RZ-1 machine that they produce operates. 
-It appeared, that during last 4 years multiple attempts were made by client to separate whites from yolks of freshly broken eggs in a mechanic way. 
-Obtained solutions (RZ-1 separation module) proved to be working good enough for some companies, while other rejected them as imperfect and declared will to buy clients devices in the future, provided that adequate improvements will be made.
+Ovo-tech company was contacted by author and enquired about the way that RZ-1 machine that they product operates. 
+It appeared, that during last 4 years multiple attempts were made by this company to separate whites from yolks of freshly broken eggs in a mechanic way. 
+Obtained solutions (RZ-1 separation module) proved to be working good enough for some companies, while other rejected them as imperfect and declared intention to buy devices in the future, provided that adequate improvements will be made.
+UWAGA tutaj napisz jednym zdaniem po środku, że czasem rozdzielenie jest niedostatecnzie dokładnie.
 
 Nine companies were inquired whether or not would they invest in improved Ovo-tech machine, provided that egg white will be visually clean of yolk parts.
 Eight of them replied positively that they would seriously consider such offer since their processing plants would benefit in terms of product quality or manpower cost on such improvement.
@@ -131,12 +139,10 @@ Executives of this client suspect that using machines with better egg separation
 
 
 \subsection{Problem formulation}
-Ovo-tech observed that a simple dependence exists: the older the egg is, the more likely its yolk is degenerated inside the egg shell.
-
-Also, if an egg processed by RZ-1 machine is old or the chicken was feed improperly the yolk might might break during the cracking phase.
+Ovo-tech observed that a simple dependence exists: the older the egg is, the more likely its yolk is degenerated inside the egg shell. Also, if an egg processed by RZ-1 machine is old or the chicken was feed improperly the yolk might might break during the cracking phase.
 Also, a yolk damage is possible due to cracker imperfections such us being calibrated for different size or weight eggs.
 
-A mixture of damaged yolk and white is created in a result, and it is not possible to properly separate it into two initial components using the rz-1 separation module.
+A mixture of damaged yolk and white is created in a result of processing a bad quality egg (old and/or damaged), and it is not possible to properly separate it into two initial components using the rz-1 separation module.
 Eliminating the batches containing fuzzy yolk should decrease chances of accidentally processing the contaminated eggs, while the risk of egg contamination generally increases with egg age.
 
 Ovo-tech deals with those cases by encouraging companies to hire a person that manually removes the eggs from an accumulating batch (See 2.1 subchapter), but is not satisfied in cost that is additionally generated by this solution.
@@ -153,16 +159,17 @@ Ovo-tech deals with those cases by encouraging companies to hire a person that m
 \caption{Damaged yolk in improperly cracked egg}
 \end{figure}
 
-
+UWAGA tutaj dłuższe zdanie na temat, że przeanalizowawszy powyższe kwestie sformuowano project goals jako:
 Thus, project goals are formulated as:
 \begin{enumerate}
-\item Finding and optimal method for automatically detecting yolk-and white mixture state.
+\item Finding an effective method for automatically detecting yolk-and white mixture state.
 \item Implementing such method in a prototype device that utilises the discovered method.
 \end{enumerate}
 
 
 \section{Problem analysis}
 \subsection{Host machine}
+UWAGA tu dwa - trzy zdania więcej, że dobrym metoda pokazania będzi ta maszyna
 The machine that will be extended with the module prototype prepared in this thesis is OVO-TECH RZ-1 model.
 
 \begin{figure}[H]+
@@ -179,16 +186,16 @@ The machine that will be extended with the module prototype prepared in this the
 \end{figure}
 
 
-The machine operates in a following way:
+The RZ-1 machine operates in a following way: UWAGA see figure no blablabla
 \begin{enumerate}
 \item Eggs are directed into one-line flow, and mechanically aligned
 
-\item Cracking module cuts the incoming egg surface from below with two knives that are aligned in direction of egg focal radius
-\item The knives imitate human hands work by opening the previously notched egg
+\item Cracking module cuts the incoming egg surface from below with two knives that are aligned in direction of egg focal radius.
+\item The knives imitate human hands work by opening the previously notched egg.
 \item The cracked eggs are accumulated in a movable utensil for optical assessment. 
-If the egg yolk appears to be broken, it is removed by an operator from the processing plant
-\item Cracked eggs are transported by sliding to white and yolk separating module
-\item Separation  is done in a mechanic way while eggs slide over specificly shaped gap that only egg white fills in, while the egg yolks remain intact
+If the egg yolk appears to be broken, it is removed by an operator from the processing plant.
+\item Cracked eggs are transported by sliding to white and yolk separating module.
+\item Separation  is done in a mechanic way while eggs slide over specificly shaped gap that only egg white fills in, while the egg yolks remain intact.
 \end{enumerate}
 
 \begin{figure}[H]
@@ -202,9 +209,11 @@ RZ-1 operates in two modes:
 \item Precision mode
 \item Fast mode
 \end{itemize}
+UWAGA że fast mode nie jest rozważany przeze mnie
 Precision mode is used widely with bad quality eggs to extend amount of time for optical assessment in (5) phase.
 
-The author idea is to replace the whole Quality Control module with custom designed module, that will automatically asses broken egg quality and remove them mechanically.
+UWAGA tutaj ciut więcej, że te a te processy są automatyczne, a te i te są nieautomatyczne; automatise zamiast replace
+The authors idea is to replace the whole Quality Control module with custom designed module, that will automatically asses broken egg quality and remove them mechanically.
 The creation of the mechanical element is out of the scope of this work and is handled by Ovo-tech engineers.
 The egg accumulation will not longer be required, as well as the work of qualified expert that optically assased the egg quality is not needed any more.
 
@@ -217,6 +226,8 @@ More advanced OVO-TECH models such us RZ-3, RZ-6 and RZ-8 will be also considere
 
 The requirement is to create a system able to detect all product batches containing badly-cracked eggs.
 A batch is defined as a mixture of freshly broken eggs containing egg yolks, egg white, not containing the egg shells, that is present on a the sliding slope that transports the product to separating module.
+
+UWAGA uciekło zdanie
 
 After request for clarification, client made 60+ pictures of product during machine operation and classified them manually, thus requirement is less ambiguous.
 
@@ -245,18 +256,17 @@ also, there is no need to do anything when:
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\paperwidth]{8of9}
-\caption{Cracked egg product cases. Source: own materials }
+\caption{Cracked egg product cases.}
 \end{figure}
-Source: own materials 
 
-Also, a problem is constituted by chalaza - a usually white element that is attached to egg yolk for in-egg suspension.
+Also, there an additional problem is constituted by chalaza - a usually white element that is attached to egg yolk for in-egg suspension.
 Despite the fact, that client decided that chalaza position and amount are irrelevant to him, its appearance may increase difficulty of the recognition problem if identified as parts of damaged egg yolk.
 
  
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{chalaza}
-\caption{Chalaza attached to egg. Source: own materials}
+\caption{Chalaza attached to egg.}
 \end{figure}
 
 
@@ -269,7 +279,7 @@ Among them, the following are worth mentioning:
 \item Fourier frequency analysis of a vibration-based response on impact force\cite{svm} 
 \item Ultrasonic, magnetic resonance, electric resistance, electric nose\cite{nondestr}  
 \end{itemize}
-All methods listed above require very specific equipment, are prone to overfitting and take in to account an assumption that does not has to be satisfied for problem considered in this thesis: the egg shell should not be damaged.
+All methods listed above require very specific and expensive equipment, are prone to overfitting and take in to account an assumption that does not has to be satisfied for problem considered in this thesis: the egg shell should not be damaged.
 
 Since in this very special case, eggs are already broken, simplified and different methods can be considered.
 Initially, two ideas were researched by author of this thesis:
@@ -280,6 +290,7 @@ Initially, two ideas were researched by author of this thesis:
 Both methods would identify the intact yolk basing on its height and would not require much processing (an Arduino Uno or other ATMega based circuits might be sufficient).
 Nevertheless, both of them had to be rejected, since intact yolks presence in the tested batch is not sufficient for batch accepting – absence of egg yolk parts is also required (see subchapter 2.1).
 
+UWAGA tutaj dwa więcej w tym finally albo trzy; że ta metoda wydaje się być natjańszą najlepsza i polega na umieszczeniu kmaery etc
 
 Finally, using images of the batch obtained from camera and processing it was chosen as a most promising option for further research.
 
@@ -315,15 +326,17 @@ The method application will be researched further on beyond the scope of this wo
 \section{Batch state detection system design}
 
 \subsection{System structure}
+UWAGA zdanie więcej z czego się skłąda (to co jest przy obrazku i refka) i, że kamera zamocowana
 
 A camera will be placed on top of Separator module part, where cracked eggs are transported by sliding to the separating part.
 
+
+UWAGA tu się coś powieliło
 The processing device will use the frames of camera image. Some of the frames will be skipped to reduce amount of data.
 Frame-skipping ratio depends on decision algorithm and device performance.
 
 The processing device will use the frames, to make a decision whether or nor the egg batch visible on the frame is acceptable, or represent a badly cracked egg.
 A signal will be send to element that will either remove egg batch from the processing plant or let is pass further.
-
 Development of this physical element is done by OVO-TECH company and is not analysed in the thesis. OVO-TECH declared, that having +5V signal for positive batch, and -5V for negative is enough for them to work on their part.
 
 
@@ -398,8 +411,8 @@ As for camera module, a standard Raspberry Pi v1.3 5Mpix Camera module was shipp
 \subsection{Detection algorithm}
 
 Frames are acquired from the camera module.
-
-Than, two copies of the frame are processed independently.
+Two copies of the frame are processed independently. 
+UWAGA tutaj jakoś zaznacz, że każda z kopii jest jest osobno wypunktowana
 
 \begin{description}
   \item[Firstly,]one channel is extracted from the image.
@@ -620,7 +633,7 @@ The term ‘convolution’ might be misleading and for the scope of image proces
 
 \subsection{Methods execution}
 \lstinputlisting[language=Python]{yolk.py}
-
+UWAGA więcej komentarza w methods execution
 
 \begin{figure}[H]
 \centering
@@ -662,7 +675,7 @@ Various modes and modifications are used depending on coding schema and colors d
 \caption{Different Thresholding modes generated with Metaplotlib}
 \end{figure}
 
-
+UWAGA obrazki mają być bardziej zwarte w thresholdingu
 
 Finding optimal threshold value finding is a time consuming process and it often gives satisfactory results only for small set of images.
 Therefore Otsu Binarization algorithm for automatically selecting threshold is used.
@@ -706,6 +719,7 @@ For more general cases (i.e. multichannel images, assigning more colors) cluster
 \caption{K-means clustering method for k = 16\cite{segm}}
 \end{figure}
 \subsection{Methods execution}
+UWAGA dużo więcej komentarza w methods execution
 \lstinputlisting[language=Python]{contaminated.py}
 
 \begin{figure}[H]
@@ -739,7 +753,7 @@ The expert was reviewing the output while changing the trackbar positions to obt
 \end{figure}
 
 Script crucial fragments:
-
+UWAGA wywalić trackbary a napisać, że eksprt zmienial wartosci parametrow
 \lstinputlisting[language=Python]{trackbars.py}
 
 Unfortunately, while some parameters sets worked fine for some image sets, they failed with another ones.
@@ -808,7 +822,7 @@ The recognition accuracy maximised during optimisation process was 91,25\%, and 
 
 
 
-\section{Physical system implementation}
+\section{System implementation}
 \subsection{Hardware and OS issues}
 
 Initially, hardware platform was connected to LG 27MP35 display through HDMI, iBox keyboard and mouse via USB. 
@@ -904,6 +918,9 @@ $ python
 \end{lstlisting}
 
 \subsection{Code deployment}
+
+UWAGA nie deployment tylko implementation i więcej trochę
+
 \lstinputlisting[language=Python]{rpi.py}
 \section{Further research and development}
 
@@ -982,7 +999,7 @@ Both the project goals has been achieved.
 All the Web. sources have been checked for availability in November 2015.
 Web links are not included if articles are to be immediately found with search engines, which is consistent to MLN referencing convention.
 For modified web documents, date of last modification is shown.
-
+UWAGA dopisz ze zdjecia own materialow sa nieopisane
 
 \begin{thebibliography}{9}
 
