@@ -32,15 +32,13 @@
 \contentsline {subsection}{\numberline {6.3}Overfitting}{28}
 \contentsline {subsection}{\numberline {6.4}Results}{28}
 \contentsline {section}{\numberline {7}Physical system implementation}{29}
-\contentsline {subsection}{\numberline {7.1}Hardware problems}{29}
-\contentsline {subsection}{\numberline {7.2}Camera module configuration}{29}
-\contentsline {subsection}{\numberline {7.3}Operating system configuration}{29}
-\contentsline {subsection}{\numberline {7.4}Python and OpenCV configuration}{29}
-\contentsline {subsection}{\numberline {7.5}Code deployment}{29}
-\contentsline {section}{\numberline {8}Further research and development}{30}
-\contentsline {subsection}{\numberline {8.1}Server and logging}{30}
-\contentsline {subsection}{\numberline {8.2}One month prototype testing and environment of work tuning}{30}
-\contentsline {subsection}{\numberline {8.3}Testing new approaches}{30}
-\contentsline {subsection}{\numberline {8.4}Obtaining more image data and parameters tuning}{31}
-\contentsline {subsection}{\numberline {8.5}Machine learning}{32}
-\contentsline {section}{\numberline {9}Conclusions}{32}
+\contentsline {subsection}{\numberline {7.1}Hardware and OS issues}{29}
+\contentsline {subsection}{\numberline {7.2}Python and OpenCV configuration}{30}
+\contentsline {subsection}{\numberline {7.3}Code deployment}{31}
+\contentsline {section}{\numberline {8}Further research and development}{31}
+\contentsline {subsection}{\numberline {8.1}Server and logging}{32}
+\contentsline {subsection}{\numberline {8.2}One month prototype testing and environment of work tuning}{32}
+\contentsline {subsection}{\numberline {8.3}Testing new approaches}{32}
+\contentsline {subsection}{\numberline {8.4}Obtaining more image data and parameters tuning}{33}
+\contentsline {subsection}{\numberline {8.5}Machine learning}{33}
+\contentsline {section}{\numberline {9}Conclusions}{33}
