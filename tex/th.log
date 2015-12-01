@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.2.7)  1 DEC 2015 14:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.2.7)  1 DEC 2015 15:04
 entering extended mode
 **th.tex
 (C:\Users\Orley\Desktop\thesis\docs\tex\th.tex
@@ -649,18 +649,13 @@ File: imgs/damg.png Graphic file (type png)
 Package pdftex.def Info: imgs/damg.png used on input line 148.
 (pdftex.def)             Requested size: 238.9995pt x 149.37405pt.
 
-Overfull \hbox (12.27994pt too wide) in paragraph at lines 152--155
-[]\T1/ptm/m/n/12 UWAGA tu-taj dªu»sze zdanie na temat, »e przeanal-i-zowawszy p
-owy»sze kwestie sfor-muowano
- []
-
 <imgs/rz1table.png, id=25, 583.17876pt x 557.08125pt>
 File: imgs/rz1table.png Graphic file (type png)
  <use imgs/rz1table.png>
 Package pdftex.def Info: imgs/rz1table.png used on input line 167.
 (pdftex.def)             Requested size: 238.9995pt x 228.30278pt.
 
-Underfull \vbox (badness 1910) has occurred while \output is active []
+Underfull \vbox (badness 1122) has occurred while \output is active []
 
  [6 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/prop.png> <C:/Users/Orley/Desk
 top/thesis/docs/tex/imgs/damg.png>] <imgs/rz1crack.jpg, id=29, 1204.5pt x 677.5
@@ -936,7 +931,7 @@ Underfull \hbox (badness 1701) in paragraph at lines 1016--1018
 Here is how much of TeX's memory you used:
  5395 strings out of 493921
  74069 string characters out of 3151769
- 239354 words of memory out of 3000000
+ 240354 words of memory out of 3000000
  8551 multiletter control sequences out of 15000+200000
  33088 words of font info for 51 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -948,7 +943,7 @@ Files (x86)/TiCTeX v1.0 for windows/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy1
 mes/utmb8a.pfb><C:/Program Files (x86)/TiCTeX v1.0 for windows/MiKTeX/fonts/typ
 e1/urw/times/utmr8a.pfb><C:/Program Files (x86)/TiCTeX v1.0 for windows/MiKTeX/
 fonts/type1/urw/times/utmri8a.pfb>
-Output written on th.pdf (35 pages, 3856874 bytes).
+Output written on th.pdf (35 pages, 3857055 bytes).
 PDF statistics:
  174 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
