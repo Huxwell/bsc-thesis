@@ -110,14 +110,14 @@ Author of this thesis managed to find four companies that already produce machin
 \item Ovo-tech from Poland
 \end{itemize}
 Ovo-tech company was contacted by author and enquired about the way that RZ-1 machine that they product operates. 
-It appeared, that during last 4 years multiple attempts were made by this company to separate whites from yolks of freshly broken eggs in a mechanic way. 
-Obtained solutions (RZ-1 separation module) proved to be working good enough for some companies, while other rejected them as imperfect and declared intention to buy devices in the future, provided that adequate improvements will be made.
-UWAGA tutaj napisz jednym zdaniem po środku, że czasem rozdzielenie jest niedostatecnzie dokładnie.
+It appeared, that during last 4 years multiple attempts were made by this company to separate whites from yolks of freshly broken eggs in a mechanic way.
+Obtained solution (RZ-1 separation module) realise that goal partially, since the separation is imperfect and its ratio varies depending on egg quality.
+It proved to be working good enough for some companies, while other rejected it and declared intention to buy OVO-TECH machines in the future, provided that adequate improvements will be made.
 
-Nine companies were inquired whether or not would they invest in improved Ovo-tech machine, provided that egg white will be visually clean of yolk parts.
-Eight of them replied positively that they would seriously consider such offer since their processing plants would benefit in terms of product quality or manpower cost on such improvement.
+Nine companies were inquired whether or not would they invest in improved Ovo-tech machine, if that egg white will be visually clean of yolk parts.
+Eight of them replied positively that they would seriously consider such offer since their processing plants would benefit in terms of product quality or manpower cost on this improvement.
 
-One of these companies purchased some ovo-tech machines, but is nevertheless displeased with their separation ratio.
+One of these companies is particularly interesting, since it has purchased some ovo-tech machines, and is nevertheless displeased with its efficiency.
 This company currently is undergoing a procedure of obtaining US Food Drug Administration (FDA) approval for wide distribution of their egg-based medicine.
 Executives of this client suspect that using machines with better egg separation will increase their chance for positive outcome of above process.
 
@@ -209,7 +209,7 @@ The egg accumulation will not longer be required, as well as the work of qualifi
 
 
 
-More advanced OVO-TECH models such us RZ-3, RZ-6 and RZ-8 will be also considered for further research.
+More advanced Ovo-tech models such us RZ-3, RZ-6 and RZ-8 will be also considered for further research.
 
 
 \subsection{Establishing framework for product cleanness assessment}
@@ -327,7 +327,7 @@ Frame-skipping ratio depends on decision algorithm and device performance.
 
 The processing device will use the frames, to make a decision whether or nor the egg batch visible on the frame is acceptable, or represent a badly cracked egg.
 A signal will be send to element that will either remove egg batch from the processing plant or let is pass further.
-Development of this physical element is done by OVO-TECH company and is not analysed in the thesis. OVO-TECH declared, that having +5V signal for positive batch, and -5V for negative is enough for them to work on their part.
+Development of this physical element is done by Ovo-tech company and is not analysed in the thesis. Ovo-tech declared, that having +5V signal for positive batch, and -5V for negative is enough for them to work on their part.
 
 
 \begin{figure}[H]
@@ -381,7 +381,7 @@ Following platforms were considered, to be used as processing device and host ch
   \item Raspberry Pi 2 - featuring 900 MHz quad-core ARM Cortex-A7 and 1GB RAM, Broadcom VideoCore IV GPU, 4 USB ports, an ethernet port, 40 GPIO ports and camera module socket, its the most available of embedded pc ARM platforms.
   \item Arduino Uno R3 accompanied with DS1307 Real Time Clock - considered, but for now the image processing is to extensive in terms of image processing.
   Having extremely cheap clones (4-20\$ on retail market) that features often stronger ATMega units is an advantage although.
-  \item Intel Galileo Gen 2 - based on Intel Quark 32-bit SoC X1000 processor, provides pins-compatible with shields designed for the Arduino Uno R3, what makes communication with other OVO-TECH machine modules easier and allows use of the mentioned above RTC.
+  \item Intel Galileo Gen 2 - based on Intel Quark 32-bit SoC X1000 processor, provides pins-compatible with shields designed for the Arduino Uno R3, what makes communication with other Ovo-tech machine modules easier and allows use of the mentioned above RTC.
   \item PandaBoard - the OMAP4430 features 1 GHz dual-core ARM Cortex-A9 MPCore CPU (a big improvement compared to Cortex-A7 CPU in Raspberry Pi 2), 304 MHz GPU, and 1 GiB DDR2 SDRAM.
   What is interesting, it provides a real-time clock, what makes it a candidate for real-time system (see section 8.1).
   \item BeagleBoard xM - based on dual, 1,5GHz clocked ARM Cortex-A15  + dual ARM M4, 532 MHz GPu, often used with RISC-OS, having cheaper clones with more RAM.It is considered a stronger Raspberry Pi alternative.
@@ -725,7 +725,7 @@ There exist a set of parameters that define the mode, that previously explained 
 Finding optimal values of this parameters is a hard task, since for example CHT method was not able to found a single egg yolk with default numbers.
 
 
-Few similar scripts were developed, that displayed over 500 sample pictures pictures (provided by OVO-TECH) for 0.3 second each in a loop.
+Few similar scripts were developed, that displayed over 500 sample pictures pictures (provided by Ovo-tech) for 0.3 second each in a loop.
 Various trackbars was displayed above the frames, with every trackbar corresponding to one parameter that is supposed to be chosen.
 Beside, the already transformed frames after transformations were shown.
 The expert was reviewing the output while changing the trackbar positions to obtain an image that segmentates the egg yolk properly.
@@ -789,7 +789,7 @@ Crucial parts of the testing code:
 Overfitting is an unwanted effect that appears often in statistics and supervised machine learning.
 Overfitting means, that parameters of some model are fitting the specific modelled data case, rather than the general model.
 
-In this case it means, that the parameters of image processing that were found, maximise the recognition efficiency for the data provided by OVO-TECH, while a new data (with different kind of eggs, different kind of noise or with images made in different conditions) can be classified in improper way.
+In this case it means, that the parameters of image processing that were found, maximise the recognition efficiency for the data provided by Ovo-tech, while a new data (with different kind of eggs, different kind of noise or with images made in different conditions) can be classified in improper way.
 
 Overfitting occurs mostly if:
 \begin{itemize}
@@ -914,7 +914,7 @@ UWAGA nie deployment tylko implementation i więcej trochę
 \lstinputlisting[language=Python]{rpi.py}
 \section{Further research and development}
 
-Work on the solution developed in this thesis will be continued further on by the author and OVO-TECH company.
+Work on the solution developed in this thesis will be continued further on by the author and Ovo-tech company.
 The following alternative approaches and improvements in detection system will be taken into consideration
 
 \subsection{Server and logging}
@@ -927,12 +927,12 @@ Ovo-tech reported cases of unreliable egg suppliers, that shipped old, misclassi
 Such situation would be detected by monitoring statistics of how big percentage of processed eggs are badly broken.
 \subsection{One month prototype testing and environment of work tuning}
 
-The prototype will be attached to the rz-1 machine operating at OVO-TECH headquarters for a month.
+The prototype will be attached to the rz-1 machine operating at Ovo-tech headquarters for a month.
 During that time, led lights will indicate proper and improper egg batch.
 Recognition efficiency is now > 80\%. Two cases may occur, when the device is operating in working environment:
 \begin{enumerate}
 \item Recognising efficiency will rise dramatically, since the camera position will be fixed, and the background (separation module slope) will have uniform facture and color.
-The data provided by OVO-TECH for prototype construction covered various situations and backgrounds that will be invariant in factory application.
+The data provided by Ovo-tech for prototype construction covered various situations and backgrounds that will be invariant in factory application.
 \item Recognising efficiency will drop, due to varying egg quality, color and shape (the overfitting problem).
 \end{enumerate}
 
@@ -980,7 +980,7 @@ Following results were obtained in the system designing, tuning and testing proc
 \begin{enumerate}
 \item Recognising egg-batch state using camera image is an adequate method of solving the problem of imperfect egg-white separation.
 \item Simple image processing methods are cable of obtaining image recognition efficiency higher than 84\% on this problem, even if lighting and camera placement conditions are unfavourable.
-\item An operational prototype device was constructed and implemented. It will be tested and improved further in order to introduce it to mass production. OVO-TECH will be expanding its R\&D section to obtain that goal.
+\item An operational prototype device was constructed and implemented. It will be tested and improved further in order to introduce it to mass production. Ovo-tech will be expanding its R\&D section to obtain that goal.
 \end{enumerate}
 
 Both the project goals has been achieved.
