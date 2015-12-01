@@ -28,26 +28,20 @@
 
 Simple object state detection using camera image / 
 
-W poniższej pracy przedstawiono proces projektowania i tworzenia systemu, które automatycznie przypisuje rozbite jajka kurze do jednej z dwóch poniższych klas:\\
+W poniższej pracy przedstawiono proces projektowania i tworzenia systemu, który identyfikuje stan obiektów przy użyć obrazu z kamery. Obiekty stanowią partie rozbitych jaj kurzych, które przypisywane są do jednej z dwóch poniższych klas:
 \begin{enumerate}
-\item nieuszkodzone żółtka otoczone białkiem jajecznym albo czysta linia produkcyjna
+\item nieuszkodzone żółtka jaj otoczone białkiem jajecznym albo czysta linia produkcyjna
 \item uszkodzone żółtka albo nieuszkodzone żółtka otoczone szczątkami uszkodzonych żółtek
 \end{enumerate}
 
-UWAGA Najpierw przebadano. Potem zaprojektowano. Potem zaimplementowano.
-że kamera nad rynną w fabryce, że przeprowadziłem badania jakościowe. grupy odbiorców bez pkt. albo w ogóle bez grup odbiorców
+Na początku opisano proces rozbijania jaj, oraz oddzielania białka od żółtka. Następnie przeanalizowano rynkowy popyt na system automatyzujący ten proces.
+Przeprowadzono badania jakościowe istniejących rozwiązań dla tego problemu, oraz usprawnień, jakie można w nich dokonać.
+Podjęto decyzję o zaprojektowaniu i wykonaniu protoypu systemu, który montowany będzie na maszynach rozbijających jaja firmy OVO-TECH.
+Omówiono konstrucję tego systemu, algorytmy, jakie są w nim zaimplementowane, a następnie wykonano i przetestowano prototyp.
+Autor poniższej pracy przewiduje, że wykonany system zastosowanie w firmach farmaceutycznych produkujących leki z białka jajecznego, w cukierniach, które potrzebują oddzielania białek od żółtek do procesów piekarniczych takich jak ubijanie piany z białek, oraz w firmach produkujących odżywki dla sportowców.
 
 
-Implementacja urządzenia została poprzedzona badaniami, które porównują rózne metody oceniania obrazu z kamery, biorąc pod uwagę ich skuteczność pod względem zużycia zasobów obliczeniowych, oraz skuteczność klasyfikacji.\\
-Działający prototyp został opracowany i jest w trakcie testów.
-Urządzenie będzie masowo produkowane jako moduł wykorzystywanych w maszynie RZ-1 firmy OVO-Tech.
-Zwiększy on atrakcyjnośc maszyny dla następujących grup odbiorców:
 
-\begin{enumerate}
-\item Firmy framaceutyczne, które produkują lekarstwa z białka jajecznego i stawiają wygórowane wymagania pod względem czystości białka jajecznego
-\item Cukiernie, które wymagają czystego białka jajecznego do procesów piekarniczych takich jak ubijanie piany jajecznej.
-\item Firmy produkujące odżywki dla sportowców
-\end{enumerate}
 \end{abstract}
 
 \selectlanguage{english}
