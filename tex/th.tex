@@ -159,8 +159,8 @@ The above analysis led to conclusion, that researching egg-white separation is j
 
 \section{Problem analysis}
 \subsection{Host machine}
-UWAGA tu dwa - trzy zdania więcej, że dobrym metoda pokazania będzi ta maszyna
-The machine that will be extended with the module prototype prepared in this thesis is OVO-TECH RZ-1 model.
+Ovo-tech produces a processing plant called "RZ-1".
+This device automatically cracks the eggs and attempt to separate the egg yolk from egg white. This machine has been chosen as the one that will be extended with the module prototype prepared in this thesis, due to its availability (it is the most popular of the Ovo-tech machines) and the fact, that it operates relatively slow (compared to other Ovo-tech machines), so the flowing eggs yolks surfaces do not touch each other - what makes them easier to process.
 
 \begin{figure}[H]+
 \centering
@@ -176,7 +176,7 @@ The machine that will be extended with the module prototype prepared in this the
 \end{figure}
 
 
-The RZ-1 machine operates in a following way: UWAGA see figure no blablabla
+The RZ-1 machine operates in a following way (see Figure \ref{fig:process}):
 \begin{enumerate}
 \item Eggs are directed into one-line flow, and mechanically aligned
 
@@ -191,7 +191,7 @@ If the egg yolk appears to be broken, it is removed by an operator from the proc
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\paperwidth]{process}
-\caption{RZ-1 Egg processing  - process and plant structure}
+\caption{RZ-1 Egg processing  - process and plant structure}\label{fig:process}
 
 \end{figure}
 RZ-1 operates in two modes:
@@ -274,8 +274,6 @@ Initially, two ideas were researched by author of this thesis:
 Both methods would identify the intact yolk basing on its height and would not require much processing (an Arduino Uno or other ATMega based circuits might be sufficient).
 Nevertheless, both of them had to be rejected, since intact yolks presence in the tested batch is not sufficient for batch accepting – absence of egg yolk parts is also required (see subchapter 2.1).
 
-UWAGA tutaj dwa więcej w tym finally albo trzy; że ta metoda wydaje się być natjańszą najlepsza i polega na umieszczeniu kmaery etc
-
 Finally, using images of the batch obtained from camera and processing it was considered. Such camera would be mounted just after the cracking module of RZ-1 machine and make decision whether or not the product batch looks like the one that is expected.
 This approach is very similar to the currently used one - the expert looking at the egg and making decision - except for the fact, that it would be fully automatised.
 Due to the potentially low price (camera and ARM computer price don't exceed 100\$ in retail price) and no need for extensive modifications of RZ-1 structure, this method was chosen as most promising option for further research.
@@ -312,16 +310,16 @@ The method application will be researched further on beyond the scope of this wo
 \section{Batch state detection system design}
 
 \subsection{System structure}
-UWAGA zdanie więcej z czego się skłąda (to co jest przy obrazku i refka) i, że kamera zamocowana
+The system consists of:
+\begin{itemize}
+\item Camera module that photographs the egg white-yolk batches
+\item Processing device - an embedded computer (i.e. ARM based platform)
+\item Signal interface (i.e GPIO pins) on processing device
+\end{itemize}
 
 A camera will be placed on top of Separator module part, where cracked eggs are transported by sliding to the separating part.
 
-
-UWAGA tu się coś powieliło
-The processing device will use the frames of camera image. Some of the frames will be skipped to reduce amount of data.
-Frame-skipping ratio depends on decision algorithm and device performance.
-
-The processing device will use the frames, to make a decision whether or nor the egg batch visible on the frame is acceptable, or represent a badly cracked egg.
+The processing device uses the camera frames, to make a decision whether or nor the egg batch visible on the frame is acceptable, or represent a badly cracked egg.
 A signal will be send to element that will either remove egg batch from the processing plant or let is pass further.
 Development of this physical element is done by Ovo-tech company and is not analysed in the thesis. Ovo-tech declared, that having +5V signal for positive batch, and -5V for negative is enough for them to work on their part.
 
@@ -395,11 +393,8 @@ As for camera module, a standard Raspberry Pi v1.3 5Mpix Camera module was shipp
 
 
 \subsection{Detection algorithm}
-
-Frames are acquired from the camera module.
-Two copies of the frame are processed independently. 
-UWAGA tutaj jakoś zaznacz, że każda z kopii jest jest osobno wypunktowana
-
+Detection algorithm operates on images(frames) passed by the camera module.
+Two copies of a frame are processed. The first copy is a subject of following transformations:
 \begin{description}
   \item[Firstly,]one channel is extracted from the image.
   Its state is passed further as image, along all the steps.
@@ -619,7 +614,8 @@ The term ‘convolution’ might be misleading and for the scope of image proces
 
 \subsection{Methods execution}
 \lstinputlisting[language=Python]{yolk.py}
-UWAGA więcej komentarza w methods execution
+
+The methods described above are used one after another as subsequent OpenCV library function calls in Python language:
 
 \begin{figure}[H]
 \centering
@@ -628,7 +624,7 @@ UWAGA więcej komentarza w methods execution
 \end{figure}
 
 
-\section{Contaminated product recognition}
+\section{Contaminated product assessment}
 Methods described in previous chapter are used for contaminated product recognition, as well as two more presented below:
 
 \subsection{Subtracting yolk image}
@@ -661,7 +657,6 @@ Various modes and modifications are used depending on coding schema and colors d
 \caption{Different Thresholding modes generated with Metaplotlib}
 \end{figure}
 
-UWAGA obrazki mają być bardziej zwarte w thresholdingu
 
 Finding optimal threshold value finding is a time consuming process and it often gives satisfactory results only for small set of images.
 Therefore Otsu Binarization algorithm for automatically selecting threshold is used.
@@ -705,7 +700,7 @@ For more general cases (i.e. multichannel images, assigning more colors) cluster
 \caption{K-means clustering method for k = 16\cite{segm}}
 \end{figure}
 \subsection{Methods execution}
-UWAGA dużo więcej komentarza w methods execution
+The methods described above are used one after another as subsequent OpenCV library function calls in Python language:
 \lstinputlisting[language=Python]{contaminated.py}
 
 \begin{figure}[H]
@@ -718,13 +713,13 @@ UWAGA dużo więcej komentarza w methods execution
 \subsection{Manual parameters optimisation}
 
 There exist a set of parameters that define the mode, that previously explained methods operate as well as their insensitivity.
-Finding optimal values of this parameters is a hard task, since for example CHT method was not able to found a single egg yolk with default numbers.
+Finding effective values of this parameters is a hard task, since for example CHT method was not able to found a single egg yolk with default numbers.
 
 
 Few similar scripts were developed, that displayed over 500 sample pictures pictures (provided by Ovo-tech) for 0.3 second each in a loop.
 Various trackbars was displayed above the frames, with every trackbar corresponding to one parameter that is supposed to be chosen.
 Beside, the already transformed frames after transformations were shown.
-The expert was reviewing the output while changing the trackbar positions to obtain an image that segmentates the egg yolk properly.
+The expert was reviewing the output while changing the parameter values to obtain an image that segmentates the egg yolk properly.
 
 \begin{figure}[H]
 \centering
@@ -739,11 +734,10 @@ The expert was reviewing the output while changing the trackbar positions to obt
 \end{figure}
 
 Script crucial fragments:
-UWAGA wywalić trackbary a napisać, że eksprt zmienial wartosci parametrow
 \lstinputlisting[language=Python]{trackbars.py}
 
 Unfortunately, while some parameters sets worked fine for some image sets, they failed with another ones.
-Nevertheless, the interesting intervals were obtained for each trackbar. These intervals guaranteed that at least some of the graded images are segmentated in expected way.
+Nevertheless, the interesting intervals were obtained for each parameter. These intervals guaranteed that at least some of the graded images are segmentated in expected way.
 This method resulted in excluding most parameters values and vastly reducing the optimising problem size.
 
 \subsection{Automatic parameters optimisation}
@@ -903,9 +897,9 @@ $ workon cv
 $ python
 \end{lstlisting}
 
-\subsection{Code deployment}
+\subsection{Code implementation}
 
-UWAGA nie deployment tylko implementation i więcej trochę
+
 
 \lstinputlisting[language=Python]{rpi.py}
 \section{Further research and development}
@@ -985,7 +979,8 @@ Both the project goals has been achieved.
 All the Web. sources have been checked for availability in November 2015.
 Web links are not included if articles are to be immediately found with search engines, which is consistent to MLN referencing convention.
 For modified web documents, date of last modification is shown.
-UWAGA dopisz ze zdjecia own materialow sa nieopisane
+
+If it has not been specified otherwise, figure images has been taken or prepared by the author of this thesis.
 
 \begin{thebibliography}{9}
 

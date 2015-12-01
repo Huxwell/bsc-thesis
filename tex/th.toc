@@ -22,7 +22,7 @@
 \contentsline {subsection}{\numberline {4.5}Erosion and Dilatation}{19}
 \contentsline {subsection}{\numberline {4.6}Gaussian blur}{20}
 \contentsline {subsection}{\numberline {4.7}Methods execution}{21}
-\contentsline {section}{\numberline {5}Contaminated product recognition}{21}
+\contentsline {section}{\numberline {5}Contaminated product assessment}{21}
 \contentsline {subsection}{\numberline {5.1}Subtracting yolk image}{21}
 \contentsline {subsection}{\numberline {5.2}Thresholding}{22}
 \contentsline {subsection}{\numberline {5.3}Methods execution}{25}
@@ -34,7 +34,7 @@
 \contentsline {section}{\numberline {7}System implementation}{29}
 \contentsline {subsection}{\numberline {7.1}Hardware and OS issues}{29}
 \contentsline {subsection}{\numberline {7.2}Python and OpenCV configuration}{30}
-\contentsline {subsection}{\numberline {7.3}Code deployment}{31}
+\contentsline {subsection}{\numberline {7.3}Code implementation}{31}
 \contentsline {section}{\numberline {8}Further research and development}{31}
 \contentsline {subsection}{\numberline {8.1}Server and logging}{32}
 \contentsline {subsection}{\numberline {8.2}One month prototype testing and environment of work tuning}{32}
