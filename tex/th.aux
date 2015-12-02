@@ -13,8 +13,8 @@
 \@writefile{lof}{\select@language{english}}
 \@writefile{lot}{\select@language{english}}
 \citation{trillion}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Industrial egg processing}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Industrial egg processing}{3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.1.1}{\ignorespaces chicken egg structure, Src: www.gardening-for-wildlife.com}}{3}}
 \newlabel{fig:structure}{{1.1.1}{3}}
 \newlabel{fig:structure}{{1.1.1}{3}}
@@ -28,8 +28,8 @@
 \newlabel{fig:prop}{{1.2.1}{6}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.2.2}{\ignorespaces Damaged yolk in improperly cracked egg}}{6}}
 \newlabel{fig:damg}{{1.2.2}{6}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Problem analysis}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Host machine}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Problem analysis}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Host machine}{7}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.1.1}{\ignorespaces Rz-1 unit basic parameters}}{7}}
 \newlabel{fig:rz1table}{{2.1.1}{7}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.1.2}{\ignorespaces Egg cracking module of RZ-1 unit}}{7}}
@@ -37,14 +37,14 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {2.1.3}{\ignorespaces RZ-1 Egg processing - process and plant structure}}{8}}
 \newlabel{fig:process}{{2.1.3}{8}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Establishing framework for product cleanness assessment}{8}}
-\citation{agri}
-\citation{svm}
-\citation{nondestr}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.2.1}{\ignorespaces Cracked egg product cases.}}{9}}
 \newlabel{fig:8of9}{{2.2.1}{9}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.2.2}{\ignorespaces Chalaza attached to egg.}}{9}}
 \newlabel{fig:chalaza}{{2.2.2}{9}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Techniques of automatic egg quality assessment}{9}}
+\citation{agri}
+\citation{svm}
+\citation{nondestr}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Techniques of automatic egg quality assessment}{10}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Detecting batch state with camera image}{10}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Batch state detection system design}{11}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}System structure}{11}}
@@ -56,12 +56,12 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {3.1.2}{\ignorespaces Physical system structure - camera and processing device - Raspberry Pi 2 (unmounted from RZ-1 machine)}}{12}}
 \newlabel{fig:phisical}{{3.1.2}{12}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Hardware and operating system choice}{12}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Detection algorithm}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Detection algorithm}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3.1}{\ignorespaces Flowchart showing the way that detection algorithm operates}}{14}}
+\newlabel{fig:algorithmV}{{3.3.1}{14}}
 \citation{learnopencv}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3.1}{\ignorespaces Detection Algorithm}}{15}}
-\newlabel{fig:algorithmV}{{3.3.1}{15}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Software choice}{15}}
 \citation{performance}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Software choice}{16}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Egg yolk detection}{16}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}General idea}{16}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Extracting channels}{16}}
@@ -108,66 +108,63 @@
 \@writefile{lol}{\contentsline {lstlisting}{yolk.py}{21}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.7.1}{\ignorespaces Properly detected intact egg yolk\cite  {cnoisy}}}{21}}
 \newlabel{fig:detected}{{4.7.1}{21}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Contaminated product assessment}{21}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Subtracting yolk image}{21}}
-\citation{thre}
-\citation{thre}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Contaminated product assessment}{22}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Subtracting yolk image}{22}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Thresholding}{22}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.2.1}{\ignorespaces Different Thresholding modes generated with Metaplotlib}}{22}}
 \newlabel{fig:thr}{{5.2.1}{22}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2.2}{\ignorespaces Threshold computing methods12\cite  {thre}}}{23}}
-\newlabel{fig:thremeth}{{5.2.2}{23}}
-\newlabel{fig:diffthr}{{5.2}{23}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2.3}{\ignorespaces Different thresholding applied Fig. generated with Metaplotlib}}{23}}
+\citation{thre}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2.2}{\ignorespaces Different thresholding methods applied}}{23}}
+\newlabel{fig:diffthr}{{5.2.2}{23}}
 \citation{lesscv}
 \citation{segm}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2.4}{\ignorespaces Inefficient thresholding of grayscale image}}{24}}
-\newlabel{fig:gray}{{5.2.4}{24}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2.5}{\ignorespaces Much more effective thresholding of red channel image}}{24}}
-\newlabel{fig:red}{{5.2.5}{24}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2.6}{\ignorespaces K-means clustering method for k = 16\cite  {segm}}}{24}}
-\newlabel{fig:kmeans}{{5.2.6}{24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2.3}{\ignorespaces Inefficient thresholding of grayscale image}}{24}}
+\newlabel{fig:gray}{{5.2.3}{24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2.4}{\ignorespaces Much more effective thresholding of red channel image}}{24}}
+\newlabel{fig:red}{{5.2.4}{24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2.5}{\ignorespaces K-means clustering method for k = 16\cite  {segm}}}{25}}
+\newlabel{fig:kmeans}{{5.2.5}{25}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Methods execution}{25}}
 \@writefile{lol}{\contentsline {lstlisting}{contaminated.py}{25}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.3.1}{\ignorespaces Properly segmented damaged yolk mass}}{25}}
 \newlabel{fig:bad}{{5.3.1}{25}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Choosing detection system parameters}{25}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Manual parameters optimisation}{25}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Choosing detection system parameters}{26}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Manual parameters optimisation}{26}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6.1.1}{\ignorespaces Obtaining a set of sample pictures. Another set was obtained using Raspberry Pi camera.}}{26}}
 \newlabel{fig:samples}{{6.1.1}{26}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.1.2}{\ignorespaces One of the scripts used for manual parameter interval finding}}{26}}
-\newlabel{fig:manual}{{6.1.2}{26}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1.2}{\ignorespaces One of the scripts used for manual parameter interval finding}}{27}}
+\newlabel{fig:manual}{{6.1.2}{27}}
 \@writefile{lol}{\contentsline {lstlisting}{trackbars.py}{27}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Automatic parameters optimisation}{27}}
 \@writefile{lol}{\contentsline {lstlisting}{script.py}{28}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Overfitting}{28}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Results}{28}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Results}{29}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6.4.1}{\ignorespaces Parameter values obtained in automatic parameters optimisation}}{29}}
 \newlabel{fig:params}{{6.4.1}{29}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}System implementation}{29}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Hardware and OS issues}{29}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.1.1}{\ignorespaces Cord shaped with a knife to fit the casing}}{29}}
-\newlabel{fig:cable}{{7.1.1}{29}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.1.2}{\ignorespaces Camera module features. Src: www.modmypi.com}}{29}}
-\newlabel{fig:features}{{7.1.2}{29}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Python and OpenCV configuration}{30}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Code implementation}{31}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.3.1}{\ignorespaces Importing dependencies}}{31}}
-\newlabel{fig:libs}{{7.3.1}{31}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}System implementation}{30}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Hardware and OS issues}{30}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.1.1}{\ignorespaces Cord shaped with a knife to fit the casing}}{30}}
+\newlabel{fig:cable}{{7.1.1}{30}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.1.2}{\ignorespaces Camera module features. Src: www.modmypi.com}}{30}}
+\newlabel{fig:features}{{7.1.2}{30}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Python and OpenCV configuration}{31}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Code implementation}{32}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.3.1}{\ignorespaces Importing dependencies}}{32}}
+\newlabel{fig:libs}{{7.3.1}{32}}
 \@writefile{lof}{\contentsline {figure}{\numberline {7.3.2}{\ignorespaces Recognition function}}{32}}
 \newlabel{fig:crucial}{{7.3.2}{32}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.3.3}{\ignorespaces Camera frames grabing}}{32}}
-\newlabel{fig:rpicode}{{7.3.3}{32}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusions and further research}{32}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}One month prototype testing and environment of work tuning}{32}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.3.3}{\ignorespaces Camera frames grabing}}{33}}
+\newlabel{fig:rpicode}{{7.3.3}{33}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusions and further research}{33}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}One month prototype testing and environment of work tuning}{33}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Testing new approaches}{33}}
 \citation{watershed}
 \citation{morph}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Testing new approaches}{33}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Obtaining more image data and parameters tuning}{33}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Obtaining more image data and parameters tuning}{34}}
 \@writefile{lof}{\contentsline {figure}{\numberline {8.3.1}{\ignorespaces Screen of Java genetic function optimiser written by author of this thesis \cite  {morph}}}{34}}
 \newlabel{fig:generic}{{8.3.1}{34}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.4}Server and logging}{34}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.5}Conclusions}{34}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.4}Server and logging}{35}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5}Conclusions}{35}}
 \bibcite{trillion}{1}
 \bibcite{eggprop}{2}
 \bibcite{agri}{3}

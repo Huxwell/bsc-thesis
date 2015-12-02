@@ -37,12 +37,12 @@ W poniższej pracy przedstawiono proces projektowania i tworzenia systemu, któr
 Na początku opisano proces rozbijania jaj, oraz oddzielania białka od żółtka. Następnie przeanalizowano rynkowy popyt na system automatyzujący ten proces.
 Przeprowadzono badania jakościowe istniejących rozwiązań dla tego problemu, oraz usprawnień, jakie można w nich dokonać.
 Podjęto decyzję o zaprojektowaniu i wykonaniu prototypu systemu, który montowany będzie na maszynach rozbijających jaja firmy OVO-TECH.
-Omówiono konstrukcję tego systemu, algorytmy, jakie są w nim zaimplementowane, a następnie wykonano i przetestowano prototyp.
+Omówiono konstrukcję tego systemu, algorytmy, jakie są w nim zaimplementowane, a następnie wykonano i przetestowano prototyp.\\
 Autor poniższej pracy przewiduje, że wykonany system zastosowanie w firmach farmaceutycznych produkujących leki z białka jajecznego, w cukierniach, które potrzebują oddzielania białek od żółtek do procesów piekarniczych takich jak ubijanie piany z białek, oraz w firmach produkujących odżywki dla sportowców.
 
 
-
 \end{abstract}
+
 
 \selectlanguage{english}
 \begin{abstract}
@@ -54,11 +54,11 @@ The scope of this work is process of creating a device that identifies objects s
 At the beginning, the process of egg cracking and separating egg white from egg yolk was described. Than the market demand on a system automatising this process was analysed.
 A research about quality of existing solutions for such problem was conducted. Possible improvements in them were considered.
 A decision has been made to design and develop a prototype of a system, that will be mounted on OVO-TECH company egg-breaking machines.
-Structure and implemented algorithms were described. The prototype was manufactured and tested.
+Structure and implemented algorithms were described. The prototype was manufactured and tested.\\
 Author of this thesis is expecting, that developed system will be applied in pharmaceutics companies that produce medicines from egg white, confectionaries and sport nurition producers.
 
 \end{abstract}
-
+\newpage 
 \tableofcontents
 
 
@@ -156,7 +156,7 @@ The above analysis led to conclusion, that researching egg-white separation is j
 \item Implementing such method in a prototype device that utilises the discovered method.
 \end{enumerate}
 
-
+\newpage
 \section{Problem analysis}
 \subsection{Host machine}
 Ovo-tech produces a processing plant called "RZ-1" (see figure \ref{fig:rz1table} and \ref{fig:rz1crack}).
@@ -390,10 +390,19 @@ As for camera module, a standard Raspberry Pi v1.3 5Mpix Camera module was shipp
 \end{itemize}
 
 
+\newpage
 
 
 \subsection{Detection algorithm}
-Detection algorithm operates on images(frames) passed by the camera module.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\paperwidth]{algorithmV}
+\caption{Flowchart showing the way that detection algorithm operates}\label{fig:algorithmV}
+\end{figure}
+\newpage
+
+
+Detection algorithm operates on images(frames) passed by the camera module (see figure \ref{fig:algorithmV}).
 Two copies of a frame are processed. The first copy is a subject of following transformations:
 \begin{description}
   \item[Firstly,]one channel is extracted from the image.
@@ -423,13 +432,7 @@ It is processed in a following way:
 
 The best obtained combination of preprocessing, segmentation and grading parameters will be used in a final algorithm that will be implemented in Raspberry Pi 2 device with camera module, and than tested in the Rz-1 processing plant.
 
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.5\paperwidth]{algorithmV}
-\caption{Detection Algorithm}\label{fig:algorithmV}
-\end{figure}
-
+\newpage
 
 \subsection{Software choice}
 Decision have been made, to utilise OpenCV computer vision library for batch state recognition.
@@ -623,7 +626,7 @@ The methods described above are used one after another as subsequent OpenCV libr
 \caption{Properly detected intact egg yolk\cite{cnoisy}}\label{fig:detected}
 \end{figure}
 
-
+\newpage
 \section{Contaminated product assessment}
 Methods described in previous chapter are used for contaminated product recognition, as well as two more presented below:
 
@@ -636,9 +639,14 @@ Unfortunately, it has been sentimentally tested, that egg yolk is reflecting som
 Instead of circles, empty rectangles are drawn on the analysed image. The rectangles fill the whole image height (since eggs do not slide parallely due to transportation slope design), and their width is equal to detected yolks diameter summed with an offset that covers reflecting light. The rectangles centeres are equal to yolk centers.
 
 \subsection{Thresholding}
-
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\paperwidth]{oneth}
+\caption{Different Thresholding modes generated with Metaplotlib}\label{fig:thr}
+\end{figure}
 Thresholding is a simple case of image segmentation (see figure \ref{fig:kmeans}).
 It can be used to convert one channel (in most cases grayscale) image to binary image.
+\newpage
 The basic binary thresholding mode sets every pixel of destination matrix to:
 \begin{itemize}
 \item 0 if the source matrix value is smaller than threshold (integer parameter)
@@ -651,11 +659,7 @@ The truncate version sets every pixel of destination matrix to
 \end{itemize}
 Various modes and modifications are used depending on coding schema and colors distribution.
   
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.4\paperwidth]{thr}
-\caption{Different Thresholding modes generated with Metaplotlib}\label{fig:thr}
-\end{figure}
+
 
 
 Finding an effective threshold value finding is a time consuming process and it often gives satisfactory results only for small set of images.
@@ -666,33 +670,28 @@ Adaptive Thresholding utilize different threshold values for different ROIs.
 Two modes are often used: Adaptive Mean and Adaptive Gaussian.
 First compute threshold value as mean of neighbourhood values.
 Second uses weighted sum neighbourhood values.
- 
+
+On figures \ref{fig:diffthr}, \ref{fig:gray}, \ref{fig:red} author's attempts to find a thresholding method that distinguish egg yolk from its background are shown:
+
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.4\paperwidth]{thremeth}
-\caption{Threshold computing methods12\cite{thre}}\label{fig:thremeth}
-\end{figure}
- 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.4\paperwidth]{diffthr}\label{fig:diffthr}
-\caption{Different thresholding applied
-Fig. generated with Metaplotlib}
+\includegraphics[width=0.6\paperwidth]{diffthr}
+\caption{Different thresholding methods applied}\label{fig:diffthr}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.4\paperwidth]{gray}
+\includegraphics[width=0.6\paperwidth]{gray}
 \caption{Inefficient thresholding of grayscale image}\label{fig:gray}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.4\paperwidth]{red}
+\includegraphics[width=0.6\paperwidth]{red}
 \caption{Much more effective thresholding of red channel image}\label{fig:red}
 \end{figure}
 
-For more general cases (i.e. multichannel images, assigning more colors) clustering method known as k-means is widely used.\cite{lesscv}
+For more general cases (i.e. multichannel images, assigning more colors) clustering method known as k-means is widely used.\cite{lesscv} K-means clustering was used as a supportive method for narrowing the effective threshold values.
  
 \begin{figure}[H]
 \centering
@@ -800,7 +799,7 @@ The recognition accuracy maximised during optimisation process was 91,25\%, and 
 \caption{Parameter values obtained in automatic parameters optimisation}\label{fig:params}
 \end{figure}
 
-
+\newpage
 
 \section{System implementation}
 \subsection{Hardware and OS issues}
@@ -994,14 +993,14 @@ Following conclusions were obtained in the system designing, tuning and testing 
 
 Both the project goals has been achieved.
 
-
+\newpage
 All the Web. sources have been checked for availability in November 2015.
 Web links are not included if articles are to be immediately found with search engines, which is consistent to MLN referencing convention.
 For modified web documents, date of last modification is shown.
 
 If it has not been specified otherwise, figure images has been taken or prepared by the author of this thesis.
 
-\begin{thebibliography}{9}
+\begin{thebibliography}{1}
 
 
 \bibitem{trillion}

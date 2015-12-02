@@ -1,19 +1,19 @@
 \select@language {polish}
 \select@language {polish}
 \select@language {english}
-\contentsline {section}{\numberline {1}Introduction}{2}
-\contentsline {subsection}{\numberline {1.1}Industrial egg processing}{2}
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {subsection}{\numberline {1.1}Industrial egg processing}{3}
 \contentsline {subsection}{\numberline {1.2}Problem formulation}{5}
-\contentsline {section}{\numberline {2}Problem analysis}{6}
-\contentsline {subsection}{\numberline {2.1}Host machine}{6}
+\contentsline {section}{\numberline {2}Problem analysis}{7}
+\contentsline {subsection}{\numberline {2.1}Host machine}{7}
 \contentsline {subsection}{\numberline {2.2}Establishing framework for product cleanness assessment}{8}
-\contentsline {subsection}{\numberline {2.3}Techniques of automatic egg quality assessment}{9}
+\contentsline {subsection}{\numberline {2.3}Techniques of automatic egg quality assessment}{10}
 \contentsline {subsection}{\numberline {2.4}Detecting batch state with camera image}{10}
 \contentsline {section}{\numberline {3}Batch state detection system design}{11}
 \contentsline {subsection}{\numberline {3.1}System structure}{11}
 \contentsline {subsection}{\numberline {3.2}Hardware and operating system choice}{12}
-\contentsline {subsection}{\numberline {3.3}Detection algorithm}{13}
-\contentsline {subsection}{\numberline {3.4}Software choice}{15}
+\contentsline {subsection}{\numberline {3.3}Detection algorithm}{14}
+\contentsline {subsection}{\numberline {3.4}Software choice}{16}
 \contentsline {section}{\numberline {4}Egg yolk detection}{16}
 \contentsline {subsection}{\numberline {4.1}General idea}{16}
 \contentsline {subsection}{\numberline {4.2}Extracting channels}{16}
@@ -22,22 +22,22 @@
 \contentsline {subsection}{\numberline {4.5}Erosion and Dilatation}{19}
 \contentsline {subsection}{\numberline {4.6}Gaussian blur}{20}
 \contentsline {subsection}{\numberline {4.7}Methods execution}{21}
-\contentsline {section}{\numberline {5}Contaminated product assessment}{21}
-\contentsline {subsection}{\numberline {5.1}Subtracting yolk image}{21}
+\contentsline {section}{\numberline {5}Contaminated product assessment}{22}
+\contentsline {subsection}{\numberline {5.1}Subtracting yolk image}{22}
 \contentsline {subsection}{\numberline {5.2}Thresholding}{22}
 \contentsline {subsection}{\numberline {5.3}Methods execution}{25}
-\contentsline {section}{\numberline {6}Choosing detection system parameters}{25}
-\contentsline {subsection}{\numberline {6.1}Manual parameters optimisation}{25}
+\contentsline {section}{\numberline {6}Choosing detection system parameters}{26}
+\contentsline {subsection}{\numberline {6.1}Manual parameters optimisation}{26}
 \contentsline {subsection}{\numberline {6.2}Automatic parameters optimisation}{27}
 \contentsline {subsection}{\numberline {6.3}Overfitting}{28}
-\contentsline {subsection}{\numberline {6.4}Results}{28}
-\contentsline {section}{\numberline {7}System implementation}{29}
-\contentsline {subsection}{\numberline {7.1}Hardware and OS issues}{29}
-\contentsline {subsection}{\numberline {7.2}Python and OpenCV configuration}{30}
-\contentsline {subsection}{\numberline {7.3}Code implementation}{31}
-\contentsline {section}{\numberline {8}Conclusions and further research}{32}
-\contentsline {subsection}{\numberline {8.1}One month prototype testing and environment of work tuning}{32}
+\contentsline {subsection}{\numberline {6.4}Results}{29}
+\contentsline {section}{\numberline {7}System implementation}{30}
+\contentsline {subsection}{\numberline {7.1}Hardware and OS issues}{30}
+\contentsline {subsection}{\numberline {7.2}Python and OpenCV configuration}{31}
+\contentsline {subsection}{\numberline {7.3}Code implementation}{32}
+\contentsline {section}{\numberline {8}Conclusions and further research}{33}
+\contentsline {subsection}{\numberline {8.1}One month prototype testing and environment of work tuning}{33}
 \contentsline {subsection}{\numberline {8.2}Testing new approaches}{33}
-\contentsline {subsection}{\numberline {8.3}Obtaining more image data and parameters tuning}{33}
-\contentsline {subsection}{\numberline {8.4}Server and logging}{34}
-\contentsline {subsection}{\numberline {8.5}Conclusions}{34}
+\contentsline {subsection}{\numberline {8.3}Obtaining more image data and parameters tuning}{34}
+\contentsline {subsection}{\numberline {8.4}Server and logging}{35}
+\contentsline {subsection}{\numberline {8.5}Conclusions}{35}
