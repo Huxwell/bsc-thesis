@@ -66,19 +66,19 @@ Author of this thesis is expecting, that developed system will be applied in pha
 \subsection{Industrial egg processing}
 In a following thesis an industrial problem - chicken egg white and yolk separation - is analysed in terms of possible automation and improvements in currently used techniques.
 
-Chicken egg is a widely used ingredient of food, athletes nutrition and medicines. Simplified structure of chicken egg is commonly known: prior to processing and using the egg, its shell has to be removed first, what is done in cracking process. It is estimated that 1.8 trillion chicken eggs are used yearly around the world\cite{trillion}, and most of them are consumed without their shells. 
+Chicken egg is a widely used ingredient of food, athletes nutrition and medicines. Simplified structure of chicken egg is commonly known (see figure \ref{fig:structure}). Prior to processing or consuming an egg, its shell has to be removed first, what is done in cracking process (see figure \ref{fig:crack}). It is estimated that 1.8 trillion chicken eggs are used yearly around the world\cite{trillion}, and most of them are consumed without their shells. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{structure}
-\caption{chicken egg structure, Src: www.gardening-for-wildlife.com}
+\caption{chicken egg structure, Src: www.gardening-for-wildlife.com}\label{fig:structure}\label{fig:structure}
 \end{figure}
 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{crack}
-\caption{Manual egg cracking, Src: www.media.eggs.ca}
+\caption{Manual egg cracking, Src: www.media.eggs.ca}\label{fig:crack}
 \end{figure}
 
 For many companies, raw eggs are required to be not only removed from shells, but also egg-yolk and egg white has to be separated.
@@ -109,10 +109,10 @@ Author of this thesis managed to find four companies that already produce machin
 \item Sanovo from Denmark
 \item Ovo-tech from Poland
 \end{itemize}
-Ovo-tech company was contacted by author and enquired about the way that RZ-1 machine that they product operates. 
+Ovo-tech company was contacted by author and enquired about the way the machines they product operate. 
 It appeared, that during last 4 years multiple attempts were made by this company to separate whites from yolks of freshly broken eggs in a mechanic way.
 Obtained solution (RZ-1 separation module) realise that goal partially, since the separation is imperfect and its ratio varies depending on egg quality.
-It proved to be working good enough for some companies, while other rejected it and declared intention to buy OVO-TECH machines in the future, provided that adequate improvements will be made.
+It proved to be working good enough for some companies (see figure \ref{fig:map}), while other rejected it and declared intention to buy OVO-TECH machines in the future, provided that adequate improvements will be made.
 
 Nine companies were inquired whether or not would they invest in improved Ovo-tech machine, if that egg white will be visually clean of yolk parts.
 Eight of them replied positively that they would seriously consider such offer since their processing plants would benefit in terms of product quality or manpower cost on this improvement.
@@ -124,29 +124,29 @@ Executives of this client suspect that using machines with better egg separation
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{map}
-\caption{Ovo-tech egg braking machines operating over the world}
+\caption{Ovo-tech egg braking machines operating over the world}\label{fig:map}
 \end{figure}
 
 
 \subsection{Problem formulation}
-Ovo-tech observed that a simple dependence exists: the older the egg is, the more likely its yolk is degenerated inside the egg shell. Also, if an egg processed by RZ-1 machine is old or the chicken was feed improperly the yolk might might break during the cracking phase.
+Ovo-tech observed that a simple dependence exists: the older the egg is, the more likely its yolk is degenerated inside the egg shell. Also, if an egg processed by Ovo-tech machines is old or the chicken was feed improperly the yolk might might break during the cracking phase (see figure \ref{fig:prop} and \ref{fig:damg}).
 Also, a yolk damage is possible due to cracker imperfections such us being calibrated for different size or weight eggs.
 
 A mixture of damaged yolk and white is created in a result of processing a bad quality egg (old and/or damaged), and it is not possible to properly separate it into two initial components using the rz-1 separation module.
 Eliminating the batches containing fuzzy yolk should decrease chances of accidentally processing the contaminated eggs, while the risk of egg contamination generally increases with egg age.
 
-Ovo-tech deals with those cases by encouraging companies to hire a person that manually removes the eggs from an accumulating batch (See 2.1 subchapter). Nevertheless, Ovo-tech is dissatisfied about cost that is additionally generated by this solution and the fact that it significantly slows down the processing speed of the entire processing plant.
+Ovo-tech deals with those cases by encouraging companies to hire a person that manually removes badly cracked eggs from an accumulating batch (See 2.1 subchapter). Nevertheless, Ovo-tech is dissatisfied about cost that is additionally generated by this solution and the fact that it significantly slows down the processing speed of the entire processing plant.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{prop}
-\caption{Properly cracked egg}
+\caption{Properly cracked egg}\label{fig:prop}
 \end{figure} 
 
  
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{damg}
-\caption{Damaged yolk in improperly cracked egg}
+\caption{Damaged yolk in improperly cracked egg}\label{fig:damg}
 \end{figure}
 
 
@@ -159,24 +159,24 @@ The above analysis led to conclusion, that researching egg-white separation is j
 
 \section{Problem analysis}
 \subsection{Host machine}
-Ovo-tech produces a processing plant called "RZ-1".
+Ovo-tech produces a processing plant called "RZ-1" (see figure \ref{fig:rz1table} and \ref{fig:rz1crack}).
 This device automatically cracks the eggs and attempt to separate the egg yolk from egg white. This machine has been chosen as the one that will be extended with the module prototype prepared in this thesis, due to its availability (it is the most popular of the Ovo-tech machines) and the fact, that it operates relatively slow (compared to other Ovo-tech machines), so the flowing eggs yolks surfaces do not touch each other - what makes them easier to process.
 
 \begin{figure}[H]+
 \centering
 \includegraphics[width=0.4\paperwidth]{rz1table}
-\caption{Rz-1 unit basic parameters}
+\caption{Rz-1 unit basic parameters}\label{fig:rz1table}
 \end{figure}
 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{rz1crack}
-\caption{Egg cracking  module of RZ-1 unit}
+\caption{Egg cracking  module of RZ-1 unit}\label{fig:rz1crack}
 \end{figure}
 
 
-The RZ-1 machine operates in a following way (see Figure \ref{fig:process}):
+The RZ-1 machine operates in a following way (see figure \ref{fig:process}):
 \begin{enumerate}
 \item Eggs are directed into one-line flow, and mechanically aligned
 
@@ -216,7 +216,7 @@ More advanced Ovo-tech models such us RZ-3, RZ-6 and RZ-8 will be also considere
 The requirement is to create a system able to detect all product batches containing badly-cracked eggs.
 A batch is defined as a mixture of freshly broken eggs containing egg yolks, egg white, not containing the egg shells, that is present on a the sliding slope that transports the product to separating module.
 
-Ovo-tech was unable to specify a short, quantifiable requirement that defines which batch is acceptable and which not. Instead, pictures of batches during machine operation were classified manually by Ovo-tech expert. He decided that batch intact egg yolks should be removed from processing line if:
+Ovo-tech was unable to specify a short, quantifiable requirement that defines which batch is acceptable and which not. Instead, pictures of batches during machine operation were classified manually by Ovo-tech expert. He decided that batch intact egg yolks should be removed from processing line if (see figure \ref{fig:8of9}):
 
 \begin{enumerate}
 \item intact yolk is surrounded by homogeneous mixture of another damaged yolk and white.
@@ -240,17 +240,17 @@ also, there is no need to do anything when:
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\paperwidth]{8of9}
-\caption{Cracked egg product cases.}
+\caption{Cracked egg product cases.}\label{fig:8of9}
 \end{figure}
 
-Also, there an additional problem is constituted by chalaza - a usually white element that is attached to egg yolk for in-egg suspension.
+Also, there an additional problem is constituted by chalaza (see figure \ref{fig:chalaza}) - a usually white element that is attached to egg yolk for in-egg suspension.
 Despite the fact, that client decided that chalaza position and amount are irrelevant to him, its appearance may increase difficulty of the recognition problem if identified as parts of damaged egg yolk.
 
  
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{chalaza}
-\caption{Chalaza attached to egg.}
+\caption{Chalaza attached to egg.}\label{fig:chalaza}
 \end{figure}
 
 
@@ -272,7 +272,7 @@ Initially, two ideas were researched by author of this thesis:
 \item Using laser / narrow light beam 
 \end{itemize}
 Both methods would identify the intact yolk basing on its height and would not require much processing (an Arduino Uno or other ATMega based circuits might be sufficient).
-Nevertheless, both of them had to be rejected, since intact yolks presence in the tested batch is not sufficient for batch accepting – absence of egg yolk parts is also required (see subchapter 2.1).
+Nevertheless, both of them had to be rejected, since intact yolks presence in the tested batch is not sufficient for batch accepting – absence of egg yolk parts is also required (see subchapter 2.3).
 
 Finally, using images of the batch obtained from camera and processing it was considered. Such camera would be mounted just after the cracking module of RZ-1 machine and make decision whether or not the product batch looks like the one that is expected.
 This approach is very similar to the currently used one - the expert looking at the egg and making decision - except for the fact, that it would be fully automatised.
@@ -310,7 +310,7 @@ The method application will be researched further on beyond the scope of this wo
 \section{Batch state detection system design}
 
 \subsection{System structure}
-The system consists of:
+The system consists of (see figure \ref{fig:phisical}):
 \begin{itemize}
 \item Camera module that photographs the egg white-yolk batches
 \item Processing device - an embedded computer (i.e. ARM based platform)
@@ -320,20 +320,20 @@ The system consists of:
 A camera will be placed on top of Separator module part, where cracked eggs are transported by sliding to the separating part.
 
 The processing device uses the camera frames, to make a decision whether or nor the egg batch visible on the frame is acceptable, or represent a badly cracked egg.
-A signal will be send to element that will either remove egg batch from the processing plant or let is pass further.
+A signal will be send to element that will either remove egg batch from the processing plant or let is pass further (see figure \ref{fig:system}).
 Development of this physical element is done by Ovo-tech company and is not analysed in the thesis. Ovo-tech declared, that having +5V signal for positive batch, and -5V for negative is enough for them to work on their part.
 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\paperwidth]{system}
-\caption{System workflow}
+\caption{System workflow}\label{fig:system}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\paperwidth]{phisical}
-\caption{Physical system structure - camera and processing device - Raspberry Pi 2 (unmounted from RZ-1 machine)}
+\caption{Physical system structure - camera and processing device - Raspberry Pi 2 (unmounted from RZ-1 machine)}\label{fig:phisical}
 \end{figure}
 
 
@@ -427,7 +427,7 @@ The best obtained combination of preprocessing, segmentation and grading paramet
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\paperwidth]{algorithmV}
-\caption{Detection Algorithm}
+\caption{Detection Algorithm}\label{fig:algorithmV}
 \end{figure}
 
 
@@ -463,7 +463,7 @@ Parameters, which values have to be found to correctly apply the methods are ind
 Following methods treat images as 1, 8, or 24-bit encoded matrices, thus both terms are used synonymously.
 x and y denote pixel position.
 \subsection{Extracting channels}
-In digital graphics color information is usually stored as a value from RGB (or BGR) additive color space.
+In digital graphics color information is usually stored as a value from RGB (or BGR) additive color space (see figure \ref{fig:rgb}).
 It means, that three numbers represent amount of red, green, anb blue subcolors that combined constitute a visible color.
 For this algorithm sake, it is assumed that every one of this numbers takes values from 0-255 interval and is encoded by 8bits, what sums to 24bit encoding for every RGB pixel.
 
@@ -481,7 +481,7 @@ Particularity, an egg yolk that is visually yellow or red my be favoured in red 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{rgb}
-\caption{Three channels of RGB image. Src: www.commons.wikimedia.org}
+\caption{Three channels of RGB image. Src: www.commons.wikimedia.org}\label{fig:rgb}
 \end{figure}
 
 
@@ -496,13 +496,13 @@ In HSV color is represented by Hue (angle of a point on a cylinder), Saturation 
 
 Hue is defined as "the degree to which a stimulus can be described as similar to or different from stimuli that are described as red, green, blue, and yellow"\cite{hue}.
 Saturation stands for intensity of a particular hue.
-Value is also defined as darkness of the color and is often treated as reverse grayscale channel.
+Value is also defined as darkness of the color and is often treated as reverse grayscale channel (see figure \ref{fig:hsv}).
 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{hsv}
-\caption{HSV Cylinder. Src: www.doc.qt.io}
+\caption{HSV Cylinder. Src: www.doc.qt.io}\label{fig:hsv}
 \end{figure}
 
 
@@ -513,7 +513,7 @@ Circle Hough Transform is an algorithm used for retrieving 3 parameters defining
 
 To understand the way CHT works, simplified case is considered:
 The image is 1-bit encoded; the radius r and position (xp,yp) of a point lying on the searched circle are known.
-Potential circles space is created by treating points on a circle of radius r centered in (xp,yp) as centers for potential circles.
+Potential circles space is created by treating points on a circle of radius r centered in (xp,yp) as centers for potential circles (see figure \ref{fig:space}).
 For every potential circle, number of intersecting points is counted.
 The potential circle with largest number of intersections is chosen as the best fitting one.
 
@@ -521,17 +521,17 @@ The potential circle with largest number of intersections is chosen as the best 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{space}
-\caption{Potential circles space\cite{craters}}
+\caption{Potential circles space\cite{craters}}\label{fig:space}
 \end{figure}
 
-In the full cases, such procedure is repeated for every image point, and the intersections numbers are stored in accumulation matrix.\cite{hgt}
+In the full cases, such procedure is repeated for every image point, and the intersections numbers are stored in accumulation matrix (see figure \ref{fig:accu}).\cite{hgt}
 To reduce computation time and false detection rate, minimum distance between image centers is given as a parameter \textbf{minDist}.
 Threshold value \textbf{param2} is defined as minimum number of intersections to treat circle candidate as detected circle.
  
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{accu}
-\caption{Accumulation matrix with two good circle candidates\cite{hgt}}
+\caption{Accumulation matrix with two good circle candidates\cite{hgt}}\label{fig:accu}
 \end{figure}
 
 If r is unknown, min-radius and max-radius parameters are defined, and the algorithm repeats the procedure for all possible integer r in range of above parameters.
@@ -543,13 +543,13 @@ OpenCV utilizes Canny edge detector for finding the potential intersection point
 Erosion and dilatation are two morphological filters that enable to filter out unnecessary noise from the image.
 Combined, they leave the core information (biggest blobs) intact or amplified, while small elements are deleted.
 It is easily applied to binary images:
-A ROI (region of interest, a rectangular part of image) moves through image pixel by pixel and is compared to previously defined kernel (binary matrix, usually symmetric with respect to both diagonals).
+A ROI (region of interest, a rectangular part of image) moves through image pixel by pixel and is compared to previously defined kernel (binary matrix, usually symmetric with respect to both diagonals - see figure \ref{fig:diam}).
 
  
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{diam}
-\caption{A diamond-shaped kernel\cite{morph}}
+\caption{A diamond-shaped kernel\cite{morph}}\label{fig:diam}
 \end{figure}
 
 The consecutive pixels of on ROI that matches kernel elements with value 0 remain intact.
@@ -558,13 +558,13 @@ Pixels of ROI that matches kernel 1-valued elements changes to:
 0-s if at least one of them is 0 for Erosion.
 
 Erosion gives the effect of ‘shrinking’ the objects (and if they are small enough, they are deleted).
-Dilatation makes the objects bigger.
+Dilatation makes the objects bigger (see figure \ref{fig:lett}).
 
  
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{lett}
-\caption{Original image, eroded image, dilated image.\cite{erdil}}
+\caption{Original image, eroded image, dilated image.\cite{erdil}}\label{fig:lett}
 \end{figure}
 
 
@@ -585,7 +585,7 @@ Gaussian blur drastically reduces number of false-positive Hough circles detecti
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{gauss}
-\caption{Gauss function in two dimension\cite{featproc}}
+\caption{Gauss function in two dimension\cite{featproc}}\label{fig:featproc}
 \end{figure}
 
 
@@ -598,14 +598,14 @@ The term ‘convolution’ might be misleading and for the scope of image proces
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\paperwidth]{conv}
-\caption{Convolution of 3x3 matrices\cite{gimp}}
+\caption{Convolution of 3x3 matrices\cite{gimp}}\label{fig:conv}
 \end{figure}
 
  
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{micro}
-\caption{Microscope image before and after applying gaussian filter\cite{cnoisy}}
+\caption{Microscope image before and after applying gaussian filter\cite{cnoisy}}\label{fig:micro}
 \end{figure}
 
   
@@ -620,7 +620,7 @@ The methods described above are used one after another as subsequent OpenCV libr
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{detected}
-\caption{Properly detected intact egg yolk\cite{cnoisy}}
+\caption{Properly detected intact egg yolk\cite{cnoisy}}\label{fig:detected}
 \end{figure}
 
 
@@ -637,7 +637,7 @@ Instead of circles, empty rectangles are drawn on the analysed image. The rectan
 
 \subsection{Thresholding}
 
-Thresholding is a simple case of image segmentation.
+Thresholding is a simple case of image segmentation (see figure \ref{fig:kmeans}).
 It can be used to convert one channel (in most cases grayscale) image to binary image.
 The basic binary thresholding mode sets every pixel of destination matrix to:
 \begin{itemize}
@@ -654,11 +654,11 @@ Various modes and modifications are used depending on coding schema and colors d
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{thr}
-\caption{Different Thresholding modes generated with Metaplotlib}
+\caption{Different Thresholding modes generated with Metaplotlib}\label{fig:thr}
 \end{figure}
 
 
-Finding optimal threshold value finding is a time consuming process and it often gives satisfactory results only for small set of images.
+Finding an effective threshold value finding is a time consuming process and it often gives satisfactory results only for small set of images.
 Therefore Otsu Binarization algorithm for automatically selecting threshold is used.
 
 Moreover using one threshold value for whole image may not work properly if the lighting conditions differ in different image areas.\cite{thre}
@@ -670,12 +670,12 @@ Second uses weighted sum neighbourhood values.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{thremeth}
-\caption{Threshold computing methods12\cite{thre}}
+\caption{Threshold computing methods12\cite{thre}}\label{fig:thremeth}
 \end{figure}
  
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.4\paperwidth]{diffthr}
+\includegraphics[width=0.4\paperwidth]{diffthr}\label{fig:diffthr}
 \caption{Different thresholding applied
 Fig. generated with Metaplotlib}
 \end{figure}
@@ -683,13 +683,13 @@ Fig. generated with Metaplotlib}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{gray}
-\caption{Inefficient thresholding of grayscale image}
+\caption{Inefficient thresholding of grayscale image}\label{fig:gray}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{red}
-\caption{Much more effective thresholding of red channel image}
+\caption{Much more effective thresholding of red channel image}\label{fig:red}
 \end{figure}
 
 For more general cases (i.e. multichannel images, assigning more colors) clustering method known as k-means is widely used.\cite{lesscv}
@@ -697,7 +697,7 @@ For more general cases (i.e. multichannel images, assigning more colors) cluster
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{kmeans}
-\caption{K-means clustering method for k = 16\cite{segm}}
+\caption{K-means clustering method for k = 16\cite{segm}}\label{fig:kmeans}
 \end{figure}
 \subsection{Methods execution}
 The methods described above are used one after another as subsequent OpenCV library function calls in Python language:
@@ -706,7 +706,7 @@ The methods described above are used one after another as subsequent OpenCV libr
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{bad}
-\caption{Properly segmented damaged yolk mass}
+\caption{Properly segmented damaged yolk mass}\label{fig:bad}
 \end{figure}
 
 \section{Choosing detection system parameters}
@@ -724,13 +724,13 @@ The expert was reviewing the output while changing the parameter values to obtai
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.2\paperwidth]{samples}
-\caption{Obtaining a set of sample pictures. Another set was obtained using Raspberry Pi camera.}
+\caption{Obtaining a set of sample pictures. Another set was obtained using Raspberry Pi camera.}\label{fig:samples}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\paperwidth]{manual}
-\caption{One of the scripts used for manual parameter interval finding}
+\caption{One of the scripts used for manual parameter interval finding}\label{fig:manual}
 \end{figure}
 
 Script crucial fragments:
@@ -742,7 +742,7 @@ This method resulted in excluding most parameters values and vastly reducing the
 
 \subsection{Automatic parameters optimisation}
 
-A decision was made, to automatise process of assessing the segmentation and detection efficiency to get to optimal set of parameters.
+A decision was made, to automatise process of assessing the segmentation and detection efficiency to get to effective set of parameters.
 This process was done twice:
 \begin{description}
 \item[Firstly,] the egg yolk detection process was optimised.
@@ -797,7 +797,7 @@ The recognition accuracy maximised during optimisation process was 91,25\%, and 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\paperwidth]{params}
-\caption{Parameter values obtained in automatic parameters optimisation}
+\caption{Parameter values obtained in automatic parameters optimisation}\label{fig:params}
 \end{figure}
 
 
@@ -809,22 +809,22 @@ Initially, hardware platform was connected to LG 27MP35 display through HDMI, iB
 MicroSD SanDisk 8GB card (with EMTEC MicroSD Adapter)was used as a hard drive for operating system. 
 TP Link WN725N USB WiFi adapter was used.
 
-Device was powered from laptop USB port via microUSB cord, that has to be shaped to fit into Raspberry Pi casing.
+Device was powered from laptop USB port via microUSB cord, that has to be shaped to fit into Raspberry Pi casing (see figure \ref{fig:cable}).
 
 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.3\paperwidth]{cable}
-\caption{Cord had to be shaped with a knife to fit into Raspberry Pi casing}
+\caption{Cord shaped with a knife to fit the casing}\label{fig:cable}
 \end{figure}
 
-Raspberry Pi Camera Rev 1.3 was picked to be used as a camera module. 
+Raspberry Pi Camera Rev 1.3 was picked to be used as a camera module (see figure \ref{fig:features}). 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\paperwidth]{features}
-\caption{Camera module features. Src: www.modmypi.com}
+\caption{Camera module features. Src: www.modmypi.com}\label{fig:features}
 \end{figure}
 
 To install Raspian system on the chosen platform, SD card had to be prepared.
@@ -958,7 +958,7 @@ Further on, a ready, popular library will be used for this purpose: a DEAP genet
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\paperwidth]{genetic}
-\caption{Screen of Java genetic function optimiser written by author of this thesis \cite{morph}}
+\caption{Screen of Java genetic function optimiser written by author of this thesis \cite{morph}}\label{fig:generic}
 \end{figure}
 
 
