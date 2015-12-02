@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.2.7)  3 DEC 2015 00:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.2.7)  3 DEC 2015 00:54
 entering extended mode
 **th.tex
 (C:\Users\Orley\Desktop\thesis\docs\tex\th.tex
@@ -698,10 +698,10 @@ Package pdftex.def Info: imgs/chalaza.png used on input line 252.
 <imgs/system.png, id=48, 776.9025pt x 364.36125pt>
 File: imgs/system.png Graphic file (type png)
  <use imgs/system.png>
-Package pdftex.def Info: imgs/system.png used on input line 329.
+Package pdftex.def Info: imgs/system.png used on input line 325.
 (pdftex.def)             Requested size: 478.00812pt x 224.18924pt.
 
-Overfull \hbox (22.764pt too wide) in paragraph at lines 329--330
+Overfull \hbox (22.764pt too wide) in paragraph at lines 325--326
  [][] 
  []
 
@@ -709,10 +709,10 @@ Overfull \hbox (22.764pt too wide) in paragraph at lines 329--330
 File: imgs/phisical.jpg Graphic file (type jpg)
 
 <use imgs/phisical.jpg>
-Package pdftex.def Info: imgs/phisical.jpg used on input line 335.
+Package pdftex.def Info: imgs/phisical.jpg used on input line 331.
 (pdftex.def)             Requested size: 478.00812pt x 178.39944pt.
 
-Overfull \hbox (22.764pt too wide) in paragraph at lines 335--336
+Overfull \hbox (22.764pt too wide) in paragraph at lines 331--332
  [][] 
  []
 
@@ -722,10 +722,10 @@ sktop/thesis/docs/tex/imgs/phisical.jpg>] [13] [14]
 File: imgs/algorithmV.png Graphic file (type png)
 
 <use imgs/algorithmV.png>
-Package pdftex.def Info: imgs/algorithmV.png used on input line 399.
+Package pdftex.def Info: imgs/algorithmV.png used on input line 396.
 (pdftex.def)             Requested size: 298.75394pt x 588.55385pt.
  [15 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/algorithmV.png>]
-Overfull \hbox (7.43161pt too wide) in paragraph at lines 415--416
+Overfull \hbox (7.43161pt too wide) in paragraph at lines 412--413
 []\T1/ptm/m/n/12 the in-for-ma-tion from first copy is used to re-move in-tact 
 egg re-gion from sec-ond copy.The
  []
@@ -733,13 +733,13 @@ egg re-gion from sec-ond copy.The
 [16] [17] <imgs/rgb.png, id=75, 401.5pt x 321.2pt>
 File: imgs/rgb.png Graphic file (type png)
  <use imgs/rgb.png>
-Package pdftex.def Info: imgs/rgb.png used on input line 486.
+Package pdftex.def Info: imgs/rgb.png used on input line 483.
 (pdftex.def)             Requested size: 238.9995pt x 191.20213pt.
 
 <imgs/hsv.png, id=76, 431.6125pt x 296.10625pt>
 File: imgs/hsv.png Graphic file (type png)
  <use imgs/hsv.png>
-Package pdftex.def Info: imgs/hsv.png used on input line 507.
+Package pdftex.def Info: imgs/hsv.png used on input line 504.
 (pdftex.def)             Requested size: 238.9995pt x 163.96138pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -748,26 +748,26 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <imgs/space.jpg, id=80, 297.11pt x 297.11pt>
 File: imgs/space.jpg Graphic file (type jpg)
  <use imgs/space.jpg>
-Package pdftex.def Info: imgs/space.jpg used on input line 526.
+Package pdftex.def Info: imgs/space.jpg used on input line 523.
 (pdftex.def)             Requested size: 238.9995pt x 239.00757pt.
 
 <imgs/accu.png, id=81, 285.065pt x 275.0275pt>
 File: imgs/accu.png Graphic file (type png)
  <use imgs/accu.png>
-Package pdftex.def Info: imgs/accu.png used on input line 536.
+Package pdftex.def Info: imgs/accu.png used on input line 533.
 (pdftex.def)             Requested size: 238.9995pt x 230.58507pt.
  [19 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/hsv.png (PNG copy)> <C:/Users
 /Orley/Desktop/thesis/docs/tex/imgs/space.jpg>]
 <imgs/diam.png, id=86, 272.01625pt x 126.4725pt>
 File: imgs/diam.png Graphic file (type png)
  <use imgs/diam.png>
-Package pdftex.def Info: imgs/diam.png used on input line 554.
+Package pdftex.def Info: imgs/diam.png used on input line 551.
 (pdftex.def)             Requested size: 238.9995pt x 111.12631pt.
 
 <imgs/lett.png, id=87, 449.68pt x 213.79875pt>
 File: imgs/lett.png Graphic file (type png)
  <use imgs/lett.png>
-Package pdftex.def Info: imgs/lett.png used on input line 569.
+Package pdftex.def Info: imgs/lett.png used on input line 566.
 (pdftex.def)             Requested size: 238.9995pt x 113.63249pt.
  [20 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/accu.png> <C:/Users/Orley/Des
 ktop/thesis/docs/tex/imgs/diam.png>] <imgs/gauss.png, id=91, 265.99374pt x 76.2
@@ -775,23 +775,23 @@ ktop/thesis/docs/tex/imgs/diam.png>] <imgs/gauss.png, id=91, 265.99374pt x 76.2
 File: imgs/gauss.png Graphic file (type png)
 
 <use imgs/gauss.png>
-Package pdftex.def Info: imgs/gauss.png used on input line 590.
+Package pdftex.def Info: imgs/gauss.png used on input line 587.
 (pdftex.def)             Requested size: 238.9995pt x 68.54527pt.
  <imgs/conv.png, id=92, 939.51pt x 100.375pt>
 File: imgs/conv.png Graphic file (type png)
 
 <use imgs/conv.png>
-Package pdftex.def Info: imgs/conv.png used on input line 603.
+Package pdftex.def Info: imgs/conv.png used on input line 600.
 (pdftex.def)             Requested size: 478.00812pt x 51.06956pt.
 
-Overfull \hbox (22.764pt too wide) in paragraph at lines 603--604
+Overfull \hbox (22.764pt too wide) in paragraph at lines 600--601
  [][] 
  []
 
 <imgs/micro.png, id=93, 373.395pt x 180.675pt>
 File: imgs/micro.png Graphic file (type png)
  <use imgs/micro.png>
-Package pdftex.def Info: imgs/micro.png used on input line 610.
+Package pdftex.def Info: imgs/micro.png used on input line 607.
 (pdftex.def)             Requested size: 238.9995pt x 115.64537pt.
  [21 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/lett.png> <C:/Users/Orley/Des
 ktop/thesis/docs/tex/imgs/gauss.png> <C:/Users/Orley/Desktop/thesis/docs/tex/im
@@ -803,7 +803,7 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 <imgs/detected.jpg, id=97, 485.56406pt x 271.0125pt>
 File: imgs/detected.jpg Graphic file (type jpg)
  <use imgs/detected.jpg>
-Package pdftex.def Info: imgs/detected.jpg used on input line 625.
+Package pdftex.def Info: imgs/detected.jpg used on input line 622.
 (pdftex.def)             Requested size: 238.9995pt x 133.39276pt.
 
 [22 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/micro.png> <C:/Users/Orley/Des
@@ -811,10 +811,10 @@ ktop/thesis/docs/tex/imgs/detected.jpg>]
 <imgs/oneth.jpg, id=102, 1245.65375pt x 616.3025pt>
 File: imgs/oneth.jpg Graphic file (type jpg)
  <use imgs/oneth.jpg>
-Package pdftex.def Info: imgs/oneth.jpg used on input line 644.
+Package pdftex.def Info: imgs/oneth.jpg used on input line 641.
 (pdftex.def)             Requested size: 478.00812pt x 236.50136pt.
 
-Overfull \hbox (22.764pt too wide) in paragraph at lines 644--645
+Overfull \hbox (22.764pt too wide) in paragraph at lines 641--642
  [][] 
  []
 
@@ -822,13 +822,13 @@ Overfull \hbox (22.764pt too wide) in paragraph at lines 644--645
 <imgs/diffthr.png, id=106, 589.0005pt x 444.4605pt>
 File: imgs/diffthr.png Graphic file (type png)
  <use imgs/diffthr.png>
-Package pdftex.def Info: imgs/diffthr.png used on input line 678.
+Package pdftex.def Info: imgs/diffthr.png used on input line 675.
 (pdftex.def)             Requested size: 358.50836pt x 270.54404pt.
 
 <imgs/gray.png, id=107, 589.0005pt x 444.4605pt>
 File: imgs/gray.png Graphic file (type png)
  <use imgs/gray.png>
-Package pdftex.def Info: imgs/gray.png used on input line 684.
+Package pdftex.def Info: imgs/gray.png used on input line 681.
 (pdftex.def)             Requested size: 358.50836pt x 270.54404pt.
 
 Underfull \vbox (badness 1147) has occurred while \output is active []
@@ -837,13 +837,13 @@ Underfull \vbox (badness 1147) has occurred while \output is active []
 <imgs/red.png, id=112, 589.0005pt x 444.4605pt>
 File: imgs/red.png Graphic file (type png)
  <use imgs/red.png>
-Package pdftex.def Info: imgs/red.png used on input line 690.
+Package pdftex.def Info: imgs/red.png used on input line 687.
 (pdftex.def)             Requested size: 358.50836pt x 270.54404pt.
 
 <imgs/kmeans.png, id=113, 382.42876pt x 248.93pt>
 File: imgs/kmeans.png Graphic file (type png)
  <use imgs/kmeans.png>
-Package pdftex.def Info: imgs/kmeans.png used on input line 698.
+Package pdftex.def Info: imgs/kmeans.png used on input line 695.
 (pdftex.def)             Requested size: 238.9995pt x 155.56946pt.
 
 [25 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/gray.png> <C:/Users/Orley/Desk
@@ -852,7 +852,7 @@ top/thesis/docs/tex/imgs/red.png>]
 <imgs/bad.jpg, id=120, 642.4pt x 374.39874pt>
 File: imgs/bad.jpg Graphic file (type jpg)
  <use imgs/bad.jpg>
-Package pdftex.def Info: imgs/bad.jpg used on input line 707.
+Package pdftex.def Info: imgs/bad.jpg used on input line 704.
 (pdftex.def)             Requested size: 238.9995pt x 139.29088pt.
  [26 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/kmeans.png> <C:/Users/Orley/D
 esktop/thesis/docs/tex/imgs/bad.jpg>] <imgs/samples.jpg, id=124, 319.94531pt x 
@@ -860,13 +860,13 @@ esktop/thesis/docs/tex/imgs/bad.jpg>] <imgs/samples.jpg, id=124, 319.94531pt x
 File: imgs/samples.jpg Graphic file (type jpg)
 
 <use imgs/samples.jpg>
-Package pdftex.def Info: imgs/samples.jpg used on input line 725.
+Package pdftex.def Info: imgs/samples.jpg used on input line 722.
 (pdftex.def)             Requested size: 119.49974pt x 261.77696pt.
  <imgs/manual.jpg, id=125, 487.8225pt x 527.72156pt>
 File: imgs/manual.jpg Graphic file (type jpg)
 
 <use imgs/manual.jpg>
-Package pdftex.def Info: imgs/manual.jpg used on input line 731.
+Package pdftex.def Info: imgs/manual.jpg used on input line 728.
 (pdftex.def)             Requested size: 298.75394pt x 323.19pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -878,10 +878,10 @@ op/thesis/docs/tex/imgs/manual.jpg>]
 <imgs/params.jpg, id=135, 1233.10687pt x 301.8778pt>
 File: imgs/params.jpg Graphic file (type jpg)
  <use imgs/params.jpg>
-Package pdftex.def Info: imgs/params.jpg used on input line 798.
+Package pdftex.def Info: imgs/params.jpg used on input line 795.
 (pdftex.def)             Requested size: 478.00812pt x 117.01788pt.
 
-Overfull \hbox (22.764pt too wide) in paragraph at lines 798--799
+Overfull \hbox (22.764pt too wide) in paragraph at lines 795--796
  [][] 
  []
 
@@ -889,13 +889,13 @@ Overfull \hbox (22.764pt too wide) in paragraph at lines 798--799
 <imgs/cable.jpg, id=139, 509.65407pt x 347.79938pt>
 File: imgs/cable.jpg Graphic file (type jpg)
  <use imgs/cable.jpg>
-Package pdftex.def Info: imgs/cable.jpg used on input line 817.
+Package pdftex.def Info: imgs/cable.jpg used on input line 814.
 (pdftex.def)             Requested size: 179.25418pt x 122.32597pt.
 
 <imgs/features.jpg, id=140, 934.24031pt x 320.69812pt>
 File: imgs/features.jpg Graphic file (type jpg)
  <use imgs/features.jpg>
-Package pdftex.def Info: imgs/features.jpg used on input line 825.
+Package pdftex.def Info: imgs/features.jpg used on input line 822.
 (pdftex.def)             Requested size: 298.75394pt x 102.55208pt.
 
 [31 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/cable.jpg> <C:/Users/Orley/Des
@@ -903,30 +903,30 @@ ktop/thesis/docs/tex/imgs/features.jpg>] [32]
 <imgs/libs.jpg, id=148, 1356.56813pt x 176.15813pt>
 File: imgs/libs.jpg Graphic file (type jpg)
  <use imgs/libs.jpg>
-Package pdftex.def Info: imgs/libs.jpg used on input line 905.
+Package pdftex.def Info: imgs/libs.jpg used on input line 902.
 (pdftex.def)             Requested size: 478.00812pt x 62.0702pt.
 
-Overfull \hbox (22.764pt too wide) in paragraph at lines 905--906
+Overfull \hbox (22.764pt too wide) in paragraph at lines 902--903
  [][] 
  []
 
 <imgs/curcial.jpg, id=149, 1041.1397pt x 612.03656pt>
 File: imgs/curcial.jpg Graphic file (type jpg)
  <use imgs/curcial.jpg>
-Package pdftex.def Info: imgs/curcial.jpg used on input line 913.
+Package pdftex.def Info: imgs/curcial.jpg used on input line 910.
 (pdftex.def)             Requested size: 478.00812pt x 280.99858pt.
 
-Overfull \hbox (22.764pt too wide) in paragraph at lines 913--914
+Overfull \hbox (22.764pt too wide) in paragraph at lines 910--911
  [][] 
  []
 
 <imgs/rpicode.jpg, id=150, 812.28468pt x 309.40594pt>
 File: imgs/rpicode.jpg Graphic file (type jpg)
  <use imgs/rpicode.jpg>
-Package pdftex.def Info: imgs/rpicode.jpg used on input line 921.
+Package pdftex.def Info: imgs/rpicode.jpg used on input line 918.
 (pdftex.def)             Requested size: 478.00812pt x 182.0758pt.
 
-Overfull \hbox (22.764pt too wide) in paragraph at lines 921--922
+Overfull \hbox (22.764pt too wide) in paragraph at lines 918--919
  [][] 
  []
 
@@ -939,13 +939,13 @@ ktop/thesis/docs/tex/imgs/curcial.jpg>] [34 <C:/Users/Orley/Desktop/thesis/docs
 File: imgs/genetic.jpg Graphic file (type jpg)
 
 <use imgs/genetic.jpg>
-Package pdftex.def Info: imgs/genetic.jpg used on input line 971.
+Package pdftex.def Info: imgs/genetic.jpg used on input line 968.
 (pdftex.def)             Requested size: 418.25368pt x 302.41711pt.
 
 Underfull \vbox (badness 2460) has occurred while \output is active []
 
  [35 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/genetic.jpg>] [36]
-Underfull \hbox (badness 1701) in paragraph at lines 1025--1027
+Underfull \hbox (badness 1701) in paragraph at lines 1022--1024
 []\T1/ptm/m/n/12 Ketelaerea B.,Bamelisa F., Kempsa1 B., De-cuyperea1 E., Baerde
 -maek-era J. \T1/ptm/m/it/12 Non-
  []
@@ -969,7 +969,7 @@ blic/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/TiCTeX v1.0 for windows/MiK
 TeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/TiCTeX v1.0 for wi
 ndows/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/TiCTeX v1
 .0 for windows/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on th.pdf (38 pages, 4018010 bytes).
+Output written on th.pdf (38 pages, 4018041 bytes).
 PDF statistics:
  188 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

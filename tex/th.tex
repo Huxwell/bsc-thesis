@@ -274,7 +274,7 @@ Initially, two ideas were researched by author of this thesis:
 Both methods would identify the intact yolk basing on its height and would not require much processing (an Arduino Uno or other ATMega based circuits might be sufficient).
 Nevertheless, both of them had to be rejected, since intact yolks presence in the tested batch is not sufficient for batch accepting – absence of egg yolk parts is also required (see subchapter 2.3).
 
-Finally, using images of the batch obtained from camera and processing it was considered. Such camera would be mounted just after the cracking module of RZ-1 machine and make decision whether or not the product batch looks like the one that is expected.
+Finally, using images of the batch obtained from camera and processing was considered. Such camera would be mounted just after the cracking module of RZ-1 machine and make decision whether or not the product batch looks like the one that is expected.
 This approach is very similar to the currently used one - the expert looking at the egg and making decision - except for the fact, that it would be fully automatised.
 Due to the potentially low price (camera and ARM computer price don't exceed 100\$ in retail price) and no need for extensive modifications of RZ-1 structure, this method was chosen as most promising option for further research.
 
@@ -292,19 +292,15 @@ When it comes to assessment of camera image, 4 approaches are widely considered:
 First case was considered, since it could be implemented on Arduino Uno, other ATMega based platform or real-time systems working on PLC controllers such as LOGO! 7, which are often used in factories due to their reliability (apart from Stuxnet-class worms, that has been firstly observed in 2010, no other security threads are believed to exist).
 Unfortunately, the problem is more complex than simply deciding whether the product is present or not; or whether the product is yellow or not, thus more advanced processing is required.
 
-Second case will be expanded in the next two chapters and has been chosen as main method that will be implemented and tested in this thesis.
+Second case will be expanded in the next two chapters and has been chosen as the method that will be implemented and tested in this thesis.
 
-Last two approaches will be tested if the 2nd approach will provide to be insufficient.
+Last two approaches will be tested if the 2nd approach proves to be ineffective.
 It is worth mentioning, that for (3) Support Vector Machines was considered, since it classifies data to exactly two classes (i.e. proper and improper egg mass).
 
 Also, Haar Features Cascade was tested, but data amount obtained for testing was insufficient, and the methods popular implementations are focused on locating the particular object on image rather than on comparing two pattern cases.
 
 (4) Case was considered and the author build a multilayered perceptron network working with MNIST database in order to better understand the method.
-The method application will be researched further on beyond the scope of this work.
-
-
-
-
+Nevertheless, due to insufficient amount of sample data, neutal networks approach was abandoned.
 
 
 \section{Batch state detection system design}
@@ -312,12 +308,12 @@ The method application will be researched further on beyond the scope of this wo
 \subsection{System structure}
 The system consists of (see figure \ref{fig:phisical}):
 \begin{itemize}
-\item Camera module that photographs the egg white-yolk batches
+\item Camera module that captures images of cracked egg batches
 \item Processing device - an embedded computer (i.e. ARM based platform)
 \item Signal interface (i.e GPIO pins) on processing device
 \end{itemize}
 
-A camera will be placed on top of Separator module part, where cracked eggs are transported by sliding to the separating part.
+A camera will be placed on top of Separator module part (see figure \ref{fig:process}), where cracked eggs are transported by sliding to the separating part.
 
 The processing device uses the camera frames, to make a decision whether or nor the egg batch visible on the frame is acceptable, or represent a badly cracked egg.
 A signal will be send to element that will either remove egg batch from the processing plant or let is pass further (see figure \ref{fig:system}).
@@ -381,13 +377,14 @@ Following platforms were considered, to be used as processing device and host ch
   \item BeagleBoard xM - based on dual, 1,5GHz clocked ARM Cortex-A15  + dual ARM M4, 532 MHz GPu, often used with RISC-OS, having cheaper clones with more RAM.It is considered a stronger Raspberry Pi alternative.
   \item Nvidia Jetson TK1 - build on quad ARM Cortex-A15, NVIDIA Kepler 192-cores CUDA GPU, 2 GiB RAM, optimised for OpenGL and OpenCV, equiped with SATA connector.
   TK1 is the strongest available unit, what makes it also the most expensive one.
+\end{itemize}
 
 Raspberry Pi 2 was chosen, due to similar reasons that Raspbian was picked.
 Similarly to Raspian, Raspberry Pi 2 may be replaced with different platform inlater design phases, when a prototype is operational and tested.
 
-As for camera module, a standard Raspberry Pi v1.3 5Mpix Camera module was shipped with the board and proves to be more then sufficient in terms of resolution and fps for now.
+As a camera module, a standard Raspberry Pi v1.3 5Mpix Camera module was shipped with the board and proves to be more then sufficient in terms of resolution and fps for now.
 
-\end{itemize}
+
 
 
 \newpage
