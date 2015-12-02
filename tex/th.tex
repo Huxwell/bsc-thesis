@@ -159,7 +159,7 @@ The above analysis led to conclusion, that researching egg-white separation is j
 \section{Problem analysis}
 \subsection{Host machine}
 Ovo-tech produces a processing plant called "RZ-1" (see figure \ref{fig:rz1table} and \ref{fig:rz1crack}).
-This device automatically cracks the eggs and attempt to separate the egg yolk from egg white. This machine has been chosen as the one that will be extended with the module prototype prepared in this thesis, due to its availability (it is the most popular of the Ovo-tech machines) and the fact, that it operates relatively slow (compared to other Ovo-tech machines), so the flowing eggs yolks surfaces do not touch each other - what makes them easier to process.
+This device automatically cracks  eggs and attempt to separate egg yolk from egg white. This machine has been chosen as the one that will be extended with module prototype prepared in this thesis, due to its availability (it is the most popular of the Ovo-tech machines) and the fact, that it operates relatively slow (compared to other Ovo-tech machines), so the flowing eggs yolks surfaces do not touch each other - what makes them easier to process.
 
 \begin{figure}[H]+
 \centering
@@ -171,10 +171,10 @@ This device automatically cracks the eggs and attempt to separate the egg yolk f
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{rz1crack}
-\caption{Egg cracking  module of RZ-1 unit}\label{fig:rz1crack}
+\caption{Egg cracking module of RZ-1 unit}\label{fig:rz1crack}
 \end{figure}
 
-
+\newpage
 The RZ-1 machine operates in a following way (see figure \ref{fig:process}):
 \begin{enumerate}
 \item Eggs are directed into one-line flow, and mechanically aligned
@@ -191,25 +191,26 @@ If the egg yolk appears to be broken, it is removed by an operator from the proc
 \centering
 \includegraphics[width=0.8\paperwidth]{process}
 \caption{RZ-1 Egg processing  - process and plant structure}\label{fig:process}
-
 \end{figure}
-RZ-1 operates in two modes:
-\begin{itemize}
-\item Precision mode
-\item Fast mode
-\end{itemize}
-Precision mode is used widely with bad quality eggs to extend amount of time for optical assessment in (5) phase.
-Fast mode is used if the yolk-white separation is not conducted (separator module is not attached) or if the eggs are very fresh (1-2 days old).
-Only Precision mode is considered further to simplify the problem analysis.
 
 The authors idea is to automatise the whole Quality Control module and replace the human expert with electronic processing module, that will automatically asses broken egg quality and send a signal to mechanical part that will remove them mechanically.
 The creation of the mechanical part of this system is out of the scope of this work and is handled by Ovo-tech engineers.
 The egg accumulation will not longer be required.
 
+RZ-1 operates in two modes:
+\begin{itemize}
+\item Fast mode
+\item Precision mode
+\end{itemize}
 
-More advanced Ovo-tech models such us RZ-3, RZ-6 and RZ-8 will be also considered for further research.
+Fast mode is used if the yolk-white separation is not conducted (separator module is not attached) or if the eggs are very fresh (1-2 days old).\\
+Precision mode is used widely with bad quality eggs to extend amount of time for optical assessment in (5) phase.
+When Precision mode operates, a few centimeters gap between egg yolks is visible, what highly simplifies the recognition problem. Thus, only Precision mode is considered further to simplify the problem analysis.
 
+Ovo-tech produces also larger scale, more efficient models such us RZ-3, RZ-6 and RZ-8.
+They also would benefit on assessment automatisation, but are beyond the scope of this work.
 
+\newpage
 \subsection{Establishing framework for product cleanness assessment}
 
 The requirement is to create a system able to detect all product batches containing badly-cracked eggs.
@@ -241,7 +242,7 @@ also, there is no need to do anything when:
 \includegraphics[width=0.8\paperwidth]{8of9}
 \caption{Cracked egg product cases.}\label{fig:8of9}
 \end{figure}
-
+\newpage
 Also, there an additional problem is constituted by chalaza (see figure \ref{fig:chalaza}) - a usually white element that is attached to egg yolk for in-egg suspension.
 Despite the fact, that client decided that chalaza position and amount are irrelevant to him, its appearance may increase difficulty of the recognition problem if identified as parts of damaged egg yolk.
 
