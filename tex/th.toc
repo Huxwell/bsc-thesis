@@ -35,10 +35,9 @@
 \contentsline {subsection}{\numberline {7.1}Hardware and OS issues}{29}
 \contentsline {subsection}{\numberline {7.2}Python and OpenCV configuration}{30}
 \contentsline {subsection}{\numberline {7.3}Code implementation}{31}
-\contentsline {section}{\numberline {8}Further research and development}{31}
-\contentsline {subsection}{\numberline {8.1}Server and logging}{32}
-\contentsline {subsection}{\numberline {8.2}One month prototype testing and environment of work tuning}{32}
-\contentsline {subsection}{\numberline {8.3}Testing new approaches}{32}
-\contentsline {subsection}{\numberline {8.4}Obtaining more image data and parameters tuning}{33}
-\contentsline {subsection}{\numberline {8.5}Machine learning}{33}
-\contentsline {section}{\numberline {9}Conclusions}{33}
+\contentsline {section}{\numberline {8}Conclusions and further research}{32}
+\contentsline {subsection}{\numberline {8.1}One month prototype testing and environment of work tuning}{32}
+\contentsline {subsection}{\numberline {8.2}Testing new approaches}{33}
+\contentsline {subsection}{\numberline {8.3}Obtaining more image data and parameters tuning}{33}
+\contentsline {subsection}{\numberline {8.4}Server and logging}{34}
+\contentsline {subsection}{\numberline {8.5}Conclusions}{34}

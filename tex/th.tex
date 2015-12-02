@@ -899,22 +899,34 @@ $ python
 
 \subsection{Code implementation}
 
+Firstly, used libraries were loaded:
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\paperwidth]{libs}
+\caption{Importing dependencies}\label{fig:libs}
+\end{figure}
 
-\lstinputlisting[language=Python]{rpi.py}
-\section{Further research and development}
+The most important function, that recognise good and bad batch at obtained camera frame:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\paperwidth]{curcial}
+\caption{Recognition function}\label{fig:crucial}
+\end{figure}
+
+Below, the way that Raspberry Pi camera is handled is shown:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\paperwidth]{rpicode}
+\caption{Camera frames grabing}\label{fig:rpicode}
+\end{figure}
+\section{Conclusions and further research}
 
 Work on the solution developed in this thesis will be continued further on by the author and Ovo-tech company.
 The following alternative approaches and improvements in detection system will be taken into consideration
 
-\subsection{Server and logging}
-Gathering the data about egg quality, recognition performance and effectiveness is a possibility that has to be addressed.
-Raspberry Pi 2 platform is capable of working as a server and thus provide system manufacturer a remote access to the its operations.
-
-Such process may generate additional benefit, which is deciding whether or not the processed eggs quality is good.
-
-Ovo-tech reported cases of unreliable egg suppliers, that shipped old, misclassified eggs either purposefully or unwillingly to the bakery companies.
-Such situation would be detected by monitoring statistics of how big percentage of processed eggs are badly broken.
 \subsection{One month prototype testing and environment of work tuning}
 
 The prototype will be attached to the rz-1 machine operating at Ovo-tech headquarters for a month.
@@ -962,11 +974,18 @@ Further on, a ready, popular library will be used for this purpose: a DEAP genet
 \end{figure}
 
 
-\subsection{Machine learning}
+\subsection{Server and logging}
+Gathering the data about egg quality, recognition performance and effectiveness is a possibility that has to be addressed.
+Raspberry Pi 2 platform is capable of working as a server and thus provide system manufacturer a remote access to the its operations.
 
-\section{Conclusions}
+Such process may generate additional benefit, which is deciding whether or not the processed eggs quality is good.
 
-Following results were obtained in the system designing, tuning and testing process:
+Ovo-tech reported cases of unreliable egg suppliers, that shipped old, misclassified eggs either purposefully or unwillingly to the bakery companies.
+Such situation would be detected by monitoring statistics of how big percentage of processed eggs are badly broken.
+
+\subsection{Conclusions}
+
+Following conclusions were obtained in the system designing, tuning and testing process:
 \begin{enumerate}
 \item Recognising egg-batch state using camera image is an adequate method of solving the problem of imperfect egg-white separation.
 \item Simple image processing methods are cable of obtaining image recognition efficiency higher than 84\% on this problem, even if lighting and camera placement conditions are unfavourable.
