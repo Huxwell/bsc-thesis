@@ -16,7 +16,7 @@
 \contentsline {subsection}{\numberline {3.4}Software choice}{17}
 \contentsline {section}{\numberline {4}Egg yolk detection}{17}
 \contentsline {subsection}{\numberline {4.1}General idea}{17}
-\contentsline {subsection}{\numberline {4.2}Extracting channels}{17}
+\contentsline {subsection}{\numberline {4.2}Extracting color space channels}{17}
 \contentsline {subsection}{\numberline {4.3}HSV scale conversion}{18}
 \contentsline {subsection}{\numberline {4.4}Circle Hough Transform (CHT)}{19}
 \contentsline {subsection}{\numberline {4.5}Erosion and Dilatation}{20}

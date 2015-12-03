@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.2.7)  3 DEC 2015 00:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.2.7)  3 DEC 2015 01:01
 entering extended mode
 **th.tex
 (C:\Users\Orley\Desktop\thesis\docs\tex\th.tex
@@ -755,7 +755,7 @@ Package pdftex.def Info: imgs/space.jpg used on input line 523.
 File: imgs/accu.png Graphic file (type png)
  <use imgs/accu.png>
 Package pdftex.def Info: imgs/accu.png used on input line 533.
-(pdftex.def)             Requested size: 238.9995pt x 230.58507pt.
+(pdftex.def)             Requested size: 179.25418pt x 172.9409pt.
  [19 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/hsv.png (PNG copy)> <C:/Users
 /Orley/Desktop/thesis/docs/tex/imgs/space.jpg>]
 <imgs/diam.png, id=86, 272.01625pt x 126.4725pt>
@@ -793,6 +793,9 @@ File: imgs/micro.png Graphic file (type png)
  <use imgs/micro.png>
 Package pdftex.def Info: imgs/micro.png used on input line 607.
 (pdftex.def)             Requested size: 238.9995pt x 115.64537pt.
+
+Underfull \vbox (badness 6032) has occurred while \output is active []
+
  [21 <C:/Users/Orley/Desktop/thesis/docs/tex/imgs/lett.png> <C:/Users/Orley/Des
 ktop/thesis/docs/tex/imgs/gauss.png> <C:/Users/Orley/Desktop/thesis/docs/tex/im
 gs/conv.png>]
@@ -969,7 +972,7 @@ blic/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/TiCTeX v1.0 for windows/MiK
 TeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/TiCTeX v1.0 for wi
 ndows/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/TiCTeX v1
 .0 for windows/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on th.pdf (38 pages, 4018041 bytes).
+Output written on th.pdf (38 pages, 4018039 bytes).
 PDF statistics:
  188 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

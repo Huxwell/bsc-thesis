@@ -462,9 +462,9 @@ Parameters, which values have to be found to correctly apply the methods are ind
 
 Following methods treat images as 1, 8, or 24-bit encoded matrices, thus both terms are used synonymously.
 x and y denote pixel position.
-\subsection{Extracting channels}
+\subsection{Extracting color space channels}
 In digital graphics color information is usually stored as a value from RGB (or BGR) additive color space (see figure \ref{fig:rgb}).
-It means, that three numbers represent amount of red, green, anb blue subcolors that combined constitute a visible color.
+It means, that three numbers represent amount of red, green, and blue subcolors that combined constitute a visible color.
 For this algorithm sake, it is assumed that every one of this numbers takes values from 0-255 interval and is encoded by 8bits, what sums to 24bit encoding for every RGB pixel.
 
 Alternatively, a simplified information may be processed: a grayscale image is made of pixels encoded by a single number that denotes the colors distance from being completely black; the higher is the number, the closer to being white it is.
@@ -530,7 +530,7 @@ Threshold value \textbf{param2} is defined as minimum number of intersections to
  
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.4\paperwidth]{accu}
+\includegraphics[width=0.3\paperwidth]{accu}
 \caption{Accumulation matrix with two good circle candidates\cite{hgt}}\label{fig:accu}
 \end{figure}
 
