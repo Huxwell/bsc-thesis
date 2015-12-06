@@ -1,43 +1,43 @@
 \select@language {polish}
 \select@language {polish}
 \select@language {english}
-\contentsline {section}{\numberline {1}Introduction}{3}
-\contentsline {subsection}{\numberline {1.1}Industrial egg processing}{3}
-\contentsline {subsection}{\numberline {1.2}Problem formulation}{5}
-\contentsline {section}{\numberline {2}Problem analysis}{7}
-\contentsline {subsection}{\numberline {2.1}Host machine}{7}
-\contentsline {subsection}{\numberline {2.2}Establishing framework for product cleanness assessment}{9}
-\contentsline {subsection}{\numberline {2.3}Techniques of automatic egg quality assessment}{10}
-\contentsline {subsection}{\numberline {2.4}Detecting batch state with camera image}{11}
-\contentsline {section}{\numberline {3}Batch state detection system design}{12}
-\contentsline {subsection}{\numberline {3.1}System structure}{12}
-\contentsline {subsection}{\numberline {3.2}Hardware and operating system choice}{13}
-\contentsline {subsection}{\numberline {3.3}Detection algorithm}{16}
-\contentsline {subsection}{\numberline {3.4}Software choice}{18}
-\contentsline {section}{\numberline {4}Egg yolk detection}{18}
-\contentsline {subsection}{\numberline {4.1}General idea}{18}
-\contentsline {subsection}{\numberline {4.2}Extracting color space channels}{18}
-\contentsline {subsection}{\numberline {4.3}HSV scale conversion}{19}
-\contentsline {subsection}{\numberline {4.4}Circle Hough Transform (CHT)}{20}
-\contentsline {subsection}{\numberline {4.5}Erosion and Dilatation}{21}
-\contentsline {subsection}{\numberline {4.6}Gaussian blur}{22}
-\contentsline {subsection}{\numberline {4.7}Methods execution}{23}
-\contentsline {section}{\numberline {5}Contaminated product assessment}{24}
-\contentsline {subsection}{\numberline {5.1}Subtracting yolk image}{24}
-\contentsline {subsection}{\numberline {5.2}Thresholding}{24}
-\contentsline {subsection}{\numberline {5.3}Methods execution}{27}
-\contentsline {section}{\numberline {6}Choosing detection system parameters}{28}
-\contentsline {subsection}{\numberline {6.1}Manual parameters optimisation}{28}
-\contentsline {subsection}{\numberline {6.2}Automatic parameters optimisation}{29}
-\contentsline {subsection}{\numberline {6.3}Overfitting}{30}
-\contentsline {subsection}{\numberline {6.4}Results}{31}
-\contentsline {section}{\numberline {7}System implementation}{32}
-\contentsline {subsection}{\numberline {7.1}Hardware and OS issues}{32}
-\contentsline {subsection}{\numberline {7.2}Python and OpenCV configuration}{33}
-\contentsline {subsection}{\numberline {7.3}Code implementation}{34}
-\contentsline {section}{\numberline {8}Conclusions and further research}{35}
-\contentsline {subsection}{\numberline {8.1}One month prototype testing and environment of work tuning}{35}
-\contentsline {subsection}{\numberline {8.2}Testing new approaches}{35}
-\contentsline {subsection}{\numberline {8.3}Obtaining more image data and parameters tuning}{36}
-\contentsline {subsection}{\numberline {8.4}Server and logging}{36}
-\contentsline {subsection}{\numberline {8.5}Conclusions}{37}
+\contentsline {section}{\numberline {1}Introduction}{4}
+\contentsline {subsection}{\numberline {1.1}Industrial egg processing}{4}
+\contentsline {subsection}{\numberline {1.2}Problem formulation}{6}
+\contentsline {section}{\numberline {2}Problem analysis}{8}
+\contentsline {subsection}{\numberline {2.1}Host machine}{8}
+\contentsline {subsection}{\numberline {2.2}Establishing framework for product cleanness assessment}{10}
+\contentsline {subsection}{\numberline {2.3}Techniques of automatic egg quality assessment}{11}
+\contentsline {subsection}{\numberline {2.4}Detecting batch state with camera image}{12}
+\contentsline {section}{\numberline {3}Batch state detection system design}{13}
+\contentsline {subsection}{\numberline {3.1}System structure}{13}
+\contentsline {subsection}{\numberline {3.2}Hardware and operating system choice}{14}
+\contentsline {subsection}{\numberline {3.3}Detection algorithm}{17}
+\contentsline {subsection}{\numberline {3.4}Software choice}{19}
+\contentsline {section}{\numberline {4}Egg yolk detection}{19}
+\contentsline {subsection}{\numberline {4.1}General idea}{19}
+\contentsline {subsection}{\numberline {4.2}Extracting color space channels}{19}
+\contentsline {subsection}{\numberline {4.3}HSV scale conversion}{20}
+\contentsline {subsection}{\numberline {4.4}Circle Hough Transform (CHT)}{21}
+\contentsline {subsection}{\numberline {4.5}Erosion and Dilatation}{22}
+\contentsline {subsection}{\numberline {4.6}Gaussian blur}{23}
+\contentsline {subsection}{\numberline {4.7}Methods execution}{24}
+\contentsline {section}{\numberline {5}Contaminated product assessment}{25}
+\contentsline {subsection}{\numberline {5.1}Subtracting yolk image}{25}
+\contentsline {subsection}{\numberline {5.2}Thresholding}{25}
+\contentsline {subsection}{\numberline {5.3}Methods execution}{28}
+\contentsline {section}{\numberline {6}Choosing detection system parameters}{29}
+\contentsline {subsection}{\numberline {6.1}Manual parameters optimisation}{29}
+\contentsline {subsection}{\numberline {6.2}Automatic parameters optimisation}{30}
+\contentsline {subsection}{\numberline {6.3}Overfitting}{31}
+\contentsline {subsection}{\numberline {6.4}Results}{32}
+\contentsline {section}{\numberline {7}System implementation}{33}
+\contentsline {subsection}{\numberline {7.1}Hardware and OS issues}{33}
+\contentsline {subsection}{\numberline {7.2}Python and OpenCV configuration}{34}
+\contentsline {subsection}{\numberline {7.3}Code implementation}{35}
+\contentsline {section}{\numberline {8}Conclusions and further research}{36}
+\contentsline {subsection}{\numberline {8.1}One month prototype testing and environment of work tuning}{36}
+\contentsline {subsection}{\numberline {8.2}Testing new approaches}{36}
+\contentsline {subsection}{\numberline {8.3}Obtaining more image data and parameters tuning}{37}
+\contentsline {subsection}{\numberline {8.4}Server and logging}{37}
+\contentsline {subsection}{\numberline {8.5}Conclusions}{38}

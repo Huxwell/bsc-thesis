@@ -23,12 +23,15 @@
 \graphicspath{ {imgs/} }
 \usepackage{enumitem}
 \setlist{noitemsep} %to leave space around whole list or \setlist{nosep} 
+\usepackage{pdfpages}
+
+
 
 \begin{document}
+\includepdf[pages={1}]{titlepage.pdf}
 \selectlanguage{polish}
 \begin{abstract}
 
-Simple object state detection using camera image / 
 
 W poniższej pracy przedstawiono proces projektowania i tworzenia systemu, który identyfikuje stan obiektów przy użyć obrazu z kamery. Obiekty stanowią partie rozbitych jaj kurzych, które przypisywane są do jednej z dwóch poniższych klas:
 \begin{enumerate}
@@ -57,7 +60,7 @@ At the beginning, the process of egg cracking and separating egg white from egg 
 A research about quality of existing solutions for such problem was conducted. Possible improvements in them were considered.
 A decision has been made to design and develop a prototype of a system, that will be mounted on OVO-TECH company egg-breaking machines.
 Structure and implemented algorithms were described. The prototype was manufactured and tested.\\
-Author of this thesis is expecting, that developed system will be applied in pharmaceutics companies that produce medicines from egg white, confectionaries and sport nurition producers.
+Author of this thesis is expecting, that developed system will be applied in pharmaceutics companies that produce medicines from egg white, confectionaries and sport nutrition producers.
 
 \end{abstract}
 \newpage 
