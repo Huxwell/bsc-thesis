@@ -28,16 +28,16 @@
 \contentsline {subsection}{\numberline {5.3}Methods execution}{28}
 \contentsline {section}{\numberline {6}Choosing detection system parameters}{29}
 \contentsline {subsection}{\numberline {6.1}Manual parameters optimisation}{29}
-\contentsline {subsection}{\numberline {6.2}Automatic parameters optimisation}{30}
-\contentsline {subsection}{\numberline {6.3}Overfitting}{31}
+\contentsline {subsection}{\numberline {6.2}Automatic parameters optimisation}{31}
+\contentsline {subsection}{\numberline {6.3}Overfitting}{32}
 \contentsline {subsection}{\numberline {6.4}Results}{32}
 \contentsline {section}{\numberline {7}System implementation}{33}
 \contentsline {subsection}{\numberline {7.1}Hardware and OS issues}{33}
 \contentsline {subsection}{\numberline {7.2}Python and OpenCV configuration}{34}
 \contentsline {subsection}{\numberline {7.3}Code implementation}{35}
-\contentsline {section}{\numberline {8}Conclusions and further research}{36}
-\contentsline {subsection}{\numberline {8.1}One month prototype testing and environment of work tuning}{36}
-\contentsline {subsection}{\numberline {8.2}Testing new approaches}{36}
-\contentsline {subsection}{\numberline {8.3}Obtaining more image data and parameters tuning}{37}
-\contentsline {subsection}{\numberline {8.4}Server and logging}{37}
-\contentsline {subsection}{\numberline {8.5}Conclusions}{38}
+\contentsline {section}{\numberline {8}Conclusions and further research}{37}
+\contentsline {subsection}{\numberline {8.1}One month prototype testing and environment of work tuning}{37}
+\contentsline {subsection}{\numberline {8.2}Testing new approaches}{37}
+\contentsline {subsection}{\numberline {8.3}Obtaining more image data and parameters tuning}{38}
+\contentsline {subsection}{\numberline {8.4}Server and logging}{38}
+\contentsline {subsection}{\numberline {8.5}Conclusions}{39}

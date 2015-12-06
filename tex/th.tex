@@ -33,7 +33,7 @@
 \begin{abstract}
 
 
-W poniższej pracy przedstawiono proces projektowania i tworzenia systemu, który identyfikuje stan obiektów przy użyć obrazu z kamery. Obiekty stanowią partie rozbitych jaj kurzych, które przypisywane są do jednej z dwóch poniższych klas:
+W poniższej pracy przedstawiono proces projektowania i tworzenia systemu, który identyfikuje stan obiektów przy użyciu obrazu z kamery. Obiekty stanowią partie rozbitych jaj kurzych, które przypisywane są do jednej z dwóch poniższych klas:
 \begin{enumerate}
 \item nieuszkodzone żółtka jaj otoczone białkiem jajecznym albo czysta linia produkcyjna
 \item uszkodzone żółtka albo nieuszkodzone żółtka otoczone szczątkami uszkodzonych żółtek
@@ -308,13 +308,16 @@ First case was considered, since it could be implemented on Arduino Uno, other A
 Unfortunately, the problem is more complex than simply deciding whether the product is present or not; or whether the product is yellow or not, thus more advanced processing is required.
 
 Second case will be expanded in the next two chapters and has been chosen as the method that will be implemented and tested in this thesis.
-
 Last two approaches will be tested if the 2nd approach proves to be ineffective.
-It is worth mentioning, that for (3) Support Vector Machines was considered, since it classifies data to exactly two classes (i.e. proper and improper egg mass).
 
-Also, Haar Features Cascade was tested, but data amount obtained for testing was insufficient, and the methods popular implementations are focused on locating the particular object on image rather than on comparing two pattern cases.
+It is worth mentioning, that for (3) two machine learning algorithms were tested: 
+\begin{enumerate}
+\item Support Vector Machines - a statistical method that classifies lineary separable data to exactly two classes (i.e. proper and improper egg mass) 
+\item Haar Features Cascade - a method that applies series of so called weak classifiers (classifiers that are barely better than randomness) on the image to decide whether or not an object is present on it.
+\end{enumerate}
+Unfortunately both approaches were rejected, since the amount of obtained testing data was insufficient to teach them and while the methods are effective in locating the particular object on image, they might not be the most suitable ones for comparing the amount of damaged yolk chaotically distributed on the egg batch.
 
-(4) Case was considered and the author build a multilayered perceptron network working with MNIST database in order to better understand the method.
+(4) Case was considered and the author built a multilayered perceptron network working with MNIST database in order to better understand the method.
 Nevertheless, due to insufficient amount of sample data, neutal networks approach was abandoned.
 
 
@@ -397,7 +400,7 @@ Following platforms were considered, to be used as processing device and host ch
 Raspberry Pi 2 was chosen, due to similar reasons that Raspbian was picked.
 Similarly to Raspian, Raspberry Pi 2 may be replaced with different platform inlater design phases, when a prototype is operational and tested.
 
-As a camera module, a standard Raspberry Pi v1.3 5Mpix Camera module was shipped with the board and proves to be more then sufficient in terms of resolution and fps for now.
+As a camera module, a standard Raspberry Pi v1.3 5Mpix Camera module was shipped with the board and proves to be more then sufficient in terms of resolution and frames per second ratio for now.
 
 
 
@@ -411,35 +414,35 @@ As a camera module, a standard Raspberry Pi v1.3 5Mpix Camera module was shipped
 \includegraphics[width=0.5\paperwidth]{algorithmV}
 \caption{Flowchart showing the way that detection algorithm operates}\label{fig:algorithmV}
 \end{figure}
-\newpage
 
 
-Detection algorithm operates on images(frames) passed by the camera module (see figure \ref{fig:algorithmV}).
+
+Detection algorithm operates on frames captured with the camera module (see figure \ref{fig:algorithmV}).
 Two copies of a frame are processed. The first copy is a subject of following transformations:
-\begin{description}
-  \item[Firstly,]one channel is extracted from the image.
+\begin{enumerate}
+  \item Single channel is extracted from the image.
   Its state is passed further as image, along all the steps.
-  \item[Secondly,]the channel is a subject to preprocessing, that eliminates the unimportant data and reduces the data dimensionality. 
+  \item The channel is a subject to preprocessing, that eliminates the unimportant data and reduces the data dimensionality. 
   Amount of noise is reduced.
-  \item[Thirdly,]the image is segmentated, and the shape recognition methods are used to detect existence, position and size of the egg yolk.
-  \item[Independently,]other copy of the image is converted to different color scale.
-  \item[Then,]only one channel is extracted from the image
-  \item[Finally,]the information from first copy is used to remove intact egg region from second copy. The first copy is no longer needed and its resources are freed.
-\end{description}
+  \item The image is segmentated, and the shape recognition methods are used to detect existence, position and size of the egg yolk.
+  \item Independently, other copy of the image is converted to different color scale.
+  \item Only one channel is extracted from the image
+  \item The information from first copy is used to remove intact egg region from second copy. The first copy is no longer needed and its resources are freed.
+\end{enumerate}
 
 Obtained image (with intact eggs excluded) is processed in a following way, to asses the amount of remaining broken egg yolk: 
 
-\begin{description}
-  \item[Firstly,]an attempt is made to filter out the light reflections and flares from the image.
+\begin{enumerate}
+  \item An attempt is made to filter out the light reflections and flares from the image.
   Hopefully, during the further development, above artefacts can be removed in a physical way, by mounting and lighting the device in a very specific way.
   For now nevertheless, this step is necessary.
-  \item[Secondly,]image is segmentated with thresholding.
-  \item[Thirdly,]noise (defined as small blobs) is deleted.
-  \item[Finally,]the obtained image is expected to contain only unwanted, damaged egg mass.
+  \item Image is segmentated with thresholding.
+  \item Noise (defined as small blobs) is deleted.
+  \item The obtained image is expected to contain only unwanted, damaged egg mass.
   Amount of pixels containing it is counted.
-  \item[Decision] is made basing on the obtained amount.
+  \item Decision is made basing on the obtained amount.
   It takes a form of signal sent to physical element that either removes the egg batch or let it through.
-\end{description}
+\end{enumerate}
 
 The best obtained combination of preprocessing, segmentation and grading parameters will be used in a final algorithm that will be implemented in Raspberry Pi 2 device with camera module, and than tested in the Rz-1 processing plant.
 
@@ -447,16 +450,16 @@ The best obtained combination of preprocessing, segmentation and grading paramet
 
 \subsection{Software choice}
 Decision have been made, to utilise OpenCV computer vision library for batch state recognition.
-OepnCV is designed for computational efficiency, with strong focus on real-time applications.
+OpenCV is designed for computational efficiency, with strong focus on real-time applications.
 It has been written in optimised C and takes advantages of multicore processors.
 It provides simple-to-use interface that enables building sophisticated computer vision solutions.
 The library features more than 500 functions that process images, a general Machine Learning Library (including Multilayered Perceptron Networks).
 It is used since 1999 by major institutions such as Stanford University and is maintained and developed by specialists from companies such us IBM, Microsoft, Intel, Sony, Siemens, and Google.\cite{learnopencv}
 
-First recognition attempts were done by the author of thesis using Android 4.3 running on Samsung N7100 Galaxy Note II smartphone, utilising its build in camera.
+First recognition attempts were done by the author of thesis using Android 4.3 running on Samsung N7100 Galaxy Note II smartphone, utilising its build-in camera.
 The initial code was written with use of Java distribution of OpenCV library, as well as Android SDK.
 Sadly, the performance of developed pre-prototype was very poor and a single frame was processed in more than 3 seconds.
-Another version was build in a way that most resource consuming operations (such us Hough Circle Transform and all array operations) were rewritten in C language.
+Another version was built in a way that most resource consuming operations (such us Hough Circle Transform and all array operations) were rewritten in C language.
 For that purpose original C version of OpenCV was utilised, as well as NDK (Native Development Kit for Android).
 
 Nevertheless, author of this thesis, decided that despite Android availability for embedded platforms, it is no a platform suitable for factory tasks, due to big overhead, long booting and variety of functions that will not be utilised.
@@ -540,7 +543,7 @@ The potential circle with largest number of intersections is chosen as the best 
 \end{figure}
 
 In the full cases, such procedure is repeated for every image point, and the intersections numbers are stored in accumulation matrix (see figure \ref{fig:accu}).\cite{hgt}
-To reduce computation time and false detection rate, minimum distance between image centers is given as a parameter \textbf{minimum distance}.
+To reduce computation time and false detection rate, \textbf{minimum distance} between image centers is given as a parameter.
 Threshold value \textbf{param2} is defined as minimum number of intersections to treat circle candidate as detected circle.
  
 \begin{figure}[H]
@@ -550,7 +553,7 @@ Threshold value \textbf{param2} is defined as minimum number of intersections to
 \end{figure}
 
 If r is unknown, min-radius and max-radius parameters are defined, and the algorithm repeats the procedure for all possible integer r in range of above parameters.
-OpenCV utilizes Canny edge detector for finding the potential intersection points, thus operates not only on 1-bit images, but also in 8-bit grayscale and 24-bit bgr images and provides smaller number of false positives.\cite{mastercv}
+OpenCV utilizes Canny edge detector for finding the potential intersection points, thus operates not only on 1-bit images, but also in 8-bit grayscale and 24-bit RGB images and provides smaller number of false positives.\cite{mastercv}
 \textbf{param1} is introduced as higher threshold for Canny edge detector, while the lower threshold is set to 0.5 * param-1\cite{fd} .
 
 
@@ -558,7 +561,7 @@ OpenCV utilizes Canny edge detector for finding the potential intersection point
 Erosion and dilatation are two morphological filters that enable to filter out unnecessary noise from the image.
 Combined, they leave the core information (biggest blobs) intact or amplified, while small elements are deleted.
 It is easily applied on binary images:\\
-A ROI (region of interest, a rectangular part of image) moves through image pixel by pixel and is compared to previously defined kernel (binary matrix, usually symmetric with respect to both diagonals - see figure \ref{fig:diam}).
+A ROI (region of interest, a rectangular part of image) moves through image pixel by pixel and is compared to previously defined kernel (binary matrix, usually symmetric with respect to both diagonals - see figure \ref{fig:diam}). \textbf{Kernel size} is a parameter that defines how strongly filter alters an image.
 
  
 \begin{figure}[H]
@@ -584,7 +587,7 @@ Dilatation makes the objects bigger (see figure \ref{fig:lett}).
 
 
 When these methods are used multiple times, and convoluted, they filter out the noise.
-Using erosion and dilatation with the same kernel one ofter another is called opening.
+Using erosion and dilatation with the same kernel one after another is called opening.
 Perimeter Determination and Skeletonization are widely used contour detection functions which utilize erosion and dilatation\cite{erdil}.
 
 
@@ -602,8 +605,7 @@ Gaussian blur drastically reduces number of false-positive Hough circles detecti
 \end{figure}
 
 
-sigma, ksize.width, ksize.height  parameters are introduced.
-Ksize stands for size of precomputed kernel, that is convoluted with ROIs on the image.
+\textbf{Kernel size} is given as a parameter to a function that precomputes kernel, that is later convoluted with ROIs on the image.
 
 The applied convolution is defined as piecewise multiplying two matrices and than summing the obtained values:
 
@@ -618,7 +620,7 @@ The applied convolution is defined as piecewise multiplying two matrices and tha
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.4\paperwidth]{micro}
-\caption{Microscope image before and after applying gaussian filter\cite{cnoisy}}\label{fig:micro}
+\caption{Screenshot of a tool that applies gaussian filtering on image\cite{cnoisy}}\label{fig:micro}
 \end{figure}
 
   
@@ -645,20 +647,20 @@ Therefore, the problem would be reduced to simple assessing the amount of remain
 
 The initial implementation for this methods was supposed to be obtained by filling the image with empty circles detected in the previous chapter.
 Unfortunately, it has been experimentally tested, that egg yolk is reflecting some yellow light on it's surroundings and it is very hard to filter them out, thus a bigger area is subtracted.
-Instead of circles, empty rectangles are subtracted from the analysed image. The rectangles fill the whole image height (since eggs do not slide in parallel due to transportation slope design), and their width is equal to detected yolks diameter summed with an offset that covers reflecting light. The rectangles centers are equal to yolk centers.
+Instead of circles, empty rectangles are subtracted from the analysed image. The rectangles fill the whole image height (since eggs do not slide in parallel due to transportation slope design), and their width is equal to detected yolks diameter summed with an \textbf{offset} that covers reflecting light. The rectangles centers are equal to yolk centers.
 
 \subsection{Thresholding}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\paperwidth]{oneth}
-\caption{Different Thresholding modes generated with Metaplotlib}\label{fig:thr}
+\caption{Different Thresholding modes generated with Metaplotlib library}\label{fig:thr}
 \end{figure}
 Thresholding is a simple case of image segmentation (see figure \ref{fig:kmeans}).
 It can be used to convert one channel (in most cases grayscale) image to binary image.
 \newpage
 The basic binary thresholding mode sets every pixel of destination matrix to:
 \begin{itemize}
-\item 0 if the source matrix value is smaller than threshold (integer parameter)
+\item 0 if the source matrix value is smaller than \textbf{detection threshold} (integer parameter)
 \item 1 if the source matrix value is bigger than threshold.
 \end{itemize}
 The truncate version sets every pixel of destination matrix to
@@ -731,7 +733,7 @@ The expert was reviewing the output while changing the parameter values to obtai
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.2\paperwidth]{samples}
+\includegraphics[width=0.3\paperwidth]{samples}
 \caption{Obtaining a set of sample pictures. Another set was obtained using Raspberry Pi camera.}\label{fig:samples}
 \end{figure}
 
@@ -741,13 +743,13 @@ The expert was reviewing the output while changing the parameter values to obtai
 \caption{One of the scripts used for manual parameter interval finding}\label{fig:manual}
 \end{figure}
 
-Script crucial fragments:
+Creating GUI of parameter tuning script:
 \lstinputlisting[language=Python]{trackbars.py}
 
 Unfortunately, while some parameters sets worked fine for some image sets, they failed with another ones.
 Nevertheless, the interesting intervals were obtained for each parameter. These intervals guaranteed that at least some of the graded images are segmentated in expected way.
 This method resulted in excluding most parameters values and vastly reducing the optimising problem size.
-
+\newpage
 \subsection{Automatic parameters optimisation}
 
 A decision was made, to automatise process of assessing the segmentation and detection efficiency to get to effective set of parameters.
@@ -773,15 +775,16 @@ Error was defined as false negatives (good batch recognised as bad batch) number
 Multiplication by '3' weight was conducted on false positives, since keeping the product clean is more important for the client, that utilising all the egg mass. 
 
 A script was developed, that automatically loaded the images and graded them for different parameter values.
-This process was very expensive in terms of processing time, and the parameters range and step was chosen to fill a night of i7-3520M 8GB RAM computer work.
+This process was very expensive in terms of processing time, and the parameters range and step was chosen to fill a night (8h) of i7-3520M 8GB RAM computer work.
 It was computed in a following way: elapsed time of one full imageset testing multiplied by number of possible parameter sets.
 The process was repeated by the author multiple times with different parameter intervals discovered in a process descried in previous subsection.
 Various effort were made by the author to optimise imageset grading process, so bigger variety of parameters can be checked.
 Initially, files were open prior to every image evaluation, later on all the images were loaded once, and every processing (channel splinting, colorscale conversion) was conducted before execution of the code nested in multiple loops.
 
-Crucial parts of the testing code:
+Multiple nested testing loops:
 \lstinputlisting[language=Python]{script.py}
 
+\newpage
 
 \subsection{Overfitting}
 Overfitting is an unwanted effect that appears often in statistics and supervised machine learning.
@@ -849,6 +852,8 @@ $ sudo apt-get upgrade
 $ sudo rpi-update
 \end{lstlisting}
 
+\newpage 
+
 Unfortunately, the screen was either blinking or had unreadable 320x240 resolution on 27MP35 display, and on tested L227WT display and EB-1761W projector displayed either ‘out of range’ error, or no image at all.
 Commenting the 
 \begin{lstlisting}
@@ -859,7 +864,7 @@ lines in boot/config.txt file and rebooting enabled devices to work properly in 
 
 Later on, the device was accessed via Putty SSH using either router with DHPC enabled or direct Ethernet to PC computer using static 169.254.1.1 ip reserved for direct devices connecting.
 
-Xming software with lxsession was using for x11 forwarding - displaying the OS and GUIs on larger PC, so the egg flow could be viewed.
+Xming software with lxsession was used for x11 forwarding - displaying the OS and GUIs on larger PC, so the egg flow could be viewed.
 
 \subsection{Python and OpenCV configuration}
 
@@ -908,17 +913,17 @@ $ python
 \subsection{Code implementation}
 
 Below, the most crucial parts of Python code implementing the Detection algorithm which development was described in chapters 4, 5 and 6 is presented.
-It is stored in detector.py file, and automatically runs when system starts. It has been achieved by appending a "sudo python detector.py" line at the end of /etc/rc.local file.
+The code is stored in detector.py file, and is automatically run when system starts. It has been achieved by appending a "sudo python detector.py" line at the end of /etc/rc.local file.
 
 
-Firstly, used Python libraries are loaded. picamera is used for comunication with Raspberry Camera; numpy, itertools and cv2 are used for image matrices processing; os handles I/O operations, and time is used when performance is measured.
+Firstly, used Python libraries are loaded. Picamera is used for communication with Raspberry Camera; numpy, itertools and cv2 are used for image matrices processing; os handles I/O operations, and time is used when performance is measured.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\paperwidth]{libs}
+\includegraphics[width=0.5\paperwidth]{libs}
 \caption{Importing dependencies}\label{fig:libs}
 \end{figure}
-
+\newpage
 The most important function, that recognise good and bad batch at obtained camera frame:
 
 \begin{figure}[H]
@@ -934,18 +939,20 @@ Below, the way that Raspberry Pi camera is handled is shown:
 \includegraphics[width=0.8\paperwidth]{rpicode}
 \caption{Camera frames grabing}\label{fig:rpicode}
 \end{figure}
+
+\newpage
 \section{Conclusions and further research}
 
 Work on the solution developed in this thesis will be continued further on by the author and Ovo-tech company.
-The following alternative approaches and improvements in detection system will be taken into consideration
+The following alternative approaches and improvements in detection system will be taken into consideration:
 
 \subsection{One month prototype testing and environment of work tuning}
 
-The prototype will be attached to the rz-1 machine operating at Ovo-tech headquarters for a month.
+The prototype will be attached to the RZ-1 machine operating at Ovo-tech headquarters for a month.
 During that time, led lights will indicate proper and improper egg batch.
 Recognition efficiency is now > 80\%. Two cases may occur, when the device is operating in working environment:
 \begin{enumerate}
-\item Recognising efficiency will rise dramatically, since the camera position will be fixed, and the background (separation module slope) will have uniform facture and color.
+\item Recognising efficiency will rise dramatically, since the camera position will be fixed and the background (separation module slope) will have uniform facture and color.
 The data provided by Ovo-tech for prototype construction covered various situations and backgrounds that will be invariant in factory application.
 \item Recognising efficiency will drop, due to varying egg quality, color and shape (the overfitting problem).
 \end{enumerate}
@@ -969,7 +976,7 @@ Using a derived method for positioning the center of such circle might work bett
 \item Watershed algorithm accompanied with extracting peaks of Euclidean Distance Transform is believed to work better than contour detection and thresholding methods with touching or overlapping objects.
 It might provide efficiency boost in case of RZ-1 processing plant operating in modes faster than precise mode.\cite{watershed}
 \end{itemize}
-
+\newpage
 \subsection{Obtaining more image data and parameters tuning}
 
 Larger dataset of more different egg types will enable to better tune the processing parameters.
@@ -995,6 +1002,7 @@ Such process may generate additional benefit, which is deciding whether or not t
 Ovo-tech reported cases of unreliable egg suppliers, that shipped old, misclassified eggs either purposefully or unwillingly to the bakery companies.
 Such situation would be detected by monitoring statistics of how big percentage of processed eggs are badly broken.
 
+\newpage
 \subsection{Conclusions}
 
 Following conclusions were obtained in the system designing, tuning and testing process:
