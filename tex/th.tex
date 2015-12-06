@@ -21,6 +21,8 @@
 \usepackage[english, polish]{babel}
 \usepackage[T1]{fontenc}
 \graphicspath{ {imgs/} }
+\usepackage{enumitem}
+\setlist{noitemsep} %to leave space around whole list or \setlist{nosep} 
 
 \begin{document}
 \selectlanguage{polish}
@@ -259,11 +261,21 @@ Despite the fact, that client decided that chalaza position and amount are irrel
 Different techniques for automatic, non-destructive egg quality grading have been investigated.
 Among them, the following are worth mentioning:
 \begin{itemize}
-\item Intelligent systems based on visible-infrared transmittance spectroscopy\cite{agri}
-\item Fourier frequency analysis of a vibration-based response on impact force\cite{svm} 
+\item Intelligent systems based on visible-infrared transmittance spectroscopy.\\
+Such systems detect visible infrared (400–1100 nm) light that is altered while passing through the egg with intact shell (see figure \ref{fig:spec}). Those alterations are assessed in terms of their dependence on eggs age. Choosing features of this altered egg that are used for detection is a complex problem - authors of this method use Genetic Algorithms and Principal Component Analysis to solve it \cite{agri}.
+\item Fourier frequency analysis of a vibration-based response on impact force. \\ 
+This method focuses on distinguishing eggs which shell is partially broken from those who are intact by generating some impact force and investigating the acoustic response.
+The registered responses are assigned broken or intact class using linear Support Vector Machines method, that generates a hypersurface separating these cases.\cite{svm} 
 \item Ultrasonic, magnetic resonance, electric resistance, electric nose\cite{nondestr}  
 \end{itemize}
 All methods listed above require very specific and expensive equipment, are prone to overfitting and take in to account an assumption that does not has to be satisfied for problem considered in this thesis: the egg shell should not be damaged.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\paperwidth]{spec}
+\caption{Assessing intact egg with visible-infrared transmittance spectroscopy \cite{agri}}\label{fig:spec}
+\end{figure}
 
 Since in this very special case, eggs are already broken, simplified and different methods can be considered.
 Initially, two ideas were researched by author of this thesis:
@@ -406,14 +418,13 @@ Two copies of a frame are processed. The first copy is a subject of following tr
   Its state is passed further as image, along all the steps.
   \item[Secondly,]the channel is a subject to preprocessing, that eliminates the unimportant data and reduces the data dimensionality. 
   Amount of noise is reduced.
-  \item[Thirdly,]the image is segmentation, and the shape recognition methods are used to detect existence, position and size of the egg yolk.
-  \item[Independently,]other copy of the image is a subject to different color scale.
+  \item[Thirdly,]the image is segmentated, and the shape recognition methods are used to detect existence, position and size of the egg yolk.
+  \item[Independently,]other copy of the image is converted to different color scale.
   \item[Then,]only one channel is extracted from the image
-  \item[Finally,]the information from first copy is used to remove intact egg region from second copy.The first copy is no longer needed and its resources are freed.
+  \item[Finally,]the information from first copy is used to remove intact egg region from second copy. The first copy is no longer needed and its resources are freed.
 \end{description}
 
-Chosen channel of transformed second copy (with intact egg excluded) serve as the only image now.
-It is processed in a following way:
+Obtained image (with intact eggs excluded) is processed in a following way, to asses the amount of remaining broken egg yolk: 
 
 \begin{description}
   \item[Firstly,]an attempt is made to filter out the light reflections and flares from the image.
@@ -454,23 +465,25 @@ For author, a case occurred, that 39-lines code snippet that recognise nested re
 
 \section{Egg yolk detection}
 \subsection{General idea}
+This section describes idea introduced in 3.3 subchapter (Detection Algorithm), which is detecting the egg-yolk on the image depicting processed egg batch.
+Next, intact yolk image is removed from the image, so only remaining amount of damaged, fuzzy yolk can be measured (see. next chapter).
+
 An egg yolk, when intact and fresh can be approximated with sphere which projects as circle-like shape on 2D image.
 Methods presented below enable to filter out the unnecessary noise, simplify the image and detect the yolk shape.
 While not all of them were used in the final detection algorithm, they were giving promising results on the early stage prototypes.
 
-Parameters, which values have to be found to correctly apply the methods are indicated with \textbf{bold font}.
+Parameters, which values have to be correctly chosen to effectively apply the used methods are indicated with \textbf{bold font} and summarised later on in Figure 6.4.1.
 
-Following methods treat images as 1, 8, or 24-bit encoded matrices, thus both terms are used synonymously.
-x and y denote pixel position.
+All the following methods treat images as 1, 8, or 24-bit encoded matrices. x and y denote modified pixel position (notion explained in next subsection).
 \subsection{Extracting color space channels}
 In digital graphics color information is usually stored as a value from RGB (or BGR) additive color space (see figure \ref{fig:rgb}).
 It means, that three numbers represent amount of red, green, and blue subcolors that combined constitute a visible color.
-For this algorithm sake, it is assumed that every one of this numbers takes values from 0-255 interval and is encoded by 8bits, what sums to 24bit encoding for every RGB pixel.
+For the sake of Detection algorithm considered in this thesis, it is assumed that every one of this numbers takes values from 0-255 interval and is encoded by 8bits, what sums to 24bit encoding for every RGB pixel.
 
-Alternatively, a simplified information may be processed: a grayscale image is made of pixels encoded by a single number that denotes the colors distance from being completely black; the higher is the number, the closer to being white it is.
+Alternatively from RGB scale, simplified color space can be used: a grayscale image is made of pixels encoded by a single number that denotes the colors distance from being completely black; the higher is the number, the closer to being white it is.
 8bit encryption has been chosen for grayscale images.
 
-There is also an option to store binary black-and-white image with 1bit encoding (0 picked for black, 1 for white).
+There is also an option to process black-and-white image with 1bit encoding - 0 picked for black, 1 for white - what is denoted as binary color scale.
  
 A channel in this context is a grayscale image that represents intensity of single subcolor in RGB space. 
 For example, a red channel is an image, in which 255 constitutes red pixel, and 0 means that pixel has no red subcolor.
@@ -487,12 +500,11 @@ Particularity, an egg yolk that is visually yellow or red my be favoured in red 
 
 \subsection{HSV scale conversion}
 
-Extending assumption from previous subchapter led author to belive that using a color space different than RGB might be more effective in recognition process.
+Extending assumption from previous subchapter led author to believe that using a color space different than RGB might be more effective in recognition process.
 It might occur, that the problem of assigning color values associated with egg yolk is either linearly separable or close to being such, and thus extracting only those pixels that constitute egg yolk might be possible.
 
-HSV cylindrical color space is known as being exceptionally suitable as a preprocessing method used before image segmentation \cite{hsv}
-
-In HSV color is represented by Hue (angle of a point on a cylinder), Saturation (a radius of a point) and Value (height of the point).
+HSV cylindrical color space is known as being exceptionally suitable as a preprocessing method applied prior to image segmentation. \cite{hsv}
+In HSV, pixel color is encoded as  Hue (angle of a point on a cylinder), Saturation (a radius of a point) and Value (height of the point).
 
 Hue is defined as "the degree to which a stimulus can be described as similar to or different from stimuli that are described as red, green, blue, and yellow"\cite{hue}.
 Saturation stands for intensity of a particular hue.
@@ -525,7 +537,7 @@ The potential circle with largest number of intersections is chosen as the best 
 \end{figure}
 
 In the full cases, such procedure is repeated for every image point, and the intersections numbers are stored in accumulation matrix (see figure \ref{fig:accu}).\cite{hgt}
-To reduce computation time and false detection rate, minimum distance between image centers is given as a parameter \textbf{minDist}.
+To reduce computation time and false detection rate, minimum distance between image centers is given as a parameter \textbf{minimum distance}.
 Threshold value \textbf{param2} is defined as minimum number of intersections to treat circle candidate as detected circle.
  
 \begin{figure}[H]
@@ -542,7 +554,7 @@ OpenCV utilizes Canny edge detector for finding the potential intersection point
 \subsection{Erosion and Dilatation}
 Erosion and dilatation are two morphological filters that enable to filter out unnecessary noise from the image.
 Combined, they leave the core information (biggest blobs) intact or amplified, while small elements are deleted.
-It is easily applied to binary images:
+It is easily applied on binary images:\\
 A ROI (region of interest, a rectangular part of image) moves through image pixel by pixel and is compared to previously defined kernel (binary matrix, usually symmetric with respect to both diagonals - see figure \ref{fig:diam}).
 
  
@@ -576,9 +588,7 @@ Perimeter Determination and Skeletonization are widely used contour detection fu
 \subsection{Gaussian blur}
 
 Gaussian blur is obtained by convoluting pixel with gauss function values. 
-
 It reduces noise, detail and filters out the high frequencies what makes it a low pass filter.\cite{cv}
-
 Gaussian blur drastically reduces number of false-positive Hough circles detections. It nevertheless should be coupled with sharpening to reduce false-negative cases.\cite{cnoisy} 
 
 
@@ -592,7 +602,7 @@ Gaussian blur drastically reduces number of false-positive Hough circles detecti
 sigma, ksize.width, ksize.height  parameters are introduced.
 Ksize stands for size of precomputed kernel, that is convoluted with ROIs on the image.
 
-The term ‘convolution’ might be misleading and for the scope of image processing tasks is defined as piecewise multiplying two matrices and than summing the obtained values:
+The applied convolution is defined as piecewise multiplying two matrices and than summing the obtained values:
 
  
 \begin{figure}[H]
@@ -625,15 +635,14 @@ The methods described above are used one after another as subsequent OpenCV libr
 
 \newpage
 \section{Contaminated product assessment}
-Methods described in previous chapter are used for contaminated product recognition, as well as two more presented below:
 
 \subsection{Subtracting yolk image}
-Subtracting image of detected intact egg yolks from the general image outputs an image that holds only unwanted egg yolk, egg white and its surrounding.
+Subtracting previously detected images of intact egg yolks from the processed image outputs an image that holds only unwanted egg yolk, egg white and its surrounding.
 Therefore, the problem would be reduced to simple assessing the amount of remaining egg yolk and comparing it to a threshold value for acceptable bad yolk amount.
 
 The initial implementation for this methods was supposed to be obtained by filling the image with empty circles detected in the previous chapter.
-Unfortunately, it has been sentimentally tested, that egg yolk is reflecting some yellow light on it's surroundings and it is very hard to filter them out, thus a bigger area is subtracted.
-Instead of circles, empty rectangles are drawn on the analysed image. The rectangles fill the whole image height (since eggs do not slide parallely due to transportation slope design), and their width is equal to detected yolks diameter summed with an offset that covers reflecting light. The rectangles centeres are equal to yolk centers.
+Unfortunately, it has been experimentally tested, that egg yolk is reflecting some yellow light on it's surroundings and it is very hard to filter them out, thus a bigger area is subtracted.
+Instead of circles, empty rectangles are subtracted from the analysed image. The rectangles fill the whole image height (since eggs do not slide in parallel due to transportation slope design), and their width is equal to detected yolks diameter summed with an offset that covers reflecting light. The rectangles centers are equal to yolk centers.
 
 \subsection{Thresholding}
 \begin{figure}[H]
@@ -660,7 +669,7 @@ Various modes and modifications are used depending on coding schema and colors d
 
 
 Finding an effective threshold value finding is a time consuming process and it often gives satisfactory results only for small set of images.
-Therefore Otsu Binarization algorithm for automatically selecting threshold is used.
+A method called Otsu Binarization is often used to address this problem. Otsu Binarisation implements algorithm that automatically selects threshold value for each and every processed image.
 
 Moreover using one threshold value for whole image may not work properly if the lighting conditions differ in different image areas.\cite{thre}
 Adaptive Thresholding utilize different threshold values for different ROIs.
@@ -895,7 +904,11 @@ $ python
 
 \subsection{Code implementation}
 
-Firstly, used libraries were loaded:
+Below, the most crucial parts of Python code implementing the Detection algorithm which development was described in chapters 4, 5 and 6 is presented.
+It is stored in detector.py file, and automatically runs when system starts. It has been achieved by appending a "sudo python detector.py" line at the end of /etc/rc.local file.
+
+
+Firstly, used Python libraries are loaded. picamera is used for comunication with Raspberry Camera; numpy, itertools and cv2 are used for image matrices processing; os handles I/O operations, and time is used when performance is measured.
 
 \begin{figure}[H]
 \centering
