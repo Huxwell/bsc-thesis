@@ -853,7 +853,7 @@ Clean "Jessie" - "NOOBS" distribution in .zip archive was copied to drive.
 
 Next, OS setup was conducted on device.
 Standard updates were conducted after WiFi network setup:
-\begin{lstlisting}
+\begin{lstlisting}[columns=fullflexible]
 $ sudo apt-get update
 $ sudo apt-get upgrade
 $ sudo rpi-update
@@ -863,7 +863,7 @@ $ sudo rpi-update
 
 Unfortunately, the screen was either blinking or had unreadable 320x240 resolution on 27MP35 display, and on tested L227WT display and EB-1761W projector displayed either ‘out of range’ error, or no image at all.
 Commenting the 
-\begin{lstlisting}
+\begin{lstlisting}[columns=fullflexible]
 hdmi_mode=16
 hdmi_group=1 
 \end{lstlisting}
@@ -878,7 +878,7 @@ Xming software with lxsession was used for x11 forwarding - displaying the OS an
 Downloading and building OpenCV with all its dependencies was along process (operations elapsing over 8h, not including the authors involvement).
 Following commands were executed:
 
-\begin{lstlisting}
+\begin{lstlisting}[columns=fullflexible]
 $ sudo apt-get install build-essential cmake pkg-config
 $ sudo apt-get install libjpeg8-dev libtiff4-dev libjasper-dev libpng12-dev
 $ sudo apt-get install libgtk2.0-dev
@@ -890,13 +890,13 @@ $ sudo pip install virtualenv virtualenvwrapper
 $ sudo rm -rf ~/.cache/pip
 \end{lstlisting}
 Following lines were added to ~/.profile file:
-\begin{lstlisting}
+\begin{lstlisting}[columns=fullflexible]
 # virtualenv and virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 \end{lstlisting}
 Than, following commands were executed:
-\begin{lstlisting}
+\begin{lstlisting}[columns=fullflexible]
 $ source ~/.profile
 $ mkvirtualenv cv
 $ sudo apt-get install python2.7-dev

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.2.7)  10 DEC 2015 13:06
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.2.7)  10 DEC 2015 22:30
 entering extended mode
 **th.tex
 (C:\Users\Orley\Desktop\thesis\docs\tex\th.tex
@@ -1087,18 +1087,18 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  6709 strings out of 493921
  93560 string characters out of 3151769
- 255537 words of memory out of 3000000
+ 261537 words of memory out of 3000000
  9832 multiletter control sequences out of 15000+200000
  47228 words of font info for 73 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 37i,18n,43p,1046b,1576s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,18n,43p,1046b,1604s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/TiCTeX v1.0 for windows/MiKTeX/fonts/enc/dvips/fontna
 me/8r.enc}<C:/Program Files (x86)/TiCTeX v1.0 for windows/MiKTeX/fonts/type1/pu
 blic/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/TiCTeX v1.0 for windows/MiK
 TeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/TiCTeX v1.0 for wi
 ndows/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/TiCTeX v1
 .0 for windows/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on th.pdf (40 pages, 4508644 bytes).
+Output written on th.pdf (40 pages, 4506986 bytes).
 PDF statistics:
  226 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
