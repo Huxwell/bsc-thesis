@@ -24,8 +24,7 @@
 \usepackage{enumitem}
 \setlist{noitemsep} %to leave space around whole list or \setlist{nosep} 
 \usepackage{pdfpages}
-
-
+\renewcommand{\thefootnote}{}
 
 \begin{document}
 \includepdf[pages={1}]{titlepage.pdf}
@@ -33,16 +32,15 @@
 \begin{abstract}
 
 
-W poniższej pracy przedstawiono proces projektowania i tworzenia systemu, który identyfikuje stan obiektów przy użyciu obrazu z kamery. Obiekty stanowią partie rozbitych jaj kurzych, które przypisywane są do jednej z dwóch poniższych klas:
-\begin{enumerate}
-\item nieuszkodzone żółtka jaj otoczone białkiem jajecznym albo czysta linia produkcyjna
-\item uszkodzone żółtka albo nieuszkodzone żółtka otoczone szczątkami uszkodzonych żółtek
-\end{enumerate}
+W poniższej pracy przedstawiono proces projektowania i tworzenia systemu, który identyfikuje stan obiektów przy użyciu obrazu z kamery. Obiekty stanowią partie rozbitych jaj kurzych, które przypisywane są do jednej z dwóch klas.
+Czysty produkt jest zdefiniowany jako nieuszkodzone żółtka jaj otoczone białkiem jajecznym albo pusta linia produkcyjna, zaś partie zawierające uszkodzone żółtka albo nieuszkodzone żółtka otoczone szczątkami uszkodzonych stanowią odpad, który usuwany jest z linii fabrycznej.
 
-Na początku opisano proces rozbijania jaj, oraz oddzielania białka od żółtka. Następnie przeanalizowano rynkowy popyt na system automatyzujący ten proces.
-Przeprowadzono badania jakościowe istniejących rozwiązań dla tego problemu, oraz usprawnień, jakie można w nich dokonać.
-Podjęto decyzję o zaprojektowaniu i wykonaniu prototypu systemu, który montowany będzie na maszynach rozbijających jaja firmy OVO-TECH.
-Omówiono konstrukcję tego systemu, algorytmy, jakie są w nim zaimplementowane, a następnie wykonano i przetestowano prototyp.\\
+W treści pracy szczegółowo opisano proces rozbijania jaj, oraz oddzielania białka od żółtka. Następnie przeanalizowano rynkowy popyt na system automatyzujący ten proces.
+Przeprowadzono badania jakościowe istniejących rozwiązań dla opisanego problemu oraz usprawnień, jakie można w nich dokonać.
+Zaprojektowano urządzenie, które montowane będzie na maszynach rozbijających jaja firmy OVO-TECH w celu poprawienia ich skuteczności.
+Omówiono konstrukcję i implementację systemu zawierającego to urządzenie, a także wykorzystane w nim algorytmy.
+System ten, wykorzystujący platformę komputerową Raspberry Pi i podłączoną do niej kamerę rozpoznaje w widocznej masie jajecznej nienaruszone żółtka, oraz liczy ilość zanieczyszczonego produktu.
+
 Autor poniższej pracy przewiduje, że wykonany system zastosowanie w firmach farmaceutycznych produkujących leki z białka jajecznego, w cukierniach, które potrzebują oddzielania białek od żółtek do procesów piekarniczych takich jak ubijanie piany z białek, oraz w firmach produkujących odżywki dla sportowców.
 
 
@@ -51,15 +49,14 @@ Autor poniższej pracy przewiduje, że wykonany system zastosowanie w firmach fa
 
 \selectlanguage{english}
 \begin{abstract}
-The scope of this work is process of creating a device that identifies objects state using camera image. Objects are defined as batches of cracked chicken eggs, which are assigned to one of the two following classes:
-\begin{enumerate}
-\item intact yolks surrounded with egg white or clear processing plant line
-\item damaged yolk or intact yolk surrounded with damaged yolk parts
-\end{enumerate}
-At the beginning, the process of egg cracking and separating egg white from egg yolk was described. Than the market demand on a system automatising this process was analysed.
+In this thesis, process of creating a device that identifies objects state using camera image is described. Objects are defined as batches of cracked chicken eggs, which are assigned to one of the two classes. Clean product is defined as intact yolks surrounded with egg white or clear processing plant line. Batches containing damaged yolk or intact yolk surrounded with damaged yolk parts are considered waste and removed from processing plant.
+
+Process of egg cracking and separating egg white from egg yolk was described in detail. Than the market demand on a system automatising this process was analysed.
 A research about quality of existing solutions for such problem was conducted. Possible improvements in them were considered.
-A decision has been made to design and develop a prototype of a system, that will be mounted on OVO-TECH company egg-breaking machines.
-Structure and implemented algorithms were described. The prototype was manufactured and tested.\\
+A device which will be mounted on egg-breaking OVO-TECH company machines was designed.
+Structure, used algorithms and implementation of the system were described.
+The system utilises Raspberry Pi embedded platform and connected camera to recognise intact egg yolks in the mass present on the image, and counts the amount of contaminated product.
+
 Author of this thesis is expecting, that developed system will be applied in pharmaceutics companies that produce medicines from egg white, confectionaries and sport nutrition producers.
 
 \end{abstract}
@@ -628,13 +625,18 @@ The applied convolution is defined as piecewise multiplying two matrices and tha
 
 
 \subsection{Methods execution}
-\lstinputlisting[language=Python]{yolk.py}
 
 The methods described above are used one after another as subsequent OpenCV library function calls in Python language:
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.4\paperwidth]{detected}
+\includegraphics[width=0.75\paperwidth]{yolkcode}
+\caption{Python code snipped with OpenCV function calls}\label{fig:yolkcode}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\paperwidth]{detected}
 \caption{Properly detected intact egg yolk\cite{cnoisy}}\label{fig:detected}
 \end{figure}
 
@@ -711,7 +713,12 @@ For more general cases (i.e. multichannel images, assigning more colors) cluster
 \end{figure}
 \subsection{Methods execution}
 The methods described above are used one after another as subsequent OpenCV library function calls in Python language:
-\lstinputlisting[language=Python]{contaminated.py}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\paperwidth]{contaminatedcode}
+\caption{Python code snipped containing OpenCV function calls}\label{fig:contaminatedcode}
+\end{figure}
 
 \begin{figure}[H]
 \centering
@@ -1015,11 +1022,7 @@ Following conclusions were obtained in the system designing, tuning and testing 
 Both the project goals has been achieved.
 
 \newpage
-All the Web. sources have been checked for availability in November 2015.
-Web links are not included if articles are to be immediately found with search engines, which is consistent to MLN referencing convention.
-For modified web documents, date of last modification is shown.
 
-If it has not been specified otherwise, figure images has been taken or prepared by the author of this thesis.
 
 \begin{thebibliography}{1}
 
@@ -1137,6 +1140,11 @@ Rosebrock A.
 \textit{Watershed OpenCV} PyImageSearch Course, Web. 2015
 
 \end{thebibliography}
+\footnote{
+All the Web. sources have been checked for availability in November 2015.
+Web links are not included if articles are to be immediately found with search engines, which is consistent to MLN referencing convention.
+For modified web documents, date of last modification is shown.
 
+If it has not been specified otherwise, figure images has been taken or prepared by the author of this thesis.}
 
 \end{document}
